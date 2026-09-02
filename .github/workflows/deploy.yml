@@ -37,12 +37,23 @@ jobs:
           cache: npm
 
       - name: Install Composer dependencies
-        run: composer install --no-dev --prefer-dist --optimize-autoloader
+        run: |
+          composer install \
+            --no-dev \
+            --prefer-dist \
+            --optimize-autoloader
 
       - name: Prepare Laravel
         run: |
           cp .env.example .env
           php artisan key:generate
+
+          # GitHub Pages hanya membutuhkan HTML statis.
+          # Tidak perlu session database.
+          sed -i 's/^SESSION_DRIVER=.*/SESSION_DRIVER=array/' .env
+
+          echo "===== ENV ====="
+          grep -E '^(APP_ENV|APP_DEBUG|SESSION_DRIVER|DB_CONNECTION)=' .env || true
 
       - name: Install NPM dependencies
         run: npm ci
@@ -58,75 +69,183 @@ jobs:
           mkdir -p dist/tutorial
           mkdir -p dist/masak-pot
 
-          echo "===== CACHE BLADE ====="
+          echo "========================================"
+          echo "CACHE BLADE"
+          echo "========================================"
+
           php artisan view:cache
 
-          echo "===== GIT COMMIT ====="
+          echo "========================================"
+          echo "GIT COMMIT"
+          echo "========================================"
+
           git log -1 --oneline
 
-          echo "===== WELCOME TITLE ====="
+          echo "========================================"
+          echo "WELCOME TITLE"
+          echo "========================================"
+
           grep -n "<title>" resources/views/welcome.blade.php
 
-          echo "===== VITE MANIFEST ====="
+          echo "========================================"
+          echo "VITE MANIFEST"
+          echo "========================================"
+
           cat public/build/manifest.json
 
-          echo "===== START LARAVEL ====="
-          php artisan serve --host=127.0.0.1 --port=8000 > /tmp/laravel.log 2>&1 &
+          echo "========================================"
+          echo "START LARAVEL SERVER"
+          echo "========================================"
+
+          php artisan serve \
+            --host=127.0.0.1 \
+            --port=8000 \
+            > /tmp/laravel.log 2>&1 &
+
+          LARAVEL_PID=$!
 
           sleep 5
 
-          echo "===== LARAVEL SERVER ====="
-          cat /tmp/laravel.log
+          echo "========================================"
+          echo "LARAVEL SERVER LOG"
+          echo "========================================"
 
-          echo "===== HOMEPAGE ====="
-          curl -sS http://127.0.0.1:8000/ \
+          cat /tmp/laravel.log || true
+
+          echo "========================================"
+          echo "GENERATE HOMEPAGE"
+          echo "========================================"
+
+          STATUS=$(curl -sS \
             -o dist/index.html \
-            -w "HTTP STATUS: %{http_code}\n"
+            -w "%{http_code}" \
+            http://127.0.0.1:8000/)
+
+          echo "HTTP STATUS: $STATUS"
+
+          if [ "$STATUS" != "200" ]; then
+            echo ""
+            echo "===== HOMEPAGE RESPONSE ====="
+            cat dist/index.html || true
+
+            echo ""
+            echo "===== LARAVEL LOG ====="
+            cat /tmp/laravel.log || true
+
+            kill $LARAVEL_PID || true
+            exit 1
+          fi
 
           echo "===== HOMEPAGE TITLE ====="
-          grep -n "<title>" dist/index.html || true
+
+          grep -n "<title>" dist/index.html
 
           echo "===== HOMEPAGE HANSA FAB ====="
+
           grep -n -m 5 "Hansa Fab" dist/index.html || true
 
-          echo "===== TUTORIAL ====="
-          curl -sS http://127.0.0.1:8000/tutorial \
+          echo "========================================"
+          echo "GENERATE TUTORIAL"
+          echo "========================================"
+
+          STATUS=$(curl -sS \
             -o dist/tutorial/index.html \
-            -w "HTTP STATUS: %{http_code}\n"
+            -w "%{http_code}" \
+            http://127.0.0.1:8000/tutorial)
 
-          echo "===== MASAK POT ====="
-          curl -sS http://127.0.0.1:8000/masak-pot \
+          echo "HTTP STATUS: $STATUS"
+
+          if [ "$STATUS" != "200" ]; then
+            echo ""
+            echo "===== TUTORIAL RESPONSE ====="
+            cat dist/tutorial/index.html || true
+
+            echo ""
+            echo "===== LARAVEL LOG ====="
+            cat /tmp/laravel.log || true
+
+            kill $LARAVEL_PID || true
+            exit 1
+          fi
+
+          echo "========================================"
+          echo "GENERATE MASAK POT"
+          echo "========================================"
+
+          STATUS=$(curl -sS \
             -o dist/masak-pot/index.html \
-            -w "HTTP STATUS: %{http_code}\n"
+            -w "%{http_code}" \
+            http://127.0.0.1:8000/masak-pot)
 
-          echo "===== COPY BUILD ====="
+          echo "HTTP STATUS: $STATUS"
+
+          if [ "$STATUS" != "200" ]; then
+            echo ""
+            echo "===== MASAK POT RESPONSE ====="
+            cat dist/masak-pot/index.html || true
+
+            echo ""
+            echo "===== LARAVEL LOG ====="
+            cat /tmp/laravel.log || true
+
+            kill $LARAVEL_PID || true
+            exit 1
+          fi
+
+          kill $LARAVEL_PID || true
+
+          echo "========================================"
+          echo "COPY BUILD ASSETS"
+          echo "========================================"
+
           cp -r public/build dist/build
 
-          echo "===== COPY DATA ====="
+          echo "========================================"
+          echo "COPY DATA"
+          echo "========================================"
+
           if [ -d public/data ]; then
             cp -r public/data dist/data
           fi
 
-          echo "===== COPY CSS ====="
+          echo "========================================"
+          echo "COPY CSS"
+          echo "========================================"
+
           if [ -d public/css ]; then
             cp -r public/css dist/css
           fi
 
-          echo "===== COPY JS ====="
+          echo "========================================"
+          echo "COPY JS"
+          echo "========================================"
+
           if [ -d public/js ]; then
             cp -r public/js dist/js
           fi
 
-          echo "===== FINAL ARTIFACT ====="
+          echo "========================================"
+          echo "FINAL ARTIFACT"
+          echo "========================================"
+
           find dist -maxdepth 5 -type f -print
 
-          echo "===== INDEX FILE ====="
+          echo "========================================"
+          echo "CHECK INDEX FILE"
+          echo "========================================"
+
           ls -lh dist/index.html
 
-          echo "===== TUTORIAL FILE ====="
+          echo "========================================"
+          echo "CHECK TUTORIAL"
+          echo "========================================"
+
           ls -lh dist/tutorial/index.html
 
-          echo "===== MASAK POT FILE ====="
+          echo "========================================"
+          echo "CHECK MASAK POT"
+          echo "========================================"
+
           ls -lh dist/masak-pot/index.html
 
       - name: Upload Pages artifact
