@@ -46,10 +46,10 @@ jobs:
       - name: Prepare Laravel
         run: |
           cp .env.example .env
+
           php artisan key:generate
 
-          # Website akan menjadi static HTML.
-          # Tidak membutuhkan session/database.
+          # Static website tidak membutuhkan database session.
           sed -i 's/^SESSION_DRIVER=.*/SESSION_DRIVER=array/' .env
 
           echo "===== ENV ====="
@@ -87,7 +87,6 @@ jobs:
 
           sleep 5
 
-          echo "===== LARAVEL LOG ====="
           cat /tmp/laravel.log || true
 
           echo "========================================"
@@ -104,16 +103,10 @@ jobs:
           if [ "$STATUS" != "200" ]; then
             echo "===== HOMEPAGE ERROR ====="
             cat dist/index.html || true
-
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
-
-            kill $LARAVEL_PID || true
             exit 1
           fi
-
-          echo "===== HOMEPAGE TITLE ====="
-          grep -n "<title>" dist/index.html || true
 
           echo "========================================"
           echo "GENERATE TUTORIAL"
@@ -129,11 +122,8 @@ jobs:
           if [ "$STATUS" != "200" ]; then
             echo "===== TUTORIAL ERROR ====="
             cat dist/tutorial/index.html || true
-
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
-
-            kill $LARAVEL_PID || true
             exit 1
           fi
 
@@ -151,103 +141,111 @@ jobs:
           if [ "$STATUS" != "200" ]; then
             echo "===== MASAK POT ERROR ====="
             cat dist/masak-pot/index.html || true
-
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
-
-            kill $LARAVEL_PID || true
             exit 1
           fi
 
           kill $LARAVEL_PID || true
 
           echo "========================================"
-          echo "COPY VITE BUILD"
+          echo "COPY ASSETS"
           echo "========================================"
 
           cp -r public/build dist/build
-
-          echo "========================================"
-          echo "COPY DATA"
-          echo "========================================"
 
           if [ -d public/data ]; then
             cp -r public/data dist/data
           fi
 
-          echo "========================================"
-          echo "COPY CSS"
-          echo "========================================"
-
           if [ -d public/css ]; then
             cp -r public/css dist/css
           fi
-
-          echo "========================================"
-          echo "COPY JS"
-          echo "========================================"
 
           if [ -d public/js ]; then
             cp -r public/js dist/js
           fi
 
           echo "========================================"
-          echo "FIX GITHUB PAGES BASE PATH"
+          echo "FIX STATIC HTML PATHS"
           echo "========================================"
 
-          # GitHub Pages project site menggunakan:
-          # /hansa-fab-page/
           #
-          # Mengubah URL root seperti:
-          # /build/...
-          # /css/...
-          # /js/...
-          # /data/...
-          # /tutorial
+          # GitHub Pages:
           #
-          # menjadi:
-          # /hansa-fab-page/build/...
-          # /hansa-fab-page/css/...
-          # /hansa-fab-page/js/...
-          # /hansa-fab-page/data/...
-          # /hansa-fab-page/tutorial/
+          # https://bacaceritas-coder.github.io/hansa-fab-page/
+          #
+          # Kita menggunakan path relatif agar asset tidak
+          # bergantung pada domain.
+          #
 
-          find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -print0 |
+          find dist -type f -name "*.html" -print0 |
           xargs -0 sed -i \
-            -e 's|href="/build/|href="/hansa-fab-page/build/|g' \
-            -e 's|src="/build/|src="/hansa-fab-page/build/|g' \
-            -e 's|href="/css/|href="/hansa-fab-page/css/|g' \
-            -e 's|src="/css/|src="/hansa-fab-page/css/|g' \
-            -e 's|href="/js/|href="/hansa-fab-page/js/|g' \
-            -e 's|src="/js/|src="/hansa-fab-page/js/|g' \
-            -e 's|href="/data/|href="/hansa-fab-page/data/|g' \
-            -e 's|src="/data/|src="/hansa-fab-page/data/|g' \
-            -e 's|href="/tutorial"|href="/hansa-fab-page/tutorial/"|g' \
-            -e 's|href="/masak-pot"|href="/hansa-fab-page/masak-pot/"|g'
+            -e 's|href="/hansa-fab-page/build/|href="../build/|g' \
+            -e 's|src="/hansa-fab-page/build/|src="../build/|g' \
+            -e 's|href="/hansa-fab-page/css/|href="../css/|g' \
+            -e 's|src="/hansa-fab-page/css/|src="../css/|g' \
+            -e 's|href="/hansa-fab-page/js/|href="../js/|g' \
+            -e 's|src="/hansa-fab-page/js/|src="../js/|g' \
+            -e 's|href="/hansa-fab-page/data/|href="../data/|g' \
+            -e 's|src="/hansa-fab-page/data/|src="../data/|g' \
+            -e 's|href="/hansa-fab-page/tutorial"|href="tutorial/"|g' \
+            -e 's|href="/hansa-fab-page/masak-pot"|href="masak-pot/"|g'
+
+          #
+          # Homepage berada di /hansa-fab-page/
+          # sehingga asset cukup menggunakan:
+          #
+          # build/...
+          # css/...
+          # js/...
+          # data/...
+          #
+          # dan link:
+          #
+          # tutorial/
+          # masak-pot/
+          #
+
+          sed -i \
+            -e 's|href="/build/|href="build/|g' \
+            -e 's|src="/build/|src="build/|g' \
+            -e 's|href="/css/|href="css/|g' \
+            -e 's|src="/css/|src="css/|g' \
+            -e 's|href="/js/|href="js/|g' \
+            -e 's|src="/js/|src="js/|g' \
+            -e 's|href="/data/|href="data/|g' \
+            -e 's|src="/data/|src="data/|g' \
+            -e 's|href="/tutorial"|href="tutorial/"|g' \
+            -e 's|href="/masak-pot"|href="masak-pot/"|g' \
+            dist/index.html
 
           echo "========================================"
-          echo "FINAL ARTIFACT"
+          echo "CHECK GENERATED HTML"
+          echo "========================================"
+
+          echo "--- Homepage assets ---"
+          grep -E 'href="[^"]+\.(css|js)|src="[^"]+\.(css|js)' \
+            dist/index.html | head -30 || true
+
+          echo "--- Tutorial link ---"
+          grep -n "tutorial" dist/index.html | head -10 || true
+
+          echo "========================================"
+          echo "FINAL FILES"
           echo "========================================"
 
           find dist -maxdepth 5 -type f -print
 
           echo "========================================"
-          echo "CHECK FILES"
+          echo "FILE CHECK"
           echo "========================================"
 
-          ls -lh dist/index.html
-          ls -lh dist/tutorial/index.html
-          ls -lh dist/masak-pot/index.html
+          test -f dist/index.html
+          test -f dist/tutorial/index.html
+          test -f dist/masak-pot/index.html
 
-          echo "========================================"
-          echo "CHECK BASE PATH"
-          echo "========================================"
-
-          echo "--- Homepage ---"
-          grep -o 'href="/hansa-fab-page/[^"]*"' dist/index.html | head -20 || true
-
-          echo "--- Tutorial link ---"
-          grep -n "tutorial" dist/index.html | head -10 || true
+          echo "Build berhasil."
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
