@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
     <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PX7R0YN1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z3PX7R0YN1');
+        </script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Tutorial Hansa Fab - Cari monster berdasarkan Job Base dan Level" />
@@ -128,7 +137,8 @@
 <input id="level" name="level" type="number" min="1" max="371" step="1" value="1"
                                 placeholder="Masukkan Level (contoh: 150, max 371)"
                                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 transition placeholder-gray-500"
-                               required>
+                                onfocus="this.select()"
+                                required>
                     </div>
 
                     <!-- Submit -->
