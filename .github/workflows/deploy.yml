@@ -58,12 +58,17 @@ jobs:
 
           sleep 5
 
-          curl -f http://127.0.0.1:8000/ -o dist/index.html
-          curl -f http://127.0.0.1:8000/tutorial -o dist/tutorial.html
-          curl -f http://127.0.0.1:8000/masak-pot -o dist/masak-pot.html
+          echo "===== LARAVEL LOG ====="
+          cat /tmp/laravel.log
 
-          cp -r public/build dist/build
-          cp -r public/data dist/data
+          echo "===== TEST HOMEPAGE ====="
+          curl -i http://127.0.0.1:8000/
+
+          echo "===== TEST TUTORIAL ====="
+          curl -i http://127.0.0.1:8000/tutorial
+
+          echo "===== TEST MASAK POT ====="
+          curl -i http://127.0.0.1:8000/masak-pot
 
           if [ -d public/css ]; then
             cp -r public/css dist/css
