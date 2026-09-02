@@ -50,62 +50,61 @@ jobs:
       - name: Build frontend
         run: npm run build
 
-      - name: Prepare static site
+      - name: Generate static pages
         run: |
           mkdir -p dist
 
-          echo "===== CHECK WELCOME FILE ====="
+          php artisan view:cache
+
+          echo "===== GIT COMMIT ====="
+          git log -1 --oneline
+
+          echo "===== SOURCE WELCOME TITLE ====="
           grep -n "<title>" resources/views/welcome.blade.php
 
-          php artisan serve --host=127.0.0.1 --port=8000 > /tmp/laravel.log 2>&1 &
+          echo "===== CACHED VIEW TITLE ====="
+          grep -R -n "Hansa Fab\|<title>Laravel</title>" storage/framework/views || true
 
+          php artisan serve --host=127.0.0.1 --port=8000 > /tmp/laravel.log 2>&1 &
           sleep 5
 
-          echo "===== SERVER LOG ====="
-          cat /tmp/laravel.log
+          echo "===== GENERATE HOMEPAGE ====="
+          curl -f http://127.0.0.1:8000/ -o dist/index.html
 
-          echo "===== LARAVEL STATUS ====="
-          php artisan about || true
+          echo "===== HOMEPAGE TITLE ====="
+          grep -n "<title>" dist/index.html
 
-          echo "===== VITE MANIFEST ====="
-          ls -lah public/build || true
-          cat public/build/manifest.json || true
+          echo "===== HOMEPAGE HANSA FAB ====="
+          grep -n -m 5 "Hansa Fab" dist/index.html || true
 
-          echo "===== STORAGE LOG ====="
-          ls -lah storage/logs || true
-          cat storage/logs/laravel.log || true
+          echo "===== GENERATE TUTORIAL ====="
+          mkdir -p dist/tutorial
+          curl -f http://127.0.0.1:8000/tutorial -o dist/tutorial/index.html
 
-          echo "===== ROUTES ====="
-          php artisan route:list
+          echo "===== GENERATE MASAK POT ====="
+          mkdir -p dist/masak-pot
+          curl -f http://127.0.0.1:8000/masak-pot -o dist/masak-pot/index.html
 
-          echo "===== WELCOME VIEW ====="
-          php artisan view:cache || true
+          echo "===== COPY ASSETS ====="
+          cp -r public/build dist/build
 
-          echo "===== DIST FILES ====="
+          if [ -d public/data ]; then
+            cp -r public/data dist/data
+          fi
+
+          if [ -d public/css ]; then
+            cp -r public/css dist/css
+          fi
+
+          if [ -d public/js ]; then
+            cp -r public/js dist/js
+          fi
+
+          echo "===== FINAL ARTIFACT ====="
           find dist -maxdepth 4 -type f -print
 
-          echo "===== TEST HOMEPAGE BODY ====="
-          curl -sS http://127.0.0.1:8000/ -o /tmp/homepage.html || true
-
-          cp /tmp/homepage.html dist/index.html
-
-          echo "===== DIST CONTENT ====="
-          find dist -maxdepth 4 -type f -print
-
-          echo "===== INDEX.HTML ====="
-          ls -lah dist/index.html
-          head -20 dist/index.html
-
-          echo "===== HOMEPAGE RESPONSE ====="
-          cat /tmp/homepage.html
-
-          echo "===== LARAVEL LOG AFTER REQUEST ====="
-          cat storage/logs/laravel.log || true
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+          echo "===== INDEX FILE ====="
+          ls -lh dist/index.html
 
   deploy:
     environment:
