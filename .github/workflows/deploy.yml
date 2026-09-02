@@ -49,47 +49,19 @@ jobs:
 
           php artisan key:generate
 
-          # Static website tidak membutuhkan database session.
+          # Tidak menggunakan database session
           sed -i 's/^SESSION_DRIVER=.*/SESSION_DRIVER=array/' .env
 
-          # GitHub Pages project URL
-          echo "APP_URL=https://bacaceritas-coder.github.io/hansa-fab-page" >> .env
-          echo "ASSET_URL=https://bacaceritas-coder.github.io/hansa-fab-page" >> .env
+          # Pastikan config lama tidak tersimpan
+          php artisan config:clear
+          php artisan route:clear
+          php artisan view:clear
 
           echo "===== ENV ====="
-          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|ASSET_URL|SESSION_DRIVER|DB_CONNECTION)=' .env || true
+          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|SESSION_DRIVER|DB_CONNECTION)=' .env || true
 
       - name: Install NPM dependencies
         run: npm ci
-
-      - name: Configure Vite for GitHub Pages
-        run: |
-          node -e "
-          const fs = require('fs');
-          const file = 'vite.config.js';
-
-          if (!fs.existsSync(file)) {
-            console.log('vite.config.js tidak ditemukan, skip.');
-            process.exit(0);
-          }
-
-          let content = fs.readFileSync(file, 'utf8');
-
-          if (content.includes('base:')) {
-            content = content.replace(
-              /base:\s*['\"][^'\"]*['\"]\s*,?/,
-              \"base: '/hansa-fab-page/',\"
-            );
-          } else {
-            content = content.replace(
-              /defineConfig\\(\\{/,
-              \"defineConfig({\\n    base: '/hansa-fab-page/',\"
-            );
-          }
-
-          fs.writeFileSync(file, content);
-          console.log(content);
-          "
 
       - name: Build frontend
         run: npm run build
@@ -98,6 +70,7 @@ jobs:
         run: |
           set -e
 
+          mkdir -p dist
           mkdir -p dist/tutorial
           mkdir -p dist/masak-pot
 
@@ -207,87 +180,119 @@ jobs:
           fi
 
           echo "========================================"
-          echo "FIX STATIC LINKS"
+          echo "FIX HOMEPAGE URLS"
           echo "========================================"
 
-          # ----------------------------------------
-          # Homepage
+          # Homepage berada di:
           # /hansa-fab-page/
-          # ----------------------------------------
+          #
+          # Semua localhost URL dibuat relatif:
+          #
+          # http://127.0.0.1:8000/css/welcome.css
+          # -> css/welcome.css
+          #
+          # http://127.0.0.1:8000/build/...
+          # -> build/...
+          #
+          # http://127.0.0.1:8000/tutorial
+          # -> tutorial/
 
           sed -i \
-            -e 's|http://127.0.0.1:8000/||g' \
-            -e 's|https://bacaceritas-coder.github.io/hansa-fab-page/||g' \
-            -e 's|href="/build/|href="build/|g' \
-            -e 's|src="/build/|src="build/|g' \
-            -e 's|href="/css/|href="css/|g' \
-            -e 's|src="/css/|src="css/|g' \
-            -e 's|href="/js/|href="js/|g' \
-            -e 's|src="/js/|src="js/|g' \
-            -e 's|href="/data/|href="data/|g' \
-            -e 's|src="/data/|src="data/|g' \
+            -e 's|http://127\.0\.0\.1:8000/|./|g' \
+            -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/|./|g' \
             -e 's|href="/tutorial"|href="tutorial/"|g' \
             -e 's|href="/masak-pot"|href="masak-pot/"|g' \
             dist/index.html
 
-          # ----------------------------------------
-          # Sub pages
-          # /tutorial/
-          # /masak-pot/
-          # ----------------------------------------
+          echo "========================================"
+          echo "FIX SUBPAGE URLS"
+          echo "========================================"
+
+          # Tutorial dan Masak Pot berada satu level lebih dalam:
+          #
+          # /hansa-fab-page/tutorial/
+          #
+          # Jadi asset harus:
+          #
+          # ../css/
+          # ../js/
+          # ../build/
+          # ../data/
 
           for FILE in \
             dist/tutorial/index.html \
             dist/masak-pot/index.html
           do
+
             sed -i \
-              -e 's|http://127.0.0.1:8000/||g' \
-              -e 's|https://bacaceritas-coder.github.io/hansa-fab-page/||g' \
-              -e 's|href="/build/|href="../build/|g' \
-              -e 's|src="/build/|src="../build/|g' \
-              -e 's|href="/css/|href="../css/|g' \
-              -e 's|src="/css/|src="../css/|g' \
-              -e 's|href="/js/|href="../js/|g' \
-              -e 's|src="/js/|src="../js/|g' \
-              -e 's|href="/data/|href="../data/|g' \
-              -e 's|src="/data/|src="../data/|g' \
-              -e 's|href="/tutorial"|href="../tutorial/"|g' \
-              -e 's|href="/masak-pot"|href="../masak-pot/"|g' \
+              -e 's|http://127\.0\.0\.1:8000/css/|../css/|g' \
+              -e 's|http://127\.0\.0\.1:8000/js/|../js/|g' \
+              -e 's|http://127\.0\.0\.1:8000/build/|../build/|g' \
+              -e 's|http://127\.0\.0\.1:8000/data/|../data/|g' \
+              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/css/|../css/|g' \
+              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/js/|../js/|g' \
+              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/build/|../build/|g' \
+              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/data/|../data/|g' \
+              -e 's|http://127\.0\.0\.1:8000/tutorial|../tutorial/|g' \
+              -e 's|http://127\.0\.0\.1:8000/masak-pot|../masak-pot/|g' \
+              -e 's|http://127\.0\.0\.1:8000/|../|g' \
               -e 's|href="/"|href="../"|g' \
               "$FILE"
+
           done
 
           echo "========================================"
-          echo "CHECK GENERATED HTML"
+          echo "VERIFY NO LOCALHOST"
           echo "========================================"
 
-          echo "--- Homepage assets ---"
-
-          grep -E \
-            'href="[^"]+\.css|src="[^"]+\.js' \
-            dist/index.html | head -30 || true
-
-          echo "--- Tutorial link ---"
-
-          grep -n "tutorial" dist/index.html | head -10 || true
-
-          echo "--- Homepage localhost check ---"
-
-          if grep -q "127.0.0.1:8000" dist/index.html; then
-            echo "ERROR: Masih ada URL localhost!"
+          if grep -R -n \
+            "127.0.0.1:8000" \
+            dist \
+            --include="*.html"
+          then
+            echo ""
+            echo "ERROR: Masih ditemukan URL localhost!"
             exit 1
           fi
 
-          echo "--- CSS file check ---"
+          echo "Tidak ada URL localhost."
+
+          echo "========================================"
+          echo "VERIFY HOMEPAGE ASSETS"
+          echo "========================================"
+
+          echo "--- Homepage CSS/JS ---"
+
+          grep -E \
+            'href="[^"]+\.css|src="[^"]+\.js' \
+            dist/index.html || true
+
+          echo "========================================"
+          echo "VERIFY TUTORIAL LINK"
+          echo "========================================"
+
+          grep -n "tutorial" dist/index.html || true
+
+          echo "========================================"
+          echo "VERIFY CSS FILES"
+          echo "========================================"
+
+          echo "--- welcome.css ---"
 
           test -f dist/css/welcome.css
 
-          echo "--- Vite CSS check ---"
+          echo "--- Vite CSS ---"
 
           find dist/build/assets \
             -type f \
             -name "*.css" \
             -print
+
+          echo "========================================"
+          echo "VERIFY JAVASCRIPT"
+          echo "========================================"
+
+          test -f dist/js/welcome.js
 
           echo "========================================"
           echo "FINAL ARTIFACT"
@@ -296,13 +301,14 @@ jobs:
           find dist -maxdepth 5 -type f -print
 
           echo "========================================"
-          echo "FILE CHECK"
+          echo "FINAL CHECK"
           echo "========================================"
 
           test -f dist/index.html
           test -f dist/tutorial/index.html
           test -f dist/masak-pot/index.html
 
+          echo ""
           echo "========================================"
           echo "BUILD SUCCESS"
           echo "========================================"
