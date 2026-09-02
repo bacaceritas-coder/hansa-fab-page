@@ -52,11 +52,44 @@ jobs:
           # Static website tidak membutuhkan database session.
           sed -i 's/^SESSION_DRIVER=.*/SESSION_DRIVER=array/' .env
 
+          # GitHub Pages project URL
+          echo "APP_URL=https://bacaceritas-coder.github.io/hansa-fab-page" >> .env
+          echo "ASSET_URL=https://bacaceritas-coder.github.io/hansa-fab-page" >> .env
+
           echo "===== ENV ====="
-          grep -E '^(APP_ENV|APP_DEBUG|SESSION_DRIVER|DB_CONNECTION)=' .env || true
+          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|ASSET_URL|SESSION_DRIVER|DB_CONNECTION)=' .env || true
 
       - name: Install NPM dependencies
         run: npm ci
+
+      - name: Configure Vite for GitHub Pages
+        run: |
+          node -e "
+          const fs = require('fs');
+          const file = 'vite.config.js';
+
+          if (!fs.existsSync(file)) {
+            console.log('vite.config.js tidak ditemukan, skip.');
+            process.exit(0);
+          }
+
+          let content = fs.readFileSync(file, 'utf8');
+
+          if (content.includes('base:')) {
+            content = content.replace(
+              /base:\s*['\"][^'\"]*['\"]\s*,?/,
+              \"base: '/hansa-fab-page/',\"
+            );
+          } else {
+            content = content.replace(
+              /defineConfig\\(\\{/,
+              \"defineConfig({\\n    base: '/hansa-fab-page/',\"
+            );
+          }
+
+          fs.writeFileSync(file, content);
+          console.log(content);
+          "
 
       - name: Build frontend
         run: npm run build
@@ -87,6 +120,7 @@ jobs:
 
           sleep 5
 
+          echo "===== SERVER LOG ====="
           cat /tmp/laravel.log || true
 
           echo "========================================"
@@ -103,8 +137,10 @@ jobs:
           if [ "$STATUS" != "200" ]; then
             echo "===== HOMEPAGE ERROR ====="
             cat dist/index.html || true
+
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
+
             exit 1
           fi
 
@@ -122,8 +158,10 @@ jobs:
           if [ "$STATUS" != "200" ]; then
             echo "===== TUTORIAL ERROR ====="
             cat dist/tutorial/index.html || true
+
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
+
             exit 1
           fi
 
@@ -141,8 +179,10 @@ jobs:
           if [ "$STATUS" != "200" ]; then
             echo "===== MASAK POT ERROR ====="
             cat dist/masak-pot/index.html || true
+
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
+
             exit 1
           fi
 
@@ -167,47 +207,17 @@ jobs:
           fi
 
           echo "========================================"
-          echo "FIX STATIC HTML PATHS"
+          echo "FIX STATIC LINKS"
           echo "========================================"
 
-          #
-          # GitHub Pages:
-          #
-          # https://bacaceritas-coder.github.io/hansa-fab-page/
-          #
-          # Kita menggunakan path relatif agar asset tidak
-          # bergantung pada domain.
-          #
-
-          find dist -type f -name "*.html" -print0 |
-          xargs -0 sed -i \
-            -e 's|href="/hansa-fab-page/build/|href="../build/|g' \
-            -e 's|src="/hansa-fab-page/build/|src="../build/|g' \
-            -e 's|href="/hansa-fab-page/css/|href="../css/|g' \
-            -e 's|src="/hansa-fab-page/css/|src="../css/|g' \
-            -e 's|href="/hansa-fab-page/js/|href="../js/|g' \
-            -e 's|src="/hansa-fab-page/js/|src="../js/|g' \
-            -e 's|href="/hansa-fab-page/data/|href="../data/|g' \
-            -e 's|src="/hansa-fab-page/data/|src="../data/|g' \
-            -e 's|href="/hansa-fab-page/tutorial"|href="tutorial/"|g' \
-            -e 's|href="/hansa-fab-page/masak-pot"|href="masak-pot/"|g'
-
-          #
-          # Homepage berada di /hansa-fab-page/
-          # sehingga asset cukup menggunakan:
-          #
-          # build/...
-          # css/...
-          # js/...
-          # data/...
-          #
-          # dan link:
-          #
-          # tutorial/
-          # masak-pot/
-          #
+          # ----------------------------------------
+          # Homepage
+          # /hansa-fab-page/
+          # ----------------------------------------
 
           sed -i \
+            -e 's|http://127.0.0.1:8000/||g' \
+            -e 's|https://bacaceritas-coder.github.io/hansa-fab-page/||g' \
             -e 's|href="/build/|href="build/|g' \
             -e 's|src="/build/|src="build/|g' \
             -e 's|href="/css/|href="css/|g' \
@@ -220,19 +230,67 @@ jobs:
             -e 's|href="/masak-pot"|href="masak-pot/"|g' \
             dist/index.html
 
+          # ----------------------------------------
+          # Sub pages
+          # /tutorial/
+          # /masak-pot/
+          # ----------------------------------------
+
+          for FILE in \
+            dist/tutorial/index.html \
+            dist/masak-pot/index.html
+          do
+            sed -i \
+              -e 's|http://127.0.0.1:8000/||g' \
+              -e 's|https://bacaceritas-coder.github.io/hansa-fab-page/||g' \
+              -e 's|href="/build/|href="../build/|g' \
+              -e 's|src="/build/|src="../build/|g' \
+              -e 's|href="/css/|href="../css/|g' \
+              -e 's|src="/css/|src="../css/|g' \
+              -e 's|href="/js/|href="../js/|g' \
+              -e 's|src="/js/|src="../js/|g' \
+              -e 's|href="/data/|href="../data/|g' \
+              -e 's|src="/data/|src="../data/|g' \
+              -e 's|href="/tutorial"|href="../tutorial/"|g' \
+              -e 's|href="/masak-pot"|href="../masak-pot/"|g' \
+              -e 's|href="/"|href="../"|g' \
+              "$FILE"
+          done
+
           echo "========================================"
           echo "CHECK GENERATED HTML"
           echo "========================================"
 
           echo "--- Homepage assets ---"
-          grep -E 'href="[^"]+\.(css|js)|src="[^"]+\.(css|js)' \
+
+          grep -E \
+            'href="[^"]+\.css|src="[^"]+\.js' \
             dist/index.html | head -30 || true
 
           echo "--- Tutorial link ---"
+
           grep -n "tutorial" dist/index.html | head -10 || true
 
+          echo "--- Homepage localhost check ---"
+
+          if grep -q "127.0.0.1:8000" dist/index.html; then
+            echo "ERROR: Masih ada URL localhost!"
+            exit 1
+          fi
+
+          echo "--- CSS file check ---"
+
+          test -f dist/css/welcome.css
+
+          echo "--- Vite CSS check ---"
+
+          find dist/build/assets \
+            -type f \
+            -name "*.css" \
+            -print
+
           echo "========================================"
-          echo "FINAL FILES"
+          echo "FINAL ARTIFACT"
           echo "========================================"
 
           find dist -maxdepth 5 -type f -print
@@ -245,7 +303,9 @@ jobs:
           test -f dist/tutorial/index.html
           test -f dist/masak-pot/index.html
 
-          echo "Build berhasil."
+          echo "========================================"
+          echo "BUILD SUCCESS"
+          echo "========================================"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
