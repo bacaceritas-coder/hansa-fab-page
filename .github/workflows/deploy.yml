@@ -52,59 +52,87 @@ jobs:
 
       - name: Generate static pages
         run: |
-          mkdir -p dist
+          set -e
 
+          mkdir -p dist
+          mkdir -p dist/tutorial
+          mkdir -p dist/masak-pot
+
+          echo "===== CACHE BLADE ====="
           php artisan view:cache
 
           echo "===== GIT COMMIT ====="
           git log -1 --oneline
 
-          echo "===== SOURCE WELCOME TITLE ====="
+          echo "===== WELCOME TITLE ====="
           grep -n "<title>" resources/views/welcome.blade.php
 
-          echo "===== CACHED VIEW TITLE ====="
-          grep -R -n "Hansa Fab\|<title>Laravel</title>" storage/framework/views || true
+          echo "===== VITE MANIFEST ====="
+          cat public/build/manifest.json
 
+          echo "===== START LARAVEL ====="
           php artisan serve --host=127.0.0.1 --port=8000 > /tmp/laravel.log 2>&1 &
+
           sleep 5
 
-          echo "===== GENERATE HOMEPAGE ====="
-          curl -f http://127.0.0.1:8000/ -o dist/index.html
+          echo "===== LARAVEL SERVER ====="
+          cat /tmp/laravel.log
+
+          echo "===== HOMEPAGE ====="
+          curl -sS http://127.0.0.1:8000/ \
+            -o dist/index.html \
+            -w "HTTP STATUS: %{http_code}\n"
 
           echo "===== HOMEPAGE TITLE ====="
-          grep -n "<title>" dist/index.html
+          grep -n "<title>" dist/index.html || true
 
           echo "===== HOMEPAGE HANSA FAB ====="
           grep -n -m 5 "Hansa Fab" dist/index.html || true
 
-          echo "===== GENERATE TUTORIAL ====="
-          mkdir -p dist/tutorial
-          curl -f http://127.0.0.1:8000/tutorial -o dist/tutorial/index.html
+          echo "===== TUTORIAL ====="
+          curl -sS http://127.0.0.1:8000/tutorial \
+            -o dist/tutorial/index.html \
+            -w "HTTP STATUS: %{http_code}\n"
 
-          echo "===== GENERATE MASAK POT ====="
-          mkdir -p dist/masak-pot
-          curl -f http://127.0.0.1:8000/masak-pot -o dist/masak-pot/index.html
+          echo "===== MASAK POT ====="
+          curl -sS http://127.0.0.1:8000/masak-pot \
+            -o dist/masak-pot/index.html \
+            -w "HTTP STATUS: %{http_code}\n"
 
-          echo "===== COPY ASSETS ====="
+          echo "===== COPY BUILD ====="
           cp -r public/build dist/build
 
+          echo "===== COPY DATA ====="
           if [ -d public/data ]; then
             cp -r public/data dist/data
           fi
 
+          echo "===== COPY CSS ====="
           if [ -d public/css ]; then
             cp -r public/css dist/css
           fi
 
+          echo "===== COPY JS ====="
           if [ -d public/js ]; then
             cp -r public/js dist/js
           fi
 
           echo "===== FINAL ARTIFACT ====="
-          find dist -maxdepth 4 -type f -print
+          find dist -maxdepth 5 -type f -print
 
           echo "===== INDEX FILE ====="
           ls -lh dist/index.html
+
+          echo "===== TUTORIAL FILE ====="
+          ls -lh dist/tutorial/index.html
+
+          echo "===== MASAK POT FILE ====="
+          ls -lh dist/masak-pot/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     environment:
