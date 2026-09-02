@@ -49,10 +49,9 @@ jobs:
 
           php artisan key:generate
 
-          # Tidak menggunakan database session
+          # Static website tidak membutuhkan database session
           sed -i 's/^SESSION_DRIVER=.*/SESSION_DRIVER=array/' .env
 
-          # Pastikan config lama tidak tersimpan
           php artisan config:clear
           php artisan route:clear
           php artisan view:clear
@@ -183,63 +182,97 @@ jobs:
           echo "FIX HOMEPAGE URLS"
           echo "========================================"
 
-          # Homepage berada di:
+          # Homepage:
+          #
           # /hansa-fab-page/
           #
-          # Semua localhost URL dibuat relatif:
+          # Asset:
+          # ./css/
+          # ./js/
+          # ./build/
+          # ./data/
           #
-          # http://127.0.0.1:8000/css/welcome.css
-          # -> css/welcome.css
-          #
-          # http://127.0.0.1:8000/build/...
-          # -> build/...
-          #
-          # http://127.0.0.1:8000/tutorial
-          # -> tutorial/
+          # Link:
+          # tutorial/
+          # masak-pot/
 
           sed -i \
             -e 's|http://127\.0\.0\.1:8000/|./|g' \
+            -e 's|http://127\.0\.0\.1:8000#|./#|g' \
             -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/|./|g' \
             -e 's|href="/tutorial"|href="tutorial/"|g' \
             -e 's|href="/masak-pot"|href="masak-pot/"|g' \
             dist/index.html
 
           echo "========================================"
-          echo "FIX SUBPAGE URLS"
+          echo "FIX TUTORIAL & MASAK POT URLS"
           echo "========================================"
-
-          # Tutorial dan Masak Pot berada satu level lebih dalam:
-          #
-          # /hansa-fab-page/tutorial/
-          #
-          # Jadi asset harus:
-          #
-          # ../css/
-          # ../js/
-          # ../build/
-          # ../data/
 
           for FILE in \
             dist/tutorial/index.html \
             dist/masak-pot/index.html
           do
 
+            # Semua URL localhost menuju homepage
+            # menjadi ../
             sed -i \
-              -e 's|http://127\.0\.0\.1:8000/css/|../css/|g' \
-              -e 's|http://127\.0\.0\.1:8000/js/|../js/|g' \
-              -e 's|http://127\.0\.0\.1:8000/build/|../build/|g' \
-              -e 's|http://127\.0\.0\.1:8000/data/|../data/|g' \
-              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/css/|../css/|g' \
-              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/js/|../js/|g' \
-              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/build/|../build/|g' \
-              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/data/|../data/|g' \
-              -e 's|http://127\.0\.0\.1:8000/tutorial|../tutorial/|g' \
-              -e 's|http://127\.0\.0\.1:8000/masak-pot|../masak-pot/|g' \
+              -e 's|http://127\.0\.0\.1:8000#|../#|g' \
               -e 's|http://127\.0\.0\.1:8000/|../|g' \
+              -e 's|https://bacaceritas-coder\.github\.io/hansa-fab-page/|../|g' \
               -e 's|href="/"|href="../"|g' \
               "$FILE"
 
+            # Asset CSS
+            sed -i \
+              -e 's|href="/css/|href="../css/|g' \
+              -e 's|src="/css/|src="../css/|g' \
+              "$FILE"
+
+            # Asset JS
+            sed -i \
+              -e 's|href="/js/|href="../js/|g' \
+              -e 's|src="/js/|src="../js/|g' \
+              "$FILE"
+
+            # Vite build
+            sed -i \
+              -e 's|href="/build/|href="../build/|g' \
+              -e 's|src="/build/|src="../build/|g' \
+              "$FILE"
+
+            # Data
+            sed -i \
+              -e 's|href="/data/|href="../data/|g' \
+              -e 's|src="/data/|src="../data/|g' \
+              "$FILE"
+
           done
+
+          echo "========================================"
+          echo "FIX TUTORIAL LINKS"
+          echo "========================================"
+
+          # Pastikan link tutorial dari homepage benar
+          sed -i \
+            -e 's|href="/tutorial"|href="tutorial/"|g' \
+            dist/index.html
+
+          # Pastikan link tutorial dari subpage benar
+          sed -i \
+            -e 's|href="/tutorial"|href="../tutorial/"|g' \
+            dist/tutorial/index.html \
+            dist/masak-pot/index.html
+
+          # Pastikan link Masak Pot dari homepage benar
+          sed -i \
+            -e 's|href="/masak-pot"|href="masak-pot/"|g' \
+            dist/index.html
+
+          # Pastikan link Masak Pot dari subpage benar
+          sed -i \
+            -e 's|href="/masak-pot"|href="../masak-pot/"|g' \
+            dist/tutorial/index.html \
+            dist/masak-pot/index.html
 
           echo "========================================"
           echo "VERIFY NO LOCALHOST"
@@ -255,13 +288,11 @@ jobs:
             exit 1
           fi
 
-          echo "Tidak ada URL localhost."
+          echo "OK: Tidak ada URL localhost."
 
           echo "========================================"
-          echo "VERIFY HOMEPAGE ASSETS"
+          echo "VERIFY HOMEPAGE"
           echo "========================================"
-
-          echo "--- Homepage CSS/JS ---"
 
           grep -E \
             'href="[^"]+\.css|src="[^"]+\.js' \
@@ -274,14 +305,10 @@ jobs:
           grep -n "tutorial" dist/index.html || true
 
           echo "========================================"
-          echo "VERIFY CSS FILES"
+          echo "VERIFY CSS"
           echo "========================================"
 
-          echo "--- welcome.css ---"
-
           test -f dist/css/welcome.css
-
-          echo "--- Vite CSS ---"
 
           find dist/build/assets \
             -type f \
@@ -289,7 +316,7 @@ jobs:
             -print
 
           echo "========================================"
-          echo "VERIFY JAVASCRIPT"
+          echo "VERIFY JS"
           echo "========================================"
 
           test -f dist/js/welcome.js
