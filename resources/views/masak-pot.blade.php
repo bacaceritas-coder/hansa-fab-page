@@ -97,13 +97,24 @@
         <!-- ======================= FOOTER ======================= -->
         <footer class="py-8 px-4 border-t border-white/10">
             <div class="max-w-6xl mx-auto text-center text-sm text-gray-500">
-                <p class="mb-2">© {{ date('Y') }} Hansa Fab. All rights reserved.</p>
+                <p class="mb-2">© {{ date('Y') }} Hansa Fab.</p>
+
+                <div class="rounded-xl border border-amber-300/30 bg-amber-500/5 px-5 py-4 mb-5 text-left mx-auto max-w-3xl">
+                    <p class="font-semibold text-[#f0dca8] mb-1 text-sm text-center">⚠️ Disclaimer</p>
+                    <p class="text-[#c9c9dd] text-xs leading-relaxed">
+                        Seal Online, Playwith, serta ikon, gambar, karakter, dan resource terkait merupakan hak milik pemegang hak masing-masing. Situs ini adalah proyek fan-made dan tidak berafiliasi dengan, tidak disponsori oleh, dan tidak secara resmi didukung oleh pihak pemilik/penerbit Seal Online.
+                    </p>
+                    <p class="text-[#c9c9dd] text-xs leading-relaxed mt-2">
+                        Situs ini hanya melakukan pengumpulan, pengolahan, dan penyusunan informasi untuk keperluan referensi dan tutorial komunitas. Kami tidak mengklaim kepemilikan atas konten game tersebut.
+                    </p>
+                </div>
+
                 <div class="flex justify-center items-center gap-3 text-xs text-orange-400/70">
                     <span>🍲 Masak Pot</span>
                     <span>•</span>
                     <span>🔥 Crafting</span>
                     <span>•</span>
-                    <span>💜 #HansaFam</span>
+                    <span>💜 #HansaFab</span>
                 </div>
             </div>
         </footer>

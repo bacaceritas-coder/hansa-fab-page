@@ -270,3 +270,48 @@ select#job_base option:checked {
     color: #000000;
 }
 
+/* ===== Monster Image Modal ===== */
+#monster-modal {
+    animation: fadeIn 0.25s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#monster-modal .glass {
+    animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes slideUp {
+    from { transform: translateY(40px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+#monster-modal img {
+    transition: transform 0.3s ease;
+}
+#monster-modal img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== Mobile Bottom Navigation ===== */
+#mobile-bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    z-index: 50;
+}
+
+#mobile-bottom-nav a {
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+#mobile-bottom-nav a:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Add bottom padding to body so content isn't hidden behind fixed bottom nav */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 60px;
+    }
+}
+

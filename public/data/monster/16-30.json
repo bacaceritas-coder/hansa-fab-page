@@ -1,0 +1,165 @@
+[
+  {
+    "name": "Giant Rascal Rabbit",
+    "type": "None",
+    "level": 16,
+    "map_location": [
+      "Travia Valley",
+      "Crude Mountain Range"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Giant_Rascal_Rabbit"
+  },
+  {
+    "name": "(Giant)Moo Moo",
+    "type": "None",
+    "level": 16,
+    "map_location": [
+      "Upstream of Glasis River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Giant_Moo_Moo"
+  },
+  {
+    "name": "Knight Piya",
+    "type": "Physical",
+    "level": 16,
+    "map_location": [
+      "Forest of Silon",
+      "Outer Wall of Lime"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Knight_Piya"
+  },
+  {
+    "name": "Stiff Horse",
+    "type": "Wood",
+    "level": 17,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Stiff_Horse"
+  },
+  {
+    "name": "Wood Golem",
+    "type": "Wood",
+    "level": 18,
+    "map_location": [
+      "Upstream of Glasis River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Wood_Golem"
+  },
+  {
+    "name": "Windy",
+    "type": "None",
+    "level": 23,
+    "map_location": [
+      "Crude Mountain Range",
+      "Upstream of Glasis River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Windy"
+  },
+  {
+    "name": "Silky Joe the Boxer",
+    "type": "None",
+    "level": 23,
+    "map_location": [
+      "Adel Monastery",
+      "Forest of Silon"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Silky_Joe_the_Boxer"
+  },
+  {
+    "name": "Warrior Piya",
+    "type": "None",
+    "level": 24,
+    "map_location": [
+      "Forest of Silon",
+      "Outer Wall of Lime"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Warrior_Piya"
+  },
+  {
+    "name": "Nixie",
+    "type": "Water",
+    "level": 22,
+    "map_location": [
+      "Forest of Silon",
+      "Upstream of Glasis River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Nixie"
+  },
+  {
+    "name": "Happy Bah Bah",
+    "type": "None",
+    "level": 25,
+    "map_location": [
+      "Crude Mountain Range",
+      "Midstream of Mimir River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Happy_Bah_Bah"
+  },
+  {
+    "name": "Flying Pig (Boss)",
+    "type": "None",
+    "level": 26,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Flying_Pig_(Boss)"
+  },
+  {
+    "name": "Joe the Kick Boxer",
+    "type": "None",
+    "level": 26,
+    "map_location": [
+      "Adel Monastery",
+      "Forest of Silon"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Joe_the_Kick_Boxer"
+  },
+  {
+    "name": "Blue Plumber",
+    "type": "None",
+    "level": 27,
+    "map_location": [
+      "Forest of Silon",
+      "East of Laywook Forest",
+      "West of Laywook Forest"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Blue_Plumber"
+  },
+  {
+    "name": "(Skilled) Mage Piya",
+    "type": "Magical",
+    "level": 28,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Skilled_Mage_Piya"
+  },
+  {
+    "name": "(Skilled) Cleric Piya",
+    "type": "None",
+    "level": 29,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Skilled_Cleric_Piya"
+  },
+  {
+    "name": "Dancing Pumpkin",
+    "type": "Earth",
+    "level": 30,
+    "map_location": [
+      "Crude Dungeon 1F"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Dancing_Pumpkin"
+  },
+  {
+    "name": "(Influential) Knight Piya",
+    "type": "Physical",
+    "level": 30,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_image": "https://sealonline.fandom.com/wiki/Influential_Knight_Piya"
+  }
+]

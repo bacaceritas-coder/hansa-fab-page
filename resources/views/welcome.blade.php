@@ -47,7 +47,25 @@
                     <a href="#highlights" class="hover:text-purple-300 transition">Highlights</a>
                     <a href="#community" class="hover:text-purple-300 transition">Community</a>
                     <a href="#contact" class="hover:text-purple-300 transition">Contact</a>
+                    <a href="#support" class="hover:text-purple-300 transition">Support</a>
                     <a href="{{ route('tutorial') }}" class="text-purple-300 hover:text-purple-200 transition font-semibold">Tutorial</a>
+                </div>
+                <!-- Mobile menu toggle -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-purple-200 hover:text-purple-100 transition" aria-label="Toggle menu">
+                    ☰
+                </button>
+                <!-- Mobile menu dropdown -->
+                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 glass border-t border-white/10">
+                    <div class="flex flex-col p-4 gap-3 text-sm font-medium">
+                        <a href="#home" class="hover:text-purple-300 transition py-1">Home</a>
+                        <a href="#about" class="hover:text-purple-300 transition py-1">About</a>
+                        <a href="#schedule" class="hover:text-purple-300 transition py-1">Schedule</a>
+                        <a href="#highlights" class="hover:text-purple-300 transition py-1">Highlights</a>
+                        <a href="#community" class="hover:text-purple-300 transition py-1">Community</a>
+                        <a href="#contact" class="hover:text-purple-300 transition py-1">Contact</a>
+                        <a href="#support" class="hover:text-purple-300 transition py-1">Support</a>
+                        <a href="{{ route('tutorial') }}" class="text-purple-300 font-semibold py-1">Tutorial</a>
+                    </div>
                 </div>
 
                 <div class="flex items-center gap-3">
@@ -83,7 +101,7 @@
                     </p>
 
                     <p class="text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up delay-3">
-                        Welcome to my corner of the internet! I stream competitive games, chill RPGs,
+                        Welcome to my corner of the internet! I stream Enjoyable games, chill RPGs,
                         and everything in between. Pull up a chair, grab some snacks, and let's have
                         a great time together! 🎮✨
                     </p>
@@ -114,7 +132,7 @@
 
                         <!-- Floating stats -->
                         <div class="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 text-center animate-float-slow shadow-xl">
-                            <div class="font-display text-2xl font-bold text-cyan-300 count-number" data-count="300197 " data-suffix="">0</div>
+                            <div class="font-display text-2xl font-bold text-cyan-300 count-number" data-count="300671 " data-suffix="">0</div>
                             <div class="text-xs text-gray-400">Ditonton 🔥</div>
                         </div>
 
@@ -123,19 +141,19 @@
                         </div>
 
                         <div class="absolute top-1/3 -right-8 glass rounded-xl px-3 py-2 animate-float-slow shadow-lg">
-                            <div class="text-sm font-semibold">🔥 <span class="text-orange-300">Competitive</span></div>
+                            <div class="text-sm font-semibold">🔥 <span class="text-orange-300">Enjoyable</span></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Scroll indicator -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-gray-500 animate-bounce-soft">
+            {{-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-gray-500 animate-bounce-soft">
                 <div class="text-xs mb-1">Scroll down</div>
                 <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
-            </div>
+            </div> --}}
         </section>
 
         <!-- ======================= STATS BAR ======================= -->
@@ -245,7 +263,7 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     @php
                         $games = [
-                            ['name' => 'Seal Online', 'genre' => 'MMO RPG', 'hours' => 1000, 'icon' => '🎯', 'desc' => 'Ranked grind, clutches, and competitive energy'],
+                            ['name' => 'Seal Online', 'genre' => 'MMO RPG', 'hours' => 1000, 'icon' => '🎯', 'desc' => 'Ranked grind, clutches, and Enjoyable energy'],
                             ['name' => 'Ragnarok', 'genre' => 'RPG', 'hours' => 380, 'icon' => '⚔️', 'desc' => 'Boss battles, lore dives, and co-op adventures'],
                             // ['name' => 'Minecraft', 'genre' => 'Sandbox Survival', 'hours' => 340, 'icon' => '⛏️', 'desc' => 'Hardcore modes, building, and chill sessions'],
                             // ['name' => 'Cyberpunk 2077', 'genre' => 'Open World RPG', 'hours' => 150, 'icon' => '🌆', 'desc' => 'Night City adventures and deep storytelling'],
@@ -352,14 +370,40 @@
                     Your support keeps the content flowing and the community thriving!
                 </p>
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <button id="subscribe-btn"
+                    <button id="subscribe-btn" 
                             class="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 animate-gradient font-bold text-lg hover:scale-105 transition shadow-xl twitch-glow">
                         🔔 Subscribe Now
                     </button>
-                    <a href="https://twitch.tv/hansafab" target="_blank"
+                    <a href="https://discord.com/invite/VSKHQr9yk" target="_blank"
                        class="px-8 py-4 rounded-xl glass hover:bg-white/10 font-semibold hover:scale-105 transition">
                         💬 Join the Chat
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= SAWERIA SUPPORT ======================= -->
+        <section id="support" class="py-24 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4 reveal">DUKUNG <span class="text-gradient">HANSA FAB</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6 reveal"></div>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto reveal delay-1">
+                    Suka konten &amp; streaming-nya? Kamu bisa <strong class="text-purple-300">nyawer</strong>
+                    untuk mendukung channel ini agar tetap bisa bikin konten seru!
+                    Setiap dukungan sangat berarti. 💜
+                </p>
+
+                <a href="https://saweria.co/Hansafab" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 animate-gradient font-bold text-lg text-white hover:scale-105 transition shadow-xl reveal delay-2"
+                   style="box-shadow: 0 0 30px rgba(255, 90, 0, 0.3);">
+                    <span class="text-2xl">💸</span>
+                    Nyawer via Saweria
+                </a>
+            </br></br>
+                <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-gray-500 reveal delay-3">
+                    <span class="glass rounded-xl px-4 py-2">🙏 Semua dukungan diterima</span>
+                    <span class="glass rounded-xl px-4 py-2">🔥 Debug &amp; terima kasih di stream</span>
+                    <span class="glass rounded-xl px-4 py-2">💜 #HansaFab</span>
                 </div>
             </div>
         </section>
@@ -374,8 +418,8 @@
                     <p class="text-sm text-gray-400 mb-4">
                         For business inquiries, sponsorships, or collaborations:
                     </p>
-                    <a href="mailto:business@hansafab.com" class="font-display text-xl text-purple-300 hover:text-purple-200 transition hover:underline">
-                        📧 business@hansafab.com
+                    <a href="mailto:hansafabinfo@gmail.com" class="font-display text-xl text-purple-300 hover:text-purple-200 transition hover:underline">
+                        📧 hansafabinfo@gmail.com
                     </a>
                 </div>
 
@@ -395,11 +439,37 @@
             </div>
         </section>
 
+        <!-- ======================= MOBILE BOTTOM NAV ======================= -->
+        <div id="mobile-bottom-nav" class="md:hidden fixed bottom-0 inset-x-0 z-50 glass border-t border-white/10">
+            <div class="flex items-center justify-around py-2 px-2">
+                <a href="#home" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
+                    <span class="text-lg">🏠</span>
+                    <span>Home</span>
+                </a>
+                <a href="{{ route('tutorial') }}" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
+                    <span class="text-lg">🗡️</span>
+                    <span>Tutorial</span>
+                </a>
+                <a href="#schedule" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
+                    <span class="text-lg">📅</span>
+                    <span>Schedule</span>
+                </a>
+                <a href="#support" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
+                    <span class="text-lg">💜</span>
+                    <span>Support</span>
+                </a>
+                <a href="#contact" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
+                    <span class="text-lg">📧</span>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+
         <!-- ======================= FOOTER ======================= -->
         <footer class="py-8 px-4 border-t border-white/10">
             <div class="max-w-6xl mx-auto text-center text-sm text-gray-500">
                 <p class="mb-2">
-                    © {{ date('Y') }} Hansa Fab. All rights reserved.
+                    © {{ date('Y') }} Hansa Fab.
                     Made with 💜 by the Hansa Fab community.
                 </p>
                 <div class="flex justify-center items-center gap-3 text-xs text-purple-400/70">

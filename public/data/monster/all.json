@@ -1,0 +1,2243 @@
+[
+  {
+    "name": "Piya",
+    "type": "None",
+    "level": 1,
+    "map_location": [
+      "Forest of Silon",
+      "Upstream of Mimir River",
+      "Travia Valley",
+      "Elim",
+      "Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Piya",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/5/50/Piya.gif/revision/latest?cb=20080126085747"
+  },
+  {
+    "name": "Beanie",
+    "type": "None",
+    "level": 1,
+    "map_location": [
+      "Upstream of Mimir River",
+      "Travia Valley",
+      "Upstream of Glasis River",
+      "Elim",
+      "Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Beanie",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/9/9b/Beanie.gif/revision/latest?cb=20080128004721"
+  },
+  {
+    "name": "Treasure Chest",
+    "type": "Wood",
+    "level": 3,
+    "map_location": [
+      "Forest of Silon",
+      "Upstream of Mimir River",
+      "Travia Valley",
+      "Elim"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Treasure_Chest",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/6/67/Treasure_Chest.gif/revision/latest?cb=20080127091049"
+  },
+  {
+    "name": "Mushroom Boy",
+    "type": "None",
+    "level": 5,
+    "map_location": [
+      "Travia Valley"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mushroom_Boy",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/d/d4/Mushroom_Boy.gif/revision/latest?cb=20080128130057"
+  },
+  {
+    "name": "Q",
+    "type": "Water",
+    "level": 5,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Q",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/3/33/Q.gif/revision/latest?cb=20080130085526"
+  },
+  {
+    "name": "Moo Moo",
+    "type": "None",
+    "level": 6,
+    "map_location": [
+      "Forest of Silon",
+      "Upstream of Glasis River",
+      "Travia Valley",
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Moo_Moo",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/b/b1/Moo_Moo.gif/revision/latest?cb=20080130084838"
+  },
+  {
+    "name": "Worm-O",
+    "type": "Earth",
+    "level": 6,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Worm-O",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/a/a3/Worm-O.gif/revision/latest?cb=20080130090259"
+  },
+  {
+    "name": "Rascal Rabbit",
+    "type": "None",
+    "level": 8,
+    "map_location": [
+      "Forest of Silon",
+      "Upstream of Glasis River",
+      "Travia Valley",
+      "Land's End"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Rascal_Rabbit",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/25/Rascal_Rabbit.gif/revision/latest?cb=20080130085531"
+  },
+  {
+    "name": "Servant Mushroom",
+    "type": "None",
+    "level": 9,
+    "map_location": [
+      "Travia Valley"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Servant_Mushroom",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/20/Servant_Mushroom.gif/revision/latest?cb=20080130085554"
+  },
+  {
+    "name": "Moo Moo the Great",
+    "type": "None",
+    "level": 10,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Moo_Moo_the_Great",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/4/44/Moo_Moo_the_Great_%28Monster%29.gif/revision/latest?cb=20080130085619"
+  },
+  {
+    "name": "Red Plumber",
+    "type": "Fire",
+    "level": 11,
+    "map_location": [
+      "Forest of Silon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Red_Plumber",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/5/52/Red_Plumber.gif/revision/latest?cb=20080130085625"
+  },
+  {
+    "name": "Cranky Rooster",
+    "type": "None",
+    "level": 11,
+    "map_location": [
+      "Travia Valley"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cranky_Rooster_(Monster)",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/f/ff/Cranky_Rooster_%28Monster%29.gif/revision/latest?cb=20080130084047"
+  },
+  {
+    "name": "Flying Pig",
+    "type": "None",
+    "level": 12,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Flying_Pig",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/8/8d/Flying_Pig.gif/revision/latest?cb=20080130085649"
+  },
+  {
+    "name": "Queen Mushroom",
+    "type": "None",
+    "level": 12,
+    "map_location": [
+      "Travia Valley"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Queen_Mushroom",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/8/81/Queen_Mushroom.gif/revision/latest?cb=20080130085655"
+  },
+  {
+    "name": "Afro Tree",
+    "type": "Wood",
+    "level": 13,
+    "map_location": [
+      "Upstream of Mimir River",
+      "Travia Valley"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Afro_Tree",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/21/Afro_Tree.gif/revision/latest?cb=20080130085731"
+  },
+  {
+    "name": "Mage Piya",
+    "type": "Magical",
+    "level": 14,
+    "map_location": [
+      "Forest of Silon",
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mage_Piya",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/c/c3/Mage_Piya.gif/revision/latest?cb=20080130083631"
+  },
+  {
+    "name": "Cleric Piya",
+    "type": "None",
+    "level": 14,
+    "map_location": [
+      "Forest of Silon",
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cleric_Piya",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/f/fb/Cleric_Piya.gif/revision/latest?cb=20080219035005"
+  },
+  {
+    "name": "Giant Rascal Rabbit",
+    "type": "None",
+    "level": 16,
+    "map_location": [
+      "Travia Valley",
+      "Crude Mountain Range"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Giant_Rascal_Rabbit",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/c/c1/Giant_Rascal_Rabbit.gif/revision/latest?cb=20080201025207"
+  },
+  {
+    "name": "(Giant)Moo Moo",
+    "type": "None",
+    "level": 16,
+    "map_location": [
+      "Upstream of Glasis River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/(Giant)Moo_Moo",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/d/dd/Giant_Moo_Moo.gif/revision/latest?cb=20111204121709"
+  },
+  {
+    "name": "Knight Piya",
+    "type": "Physical",
+    "level": 16,
+    "map_location": [
+      "Forest of Silon",
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Knight_Piya",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/28/Knight_Piya.gif/revision/latest?cb=20090305135600"
+  },
+  {
+    "name": "Stiff Horse",
+    "type": "Wood",
+    "level": 17,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Stiff_Horse",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/9/9d/Stiff_Horse.gif/revision/latest?cb=20080201025519"
+  },
+  {
+    "name": "Wood Golem",
+    "type": "Wood",
+    "level": 18,
+    "map_location": [
+      "Upstream of Glasis River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Wood_Golem",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/c/c6/Wood_Golem.gif/revision/latest?cb=20080201025702"
+  },
+  {
+    "name": "Windy",
+    "type": "None",
+    "level": 23,
+    "map_location": [
+      "Crude Mountain Range",
+      "Upstream of Glasis River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Windy",
+    "image": "https://vignette.wikia.nocookie.net/sealonline/images/3/39/Nixie.gif/revision/latest?cb=20080201025810"
+  },
+  {
+    "name": "Silky Joe the Boxer",
+    "type": "None",
+    "level": 23,
+    "map_location": [
+      "Adel Monastery",
+      "Forest of Silon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Silky_Joe_the_Boxer",
+    "image": ""
+  },
+  {
+    "name": "Warrior Piya",
+    "type": "None",
+    "level": 24,
+    "map_location": [
+      "Forest of Silon",
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Warrior_Piya",
+    "image": ""
+  },
+  {
+    "name": "Nixie",
+    "type": "Water",
+    "level": 22,
+    "map_location": [
+      "Forest of Silon",
+      "Upstream of Glasis River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Nixie",
+    "image": ""
+  },
+  {
+    "name": "Happy Bah Bah",
+    "type": "None",
+    "level": 25,
+    "map_location": [
+      "Crude Mountain Range",
+      "Midstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Happy_Bah_Bah",
+    "image": ""
+  },
+  {
+    "name": "Flying Pig (Boss)",
+    "type": "None",
+    "level": 26,
+    "map_location": [
+      "Upstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Flying_Pig_(Boss)",
+    "image": ""
+  },
+  {
+    "name": "Joe the Kick Boxer",
+    "type": "None",
+    "level": 26,
+    "map_location": [
+      "Adel Monastery",
+      "Forest of Silon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Joe_the_Kick_Boxer",
+    "image": ""
+  },
+  {
+    "name": "Blue Plumber",
+    "type": "None",
+    "level": 27,
+    "map_location": [
+      "Forest of Silon",
+      "East of Laywook Forest",
+      "West of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Blue_Plumber",
+    "image": ""
+  },
+  {
+    "name": "(Skilled) Mage Piya",
+    "type": "Magical",
+    "level": 28,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Skilled_Mage_Piya",
+    "image": ""
+  },
+  {
+    "name": "(Skilled) Cleric Piya",
+    "type": "None",
+    "level": 29,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Skilled_Cleric_Piya",
+    "image": ""
+  },
+  {
+    "name": "Dancing Pumpkin",
+    "type": "Earth",
+    "level": 30,
+    "map_location": [
+      "Crude Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dancing_Pumpkin",
+    "image": ""
+  },
+  {
+    "name": "(Influential) Knight Piya",
+    "type": "Physical",
+    "level": 30,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Influential_Knight_Piya",
+    "image": ""
+  },
+  {
+    "name": "Baby Bear",
+    "type": "None",
+    "level": 31,
+    "map_location": [
+      "East of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Baby_Bear",
+    "image": ""
+  },
+  {
+    "name": "Gloomy Humbug",
+    "type": "None",
+    "level": 32,
+    "map_location": [
+      "Crude Mountain Range",
+      "Midstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Gloomy_Humbug",
+    "image": ""
+  },
+  {
+    "name": "Flora",
+    "type": "Wood",
+    "level": 33,
+    "map_location": [
+      "Midstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Flora_(Monster)",
+    "image": ""
+  },
+  {
+    "name": "Mama Bear",
+    "type": "None",
+    "level": 33,
+    "map_location": [
+      "East of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mama_Bear",
+    "image": ""
+  },
+  {
+    "name": "Crow",
+    "type": "Magical",
+    "level": 34,
+    "map_location": [
+      "Midstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Crow_(Monster)",
+    "image": ""
+  },
+  {
+    "name": "Tarantula",
+    "type": "Metal",
+    "level": 34,
+    "map_location": [
+      "Crude Dungeon 1F",
+      "Crude Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Tarantula",
+    "image": ""
+  },
+  {
+    "name": "Glora",
+    "type": "Wood",
+    "level": 35,
+    "map_location": [
+      "Midstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Glora",
+    "image": ""
+  },
+  {
+    "name": "(Influential) Warrior Piya",
+    "type": "None",
+    "level": 36,
+    "map_location": [
+      "Outer Wall of Lime"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Influential_Warrior_Piya",
+    "image": ""
+  },
+  {
+    "name": "Pumpkeener",
+    "type": "Earth",
+    "level": 37,
+    "map_location": [
+      "Crude Dungeon 1F",
+      "Crude Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Pumpkeener",
+    "image": ""
+  },
+  {
+    "name": "Traveling Cat in Boots",
+    "type": "Magical",
+    "level": 39,
+    "map_location": [
+      "Midstream of Mimir River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Traveling_Cat_in_Boots",
+    "image": ""
+  },
+  {
+    "name": "Blood Worm-O",
+    "type": "Earth",
+    "level": 39,
+    "map_location": [
+      "Silon-Aleph Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Blood_Worm-O",
+    "image": ""
+  },
+  {
+    "name": "Papa Bear",
+    "type": "None",
+    "level": 40,
+    "map_location": [
+      "East of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Papa_Bear",
+    "image": ""
+  },
+  {
+    "name": "Ghost Mage",
+    "type": "Magical",
+    "level": 42,
+    "map_location": [
+      "Crude Dungeon 1F",
+      "Crude Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ghost_Mage",
+    "image": ""
+  },
+  {
+    "name": "Head of Dullahan",
+    "type": "None",
+    "level": 42,
+    "map_location": [
+      "Forest of Herkaus",
+      "West of Laywook Forest",
+      "Crude Mountain Range"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Head_of_Dullahan",
+    "image": ""
+  },
+  {
+    "name": "Golden Plumber",
+    "type": "None",
+    "level": 45,
+    "map_location": [
+      "West of Laywook Forest",
+      "East of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Golden_Plumber",
+    "image": ""
+  },
+  {
+    "name": "Ghost Knight",
+    "type": "Physical",
+    "level": 45,
+    "map_location": [
+      "Crude Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ghost_Knight",
+    "image": ""
+  },
+  {
+    "name": "Pumpisto",
+    "type": "Earth",
+    "level": 45,
+    "map_location": [
+      "Silon-Aleph Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Pumpisto",
+    "image": ""
+  },
+  {
+    "name": "Forest Ogre",
+    "type": "Wood",
+    "level": 47,
+    "map_location": [
+      "East of Laywook Forest",
+      "West of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Forest_Ogre",
+    "image": ""
+  },
+  {
+    "name": "Tarantula Ben",
+    "type": "Metal",
+    "level": 48,
+    "map_location": [
+      "Crude Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Tarantula_Ben",
+    "image": ""
+  },
+  {
+    "name": "Tarantula Queen",
+    "type": "Metal",
+    "level": 50,
+    "map_location": [
+      "Crude Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Tarantula_Queen",
+    "image": ""
+  },
+  {
+    "name": "Eyez",
+    "type": "None",
+    "level": 51,
+    "map_location": [
+      "Clements Mine 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Eyez",
+    "image": ""
+  },
+  {
+    "name": "Steel Golem",
+    "type": "Metal",
+    "level": 51,
+    "map_location": [
+      "Land's End"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Steel_Golem",
+    "image": ""
+  },
+  {
+    "name": "Scorpy",
+    "type": "Darkness",
+    "level": 52,
+    "map_location": [
+      "Clements Mine 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Scorpy",
+    "image": ""
+  },
+  {
+    "name": "Samba Cactus",
+    "type": "Wood",
+    "level": 52,
+    "map_location": [
+      "Travia Mountain"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Samba_Cactus",
+    "image": ""
+  },
+  {
+    "name": "Conceited Ostrich",
+    "type": "None",
+    "level": 54,
+    "map_location": [
+      "Travia Mountain"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Conceited_Ostrich",
+    "image": ""
+  },
+  {
+    "name": "Knight of Darkness",
+    "type": "Darkness",
+    "level": 55,
+    "map_location": [
+      "Land's End"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Knight_of_Darkness",
+    "image": ""
+  },
+  {
+    "name": "Super Steel Golem",
+    "type": "Metal",
+    "level": 55,
+    "map_location": [
+      "Silon-Aleph Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Super_Steel_Golem",
+    "image": ""
+  },
+  {
+    "name": "Skullo",
+    "type": "Darkness",
+    "level": 56,
+    "map_location": [
+      "Clements Mine 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Skullo",
+    "image": ""
+  },
+  {
+    "name": "Cave Ogre",
+    "type": "Metal",
+    "level": 57,
+    "map_location": [
+      "Clements Mine 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cave_Ogre",
+    "image": ""
+  },
+  {
+    "name": "Sandy Windy",
+    "type": "Earth",
+    "level": 58,
+    "map_location": [
+      "Travia Mountain"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Sandy_Windy",
+    "image": ""
+  },
+  {
+    "name": "Abyss",
+    "type": "Darkness",
+    "level": 60,
+    "map_location": [
+      "Clements Mine 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Abyss",
+    "image": ""
+  },
+  {
+    "name": "Warrior of Darkness",
+    "type": "Darkness",
+    "level": 60,
+    "map_location": [
+      "Silon-Aleph Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Warrior_of_Darkness",
+    "image": ""
+  },
+  {
+    "name": "Mining Ant",
+    "type": "None",
+    "level": 60,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mining_Ant",
+    "image": ""
+  },
+  {
+    "name": "Meow-gician",
+    "type": "None",
+    "level": 61,
+    "map_location": [
+      "Travia Mountain"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Meow-gician",
+    "image": ""
+  },
+  {
+    "name": "Ruthless Skullo",
+    "type": "Darkness",
+    "level": 61,
+    "map_location": [
+      "Clements Mine 1F",
+      "Closed(Old) Mine"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ruthless_Skullo",
+    "image": ""
+  },
+  {
+    "name": "(Giant) Red Plumber",
+    "type": "None",
+    "level": 63,
+    "map_location": [
+      "East of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Giant_Red_Plumber",
+    "image": ""
+  },
+  {
+    "name": "Coal Mine Mole",
+    "type": "None",
+    "level": 63,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Coal_Mine_Mole",
+    "image": ""
+  },
+  {
+    "name": "Saloa",
+    "type": "Wood",
+    "level": 64,
+    "map_location": [
+      "Cross Lake"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Saloa",
+    "image": ""
+  },
+  {
+    "name": "Computer Freak",
+    "type": "Physical",
+    "level": 65,
+    "map_location": [
+      "West of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Computer_Freak",
+    "image": ""
+  },
+  {
+    "name": "Soldier Ant",
+    "type": "None",
+    "level": 65,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Soldier_Ant",
+    "image": ""
+  },
+  {
+    "name": "(Naive) Succubus",
+    "type": "None",
+    "level": 66,
+    "map_location": [
+      "East of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Naive_Succubus",
+    "image": ""
+  },
+  {
+    "name": "White Stiff Horse",
+    "type": "Wood",
+    "level": 67,
+    "map_location": [
+      "Cross Lake"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/White_Stiff_Horse",
+    "image": ""
+  },
+  {
+    "name": "Cool Boy",
+    "type": "None",
+    "level": 68,
+    "map_location": [
+      "West of Laywook Forest"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cool_Boy",
+    "image": ""
+  },
+  {
+    "name": "(Naive) Incubus",
+    "type": "None",
+    "level": 69,
+    "map_location": [
+      "East of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Naive_Incubus",
+    "image": ""
+  },
+  {
+    "name": "Soldier Fire Ant",
+    "type": "None",
+    "level": 69,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Soldier_Fire_Ant",
+    "image": ""
+  },
+  {
+    "name": "Aleph",
+    "type": "Water",
+    "level": 70,
+    "map_location": [
+      "Land's End",
+      "Aleph Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Aleph",
+    "image": ""
+  },
+  {
+    "name": "(Land Type) High Nixie",
+    "type": "None",
+    "level": 70,
+    "map_location": [
+      "West of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Land_Type_High_Nixie",
+    "image": ""
+  },
+  {
+    "name": "High Nixie",
+    "type": "Water",
+    "level": 71,
+    "map_location": [
+      "Land's End"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/High_Nixie",
+    "image": ""
+  },
+  {
+    "name": "Body of Dullahan",
+    "type": "None",
+    "level": 72,
+    "map_location": [
+      "Forest of Herkaus"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Body_of_Dullahan",
+    "image": ""
+  },
+  {
+    "name": "Peroa",
+    "type": "Wood",
+    "level": 72,
+    "map_location": [
+      "East of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Peroa",
+    "image": ""
+  },
+  {
+    "name": "Big Winged Bat",
+    "type": "None",
+    "level": 72,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Big_Winged_Bat",
+    "image": ""
+  },
+  {
+    "name": "Kinbara",
+    "type": "Earth",
+    "level": 73,
+    "map_location": [
+      "Forest of Herkaus"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Kinbara",
+    "image": ""
+  },
+  {
+    "name": "Gun",
+    "type": "Fire",
+    "level": 73,
+    "map_location": [
+      "Cross Lake"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Gun",
+    "image": ""
+  },
+  {
+    "name": "Sergeant Scorpy",
+    "type": "None",
+    "level": 74,
+    "map_location": [
+      "West of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Sergeant_Scorpy",
+    "image": ""
+  },
+  {
+    "name": "Big Mouth Bat",
+    "type": "None",
+    "level": 74,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Big_Mouth_Bat",
+    "image": ""
+  },
+  {
+    "name": "Succubus",
+    "type": "Darkness",
+    "level": 75,
+    "map_location": [
+      "Forest of Herkaus"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Succubus",
+    "image": ""
+  },
+  {
+    "name": "(Violent) Sandy Windy",
+    "type": "Earth",
+    "level": 77,
+    "map_location": [
+      "West of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/(Violent)_Sandy_Windy",
+    "image": ""
+  },
+  {
+    "name": "Incubus",
+    "type": "Darkness",
+    "level": 78,
+    "map_location": [
+      "Forest of Herkaus"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Incubus",
+    "image": ""
+  },
+  {
+    "name": "Cool Guy",
+    "type": "Water",
+    "level": 80,
+    "map_location": [
+      "Silon-Aleph Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cool_Guy",
+    "image": ""
+  },
+  {
+    "name": "Warrior Kinbara",
+    "type": "Metal",
+    "level": 80,
+    "map_location": [
+      "West of Sealed Island"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Warrior_Kinbara",
+    "image": ""
+  },
+  {
+    "name": "Queen Meroa",
+    "type": "Wood",
+    "level": 80,
+    "map_location": [
+      "Glasis Plains"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Queen_Meroa",
+    "image": ""
+  },
+  {
+    "name": "(Mutated) Aleph",
+    "type": "None",
+    "level": 81,
+    "map_location": [
+      "Sealed Island Cave",
+      "Aleph Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mutated_Aleph",
+    "image": ""
+  },
+  {
+    "name": "Snow Princess",
+    "type": "Water",
+    "level": 82,
+    "map_location": [
+      "Land's End"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Snow_Princess",
+    "image": ""
+  },
+  {
+    "name": "Bolt Arm Franken",
+    "type": "None",
+    "level": 82,
+    "map_location": [
+      "Antroden"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Bolt_Arm_Franken",
+    "image": ""
+  },
+  {
+    "name": "Solar (Monster)",
+    "type": "Wood",
+    "level": 83,
+    "map_location": [
+      "Downstream of Glasis River",
+      "Glasis Plains"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Solar_(Monster)",
+    "image": ""
+  },
+  {
+    "name": "Abuca",
+    "type": "Earth",
+    "level": 84,
+    "map_location": [
+      "Sealed Island Cave"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Abuca",
+    "image": ""
+  },
+  {
+    "name": "(Fanatic) High Nixie",
+    "type": "Water",
+    "level": 85,
+    "map_location": [
+      "Glasis Plains"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Fanatic_High_Nixie",
+    "image": ""
+  },
+  {
+    "name": "Dullahan",
+    "type": "None",
+    "level": 85,
+    "map_location": [
+      "Forest of Herkaus"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dullahan",
+    "image": ""
+  },
+  {
+    "name": "Platinum Plumber",
+    "type": "Metal",
+    "level": 86,
+    "map_location": [
+      "Aleph Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Platinum_Plumber",
+    "image": ""
+  },
+  {
+    "name": "Bubble Dragon",
+    "type": "Water",
+    "level": 87,
+    "map_location": [
+      "Downstream of Glasis River",
+      "Glasis Plains",
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Bubble_Dragon",
+    "image": ""
+  },
+  {
+    "name": "Cankura",
+    "type": "Earth",
+    "level": 88,
+    "map_location": [
+      "Aleph Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cankura",
+    "image": ""
+  },
+  {
+    "name": "Scissors Beetle",
+    "type": "Earth",
+    "level": 88,
+    "map_location": [
+      "Sealed Island Cave"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Scissors_Beetle",
+    "image": ""
+  },
+  {
+    "name": "Scorpy the General",
+    "type": "Darkness",
+    "level": 90,
+    "map_location": [
+      "Clements Mine 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Scorpy_the_General",
+    "image": ""
+  },
+  {
+    "name": "Ravaged Worm-O",
+    "type": "Water",
+    "level": 90,
+    "map_location": [
+      "Glasis Plains"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ravaged_Worm-O",
+    "image": ""
+  },
+  {
+    "name": "Dark Owlian",
+    "type": "Darkness",
+    "level": 90,
+    "map_location": [
+      "Black Orb Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dark_Owlian",
+    "image": ""
+  },
+  {
+    "name": "Bell(Monster)",
+    "type": "Water",
+    "level": 90,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Bell_(Monster)",
+    "image": ""
+  },
+  {
+    "name": "(Broken) Railor",
+    "type": "Metal",
+    "level": 91,
+    "map_location": [
+      "Sealed Island Cave"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%28Broken%29_Railor",
+    "image": ""
+  },
+  {
+    "name": "Creepy Humbug",
+    "type": "None",
+    "level": 92,
+    "map_location": [
+      "Aleph Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Creepy_Humbug",
+    "image": ""
+  },
+  {
+    "name": "Magical Nixie",
+    "type": "Water",
+    "level": 92,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Magical_Nixie",
+    "image": ""
+  },
+  {
+    "name": "Afro Rock",
+    "type": "Wood",
+    "level": 92,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Afro_Rock",
+    "image": ""
+  },
+  {
+    "name": "Rayshark the 3rd",
+    "type": "Water",
+    "level": 93,
+    "map_location": [
+      "Downstream of Glasis River",
+      "Glasis Plains"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Rayshark_the_3rd",
+    "image": ""
+  },
+  {
+    "name": "Dark Mariel",
+    "type": "Darkness",
+    "level": 93,
+    "map_location": [
+      "Black Orb Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dark_Mariel",
+    "image": ""
+  },
+  {
+    "name": "Edgy Queen Bee",
+    "type": "None",
+    "level": 94,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Edgy_Queen_Bee",
+    "image": ""
+  },
+  {
+    "name": "Nyx",
+    "type": "Wood",
+    "level": 94,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Nyx",
+    "image": ""
+  },
+  {
+    "name": "Malicen",
+    "type": "Darkness",
+    "level": 94,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Malicen",
+    "image": ""
+  },
+  {
+    "name": "TNT Skullo",
+    "type": "Darkness",
+    "level": 95,
+    "map_location": [
+      "Aleph Dungeon 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/TNT_Skullo",
+    "image": ""
+  },
+  {
+    "name": "Notorsonia",
+    "type": "None",
+    "level": 96,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Notorsonia",
+    "image": ""
+  },
+  {
+    "name": "Elegant Nixie",
+    "type": "Water",
+    "level": 96,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Elegant_Nixie",
+    "image": ""
+  },
+  {
+    "name": "Dark Gariel",
+    "type": "Darkness",
+    "level": 96,
+    "map_location": [
+      "Black Orb Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dark_Gariel",
+    "image": ""
+  },
+  {
+    "name": "Lemony Q",
+    "type": "",
+    "level": 97,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Lemony_Q",
+    "image": ""
+  },
+  {
+    "name": "[A]Bah Bah",
+    "type": "Fire",
+    "level": 97,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%5BA%5DBah_Bah",
+    "image": ""
+  },
+  {
+    "name": "Giant Octopus",
+    "type": "Earth",
+    "level": 97,
+    "map_location": [
+      "Downstream of Glasis River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Giant_Octopus",
+    "image": ""
+  },
+  {
+    "name": "Ghost Midnight",
+    "type": "Fire",
+    "level": 98,
+    "map_location": [
+      "Aleph Dungeon 1F",
+      "Aleph Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ghost_Midnight",
+    "image": ""
+  },
+  {
+    "name": "Devil Cow",
+    "type": "Darkness",
+    "level": 99,
+    "map_location": [
+      "Black Orb Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Devil_Cow",
+    "image": ""
+  },
+  {
+    "name": "Freaky angel",
+    "type": "Light",
+    "level": 99,
+    "map_location": [
+      "White Spirit Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Freaky_angel",
+    "image": ""
+  },
+  {
+    "name": "[B]Bah Bah",
+    "type": "None",
+    "level": 100,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/(A)Bah_Bah",
+    "image": ""
+  },
+  {
+    "name": "Kungfu Bok",
+    "type": "Physical",
+    "level": 100,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Kungfu_Bok",
+    "image": ""
+  },
+  {
+    "name": "Sphin-x-cor",
+    "type": "Darkness",
+    "level": 100,
+    "map_location": [
+      "Aleph Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Sphin-x-cor",
+    "image": ""
+  },
+  {
+    "name": "Hot Blooded Rock",
+    "type": "",
+    "level": 101,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Hot_Blooded_Rock",
+    "image": ""
+  },
+  {
+    "name": "[A]Humbug",
+    "type": "None",
+    "level": 102,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/(A)Humbug",
+    "image": ""
+  },
+  {
+    "name": "Passionate Servan",
+    "type": "Fire",
+    "level": 102,
+    "map_location": [
+      "Red Fire Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Passionate_Servan",
+    "image": ""
+  },
+  {
+    "name": "Crack Crab",
+    "type": "Fire",
+    "level": 103,
+    "map_location": [
+      "Downstream of Glasis River",
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Crack_Crab",
+    "image": ""
+  },
+  {
+    "name": "Raywell the 1st",
+    "type": "Darkness",
+    "level": 104,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Raywell_the_1st",
+    "image": ""
+  },
+  {
+    "name": "Chainsaw Zombie",
+    "type": "Darkness",
+    "level": 105,
+    "map_location": [
+      "Aleph Dungeon 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Chainsaw_Zombie",
+    "image": ""
+  },
+  {
+    "name": "Intense Sphinkcor",
+    "type": "",
+    "level": 105,
+    "map_location": [],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Intense_Sphinkcor",
+    "image": ""
+  },
+  {
+    "name": "Courageous Warrior Piya",
+    "type": "Fire",
+    "level": 105,
+    "map_location": [
+      "Red Fire Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Courageous_Warrior_Piya",
+    "image": ""
+  },
+  {
+    "name": "Voracious Crack Crab",
+    "type": "Water",
+    "level": 105,
+    "map_location": [
+      "Glasis Plains"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Voracious_Crack_Crab",
+    "image": ""
+  },
+  {
+    "name": "Ice Heart",
+    "type": "Magical",
+    "level": 107,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ice_Heart",
+    "image": ""
+  },
+  {
+    "name": "Rayshark the 2nd",
+    "type": "Water",
+    "level": 107,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Rayshark_the_2nd",
+    "image": ""
+  },
+  {
+    "name": "Lizzard Man",
+    "type": "None",
+    "level": 108,
+    "map_location": [
+      "Downstream of Glasis River"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Lizzard_Man",
+    "image": ""
+  },
+  {
+    "name": "[A]Kinbara",
+    "type": "Fire",
+    "level": 108,
+    "map_location": [
+      "Red Fire Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%5BA%5DKinbara",
+    "image": ""
+  },
+  {
+    "name": "Ice Spade",
+    "type": "Physical",
+    "level": 109,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ice_Spade",
+    "image": ""
+  },
+  {
+    "name": "Super Aquaman",
+    "type": "Earth",
+    "level": 109,
+    "map_location": [
+      "Nerais"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Super_Aquaman",
+    "image": ""
+  },
+  {
+    "name": "Chaos Gear",
+    "type": "Light",
+    "level": 110,
+    "map_location": [
+      "Forest of Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Chaos_Gear",
+    "image": ""
+  },
+  {
+    "name": "Holy Cranky Rooster",
+    "type": "Light",
+    "level": 110,
+    "map_location": [
+      "White Spirit Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Holy_Cranky_Rooster",
+    "image": ""
+  },
+  {
+    "name": "Ice Man(Shield)",
+    "type": "None",
+    "level": 110,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ice_Man%28Shield%29",
+    "image": ""
+  },
+  {
+    "name": "Ice Man(Sword)",
+    "type": "None",
+    "level": 110,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ice_Man%28Sword%29",
+    "image": ""
+  },
+  {
+    "name": "Wood Wood",
+    "type": "Wood",
+    "level": 110,
+    "map_location": [
+      "Forest of Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Wood_Wood",
+    "image": ""
+  },
+  {
+    "name": "Earth Dweller",
+    "type": "None",
+    "level": 111,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Earth_Dweller",
+    "image": ""
+  },
+  {
+    "name": "Hot-blooded Joe the Kick Boxer",
+    "type": "Fire",
+    "level": 111,
+    "map_location": [
+      "Red Fire Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Hot-blooded_Joe_the_Kick_Boxer",
+    "image": ""
+  },
+  {
+    "name": "Dwarf Saint",
+    "type": "Light",
+    "level": 112,
+    "map_location": [
+      "White Spirit Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dwarf_Saint",
+    "image": ""
+  },
+  {
+    "name": "Flames",
+    "type": "Fire",
+    "level": 113,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Flames",
+    "image": ""
+  },
+  {
+    "name": "Cold Aleph",
+    "type": "Water",
+    "level": 114,
+    "map_location": [
+      "Blue Water Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cold_Aleph",
+    "image": ""
+  },
+  {
+    "name": "Gariel",
+    "type": "Light",
+    "level": 115,
+    "map_location": [
+      "Forest of Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Gariel",
+    "image": ""
+  },
+  {
+    "name": "Ice Golem",
+    "type": "None",
+    "level": 115,
+    "map_location": [
+      "Ice Castle"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ice_Golem",
+    "image": ""
+  },
+  {
+    "name": "Saint Cow",
+    "type": "Light",
+    "level": 115,
+    "map_location": [
+      "White Spirit Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Saint_Cow",
+    "image": ""
+  },
+  {
+    "name": "Cold Nixie",
+    "type": "Water",
+    "level": 117,
+    "map_location": [
+      "Blue Water Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Cold_Nixie",
+    "image": ""
+  },
+  {
+    "name": "Mariel",
+    "type": "Light",
+    "level": 118,
+    "map_location": [
+      "Forest of Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mariel",
+    "image": ""
+  },
+  {
+    "name": "Elegant Snow Princess",
+    "type": "Water",
+    "level": 120,
+    "map_location": [
+      "Blue Water Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Elegant_Snow_Princess",
+    "image": ""
+  },
+  {
+    "name": "Legion",
+    "type": "Darkness",
+    "level": 120,
+    "map_location": [
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Legion",
+    "image": ""
+  },
+  {
+    "name": "Earth Spirit",
+    "type": "Earth",
+    "level": 120,
+    "map_location": [
+      "Mt. Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Earth_Spirit",
+    "image": ""
+  },
+  {
+    "name": "[A]Cankura",
+    "type": "Water",
+    "level": 123,
+    "map_location": [
+      "Blue Water Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%E3%80%8CA%E3%80%8DCankura",
+    "image": ""
+  },
+  {
+    "name": "Holy Cow",
+    "type": "Light",
+    "level": 123,
+    "map_location": [
+      "Forest of Cross"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Holy_Cow",
+    "image": ""
+  },
+  {
+    "name": "Marionette",
+    "type": "Wood",
+    "level": 124,
+    "map_location": [
+      "Upstream of Glasis River",
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Marionette",
+    "image": ""
+  },
+  {
+    "name": "Vengeful Yami",
+    "type": "Metal",
+    "level": 125,
+    "map_location": [
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Vengeful_Yami",
+    "image": ""
+  },
+  {
+    "name": "Mighty Soul Collector",
+    "type": "Darkness",
+    "level": 125,
+    "map_location": [
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mighty_Soul_Collector",
+    "image": ""
+  },
+  {
+    "name": "Dry Wood",
+    "type": "Wood",
+    "level": 126,
+    "map_location": [
+      "Green Wood Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dry_Wood",
+    "image": ""
+  },
+  {
+    "name": "Crook Pedron",
+    "type": "Darkness",
+    "level": 127,
+    "map_location": [
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Crook_Pedron",
+    "image": ""
+  },
+  {
+    "name": "Brown Stiff Horse",
+    "type": "Wood",
+    "level": 129,
+    "map_location": [
+      "Green Wood Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Brown_Stiff_Horse",
+    "image": ""
+  },
+  {
+    "name": "Mad Warrior Of Doom",
+    "type": "Darkness",
+    "level": 129,
+    "map_location": [
+      "Catacomb 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Mad_Warrior_Of_Doom",
+    "image": ""
+  },
+  {
+    "name": "Wolfman Beyond",
+    "type": "None",
+    "level": 130,
+    "map_location": [
+      "Upstream of Glasis River",
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Wolfman_Beyond",
+    "image": ""
+  },
+  {
+    "name": "Deranged Hezzling",
+    "type": "None",
+    "level": 131,
+    "map_location": [
+      "Esdelon Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Deranged_Hezzling",
+    "image": ""
+  },
+  {
+    "name": "[A]Afro Tree",
+    "type": "Wood",
+    "level": 132,
+    "map_location": [
+      "Green Wood Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%28A%29_Afro_Tree",
+    "image": ""
+  },
+  {
+    "name": "Hell Dog",
+    "type": "Fire",
+    "level": 133,
+    "map_location": [
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Hell_Dog",
+    "image": ""
+  },
+  {
+    "name": "Meroa",
+    "type": "Wood",
+    "level": 135,
+    "map_location": [
+      "Green Wood Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Meroa",
+    "image": ""
+  },
+  {
+    "name": "Rascal Rabbit Gladiator",
+    "type": "Fire",
+    "level": 135,
+    "map_location": [
+      "Esdelon Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Rascal_Rabbit_Gladiator",
+    "image": ""
+  },
+  {
+    "name": "Macho Zombie",
+    "type": "Darkness",
+    "level": 137,
+    "map_location": [
+      "Catacomb 1F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Macho_Zombie",
+    "image": ""
+  },
+  {
+    "name": "Rusty Steel Golem",
+    "type": "Metal",
+    "level": 138,
+    "map_location": [
+      "Yellow Iron Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Rusty_Steel_Golem",
+    "image": ""
+  },
+  {
+    "name": "Royal Guardian",
+    "type": "Darkness",
+    "level": 139,
+    "map_location": [
+      "Esdelon Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Royal_Guardian",
+    "image": ""
+  },
+  {
+    "name": "「Gawky」AquaKing Yamok",
+    "type": "Tree",
+    "level": 141,
+    "map_location": [
+      "Esdelon Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%E3%80%8CGawky%E3%80%8DAquaKing_Yamok",
+    "image": ""
+  },
+  {
+    "name": "Rusty Teddy Melter",
+    "type": "Metal",
+    "level": 141,
+    "map_location": [
+      "Yellow Iron Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Rusty_Teddy_Melter",
+    "image": ""
+  },
+  {
+    "name": "Grand Mummy",
+    "type": "Earth",
+    "level": 143,
+    "map_location": [
+      "Catacomb 1F",
+      "Catacomb 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Grand_Mummy",
+    "image": ""
+  },
+  {
+    "name": "Royal Warrior of Darkness(A)",
+    "type": "Metal",
+    "level": 144,
+    "map_location": [
+      "Yellow Iron Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Royal_Warrior_of_Darkness%28A%29",
+    "image": ""
+  },
+  {
+    "name": "Giant Rusty Golem",
+    "type": "Steel",
+    "level": 145,
+    "map_location": [
+      "Esdelon Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Giant_Rusty_Golem",
+    "image": ""
+  },
+  {
+    "name": "「Relentless」Koala",
+    "type": "Tree",
+    "level": 147,
+    "map_location": [
+      "Esdelon Dungeon"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%E3%80%8CRelentless%E3%80DKoala",
+    "image": ""
+  },
+  {
+    "name": "Royal Warrior of Darkness(B)",
+    "type": "Metal",
+    "level": 147,
+    "map_location": [
+      "Yellow Iron Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Royal_Warrior_of_Darkness%28B%29",
+    "image": ""
+  },
+  {
+    "name": "Gork",
+    "type": "Earth",
+    "level": 150,
+    "map_location": [
+      "Catacomb 1F",
+      "Catacomb 2F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Gork",
+    "image": ""
+  },
+  {
+    "name": "Hezzling",
+    "type": "Earth",
+    "level": 150,
+    "map_location": [
+      "Brown Soil Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Hezzling",
+    "image": ""
+  },
+  {
+    "name": "Deranged Titan Skull",
+    "type": "Steel",
+    "level": 151,
+    "map_location": [
+      "Southern Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Deranged_Titan_Skull",
+    "image": ""
+  },
+  {
+    "name": "Dog Brutal Crab",
+    "type": "None",
+    "level": 152,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dog_Brutal_Crab",
+    "image": ""
+  },
+  {
+    "name": "Outerspace Boomerang Warrior",
+    "type": "None",
+    "level": 152,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Outerspace_Boomerang_Warrior",
+    "image": ""
+  },
+  {
+    "name": "Dry Sphin-x-cor",
+    "type": "Earth",
+    "level": 153,
+    "map_location": [
+      "Brown Soil Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Dry_Sphin-x-cor",
+    "image": ""
+  },
+  {
+    "name": "Soul Collector",
+    "type": "Darkness",
+    "level": 153,
+    "map_location": [
+      "Forest of Death"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Soul_Collector",
+    "image": ""
+  },
+  {
+    "name": "Pumped Zombie",
+    "type": "None",
+    "level": 154,
+    "map_location": [
+      "West of Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Pumped_Zombie",
+    "image": ""
+  },
+  {
+    "name": "[Experienced]Pedron",
+    "type": "None",
+    "level": 155,
+    "map_location": [
+      "Catacomb 2F",
+      "Catacomb 3F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%5BExperienced%5DPedron",
+    "image": ""
+  },
+  {
+    "name": "Sand Storm",
+    "type": "Earth",
+    "level": 156,
+    "map_location": [
+      "Brown Soil Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Sand_Storm",
+    "image": ""
+  },
+  {
+    "name": "Fire Warlock",
+    "type": "None",
+    "level": 156,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Fire_Warlock",
+    "image": ""
+  },
+  {
+    "name": "Queen Bee",
+    "type": "Earth",
+    "level": 156,
+    "map_location": [
+      "Brown Soil Zone"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Queen_Bee",
+    "image": ""
+  },
+  {
+    "name": "Spearman Dark World",
+    "type": "None",
+    "level": 156,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Spearman_Dark_World",
+    "image": ""
+  },
+  {
+    "name": "Outerspace Axe Warrior",
+    "type": "None",
+    "level": 157,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Outerspace_Axe_Warrior",
+    "image": ""
+  },
+  {
+    "name": "[Violent]Pedron",
+    "type": "None",
+    "level": 157,
+    "map_location": [
+      "Catacomb 2F",
+      "Catacomb 3F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%5BViolent%5DPedron",
+    "image": ""
+  },
+  {
+    "name": "Berserker from Outerdimension",
+    "type": "None",
+    "level": 158,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Berserker_from_Outerdimension",
+    "image": ""
+  },
+  {
+    "name": "Lizzard Warrior",
+    "type": "Water",
+    "level": 159,
+    "map_location": [
+      "Eastern Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Lizzard_Warrior",
+    "image": ""
+  },
+  {
+    "name": "「Protector」Cankura",
+    "type": "Steel",
+    "level": 156,
+    "map_location": [
+      "Southern Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%E3%80%8CProtector%E3%80%8DCankura",
+    "image": ""
+  },
+  {
+    "name": "Servanguy",
+    "type": "Wood",
+    "level": 160,
+    "map_location": [
+      "Southern Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Servanguy",
+    "image": ""
+  },
+  {
+    "name": "Ice Warlock",
+    "type": "None",
+    "level": 160,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Ice_Warlock",
+    "image": ""
+  },
+  {
+    "name": "Gentle Pumpkin",
+    "type": "Earth",
+    "level": 161,
+    "map_location": [
+      "Forest of Death"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Gentle_Pumpkin",
+    "image": ""
+  },
+  {
+    "name": "「Super Crook」Pedron",
+    "type": "Darkness",
+    "level": 163,
+    "map_location": [
+      "Eastern Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%E3%80%8CSuper_Crook%E3%80%8DPedron",
+    "image": ""
+  },
+  {
+    "name": "Immortal Hammer Champion",
+    "type": "None",
+    "level": 163,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Immortal_Hammer_Champion",
+    "image": ""
+  },
+  {
+    "name": "「Hard」Giant Beetle",
+    "type": "None",
+    "level": 164,
+    "map_location": [
+      "Catacomb 3F"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/%E3%80%8CHard%E3%80%8DGiant_Beetle",
+    "image": ""
+  },
+  {
+    "name": "Bird Wife",
+    "type": "None",
+    "level": 164,
+    "map_location": [
+      "Western Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Bird_Wife",
+    "image": ""
+  },
+  {
+    "name": "Outer Dimension Soul River",
+    "type": "None",
+    "level": 164,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Outer_Dimension_Soul_River",
+    "image": ""
+  },
+  {
+    "name": "Stormy Kinbara",
+    "type": "Earth",
+    "level": 165,
+    "map_location": [
+      "Eastern Red Soil"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Stormy_Kinbara",
+    "image": ""
+  },
+  {
+    "name": "Outer Dimension Archmage",
+    "type": "None",
+    "level": 165,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Outer_Dimension_Archmage",
+    "image": ""
+  },
+  {
+    "name": "Lava Apparition of Fire",
+    "type": "None",
+    "level": 165,
+    "map_location": [
+      "Sky Island Alcanez"
+    ],
+    "link_wiki": "https://sealonline.fandom.com/wiki/Lava_Apparition_of_Fire",
+    "image": ""
+  }
+]

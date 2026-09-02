@@ -211,4 +211,22 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         type();
     }
+
+    // === Mobile menu toggle ===
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            this.textContent = isHidden ? '☰' : '✕';
+        });
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+    }
 });
