@@ -72,8 +72,17 @@ jobs:
           ls -lah storage/logs || true
           cat storage/logs/laravel.log || true
 
-          echo "===== TEST HOMEPAGE ====="
-          curl -i http://127.0.0.1:8000/ || true
+          echo "===== ROUTES ====="
+          php artisan route:list
+
+          echo "===== WELCOME VIEW ====="
+          php artisan view:cache || true
+
+          echo "===== TEST HOMEPAGE BODY ====="
+          curl -sS http://127.0.0.1:8000/ -o /tmp/homepage.html || true
+
+          echo "===== HOMEPAGE RESPONSE ====="
+          cat /tmp/homepage.html
 
           echo "===== LARAVEL LOG AFTER REQUEST ====="
           cat storage/logs/laravel.log || true
