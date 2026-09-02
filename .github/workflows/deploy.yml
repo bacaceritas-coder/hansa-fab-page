@@ -48,8 +48,8 @@ jobs:
           cp .env.example .env
           php artisan key:generate
 
-          # GitHub Pages hanya membutuhkan HTML statis.
-          # Tidak perlu session database.
+          # Website akan menjadi static HTML.
+          # Tidak membutuhkan session/database.
           sed -i 's/^SESSION_DRIVER=.*/SESSION_DRIVER=array/' .env
 
           echo "===== ENV ====="
@@ -65,7 +65,6 @@ jobs:
         run: |
           set -e
 
-          mkdir -p dist
           mkdir -p dist/tutorial
           mkdir -p dist/masak-pot
 
@@ -76,25 +75,7 @@ jobs:
           php artisan view:cache
 
           echo "========================================"
-          echo "GIT COMMIT"
-          echo "========================================"
-
-          git log -1 --oneline
-
-          echo "========================================"
-          echo "WELCOME TITLE"
-          echo "========================================"
-
-          grep -n "<title>" resources/views/welcome.blade.php
-
-          echo "========================================"
-          echo "VITE MANIFEST"
-          echo "========================================"
-
-          cat public/build/manifest.json
-
-          echo "========================================"
-          echo "START LARAVEL SERVER"
+          echo "START LARAVEL"
           echo "========================================"
 
           php artisan serve \
@@ -106,10 +87,7 @@ jobs:
 
           sleep 5
 
-          echo "========================================"
-          echo "LARAVEL SERVER LOG"
-          echo "========================================"
-
+          echo "===== LARAVEL LOG ====="
           cat /tmp/laravel.log || true
 
           echo "========================================"
@@ -124,11 +102,9 @@ jobs:
           echo "HTTP STATUS: $STATUS"
 
           if [ "$STATUS" != "200" ]; then
-            echo ""
-            echo "===== HOMEPAGE RESPONSE ====="
+            echo "===== HOMEPAGE ERROR ====="
             cat dist/index.html || true
 
-            echo ""
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
 
@@ -137,12 +113,7 @@ jobs:
           fi
 
           echo "===== HOMEPAGE TITLE ====="
-
-          grep -n "<title>" dist/index.html
-
-          echo "===== HOMEPAGE HANSA FAB ====="
-
-          grep -n -m 5 "Hansa Fab" dist/index.html || true
+          grep -n "<title>" dist/index.html || true
 
           echo "========================================"
           echo "GENERATE TUTORIAL"
@@ -156,11 +127,9 @@ jobs:
           echo "HTTP STATUS: $STATUS"
 
           if [ "$STATUS" != "200" ]; then
-            echo ""
-            echo "===== TUTORIAL RESPONSE ====="
+            echo "===== TUTORIAL ERROR ====="
             cat dist/tutorial/index.html || true
 
-            echo ""
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
 
@@ -180,11 +149,9 @@ jobs:
           echo "HTTP STATUS: $STATUS"
 
           if [ "$STATUS" != "200" ]; then
-            echo ""
-            echo "===== MASAK POT RESPONSE ====="
+            echo "===== MASAK POT ERROR ====="
             cat dist/masak-pot/index.html || true
 
-            echo ""
             echo "===== LARAVEL LOG ====="
             cat /tmp/laravel.log || true
 
@@ -195,7 +162,7 @@ jobs:
           kill $LARAVEL_PID || true
 
           echo "========================================"
-          echo "COPY BUILD ASSETS"
+          echo "COPY VITE BUILD"
           echo "========================================"
 
           cp -r public/build dist/build
@@ -225,28 +192,62 @@ jobs:
           fi
 
           echo "========================================"
+          echo "FIX GITHUB PAGES BASE PATH"
+          echo "========================================"
+
+          # GitHub Pages project site menggunakan:
+          # /hansa-fab-page/
+          #
+          # Mengubah URL root seperti:
+          # /build/...
+          # /css/...
+          # /js/...
+          # /data/...
+          # /tutorial
+          #
+          # menjadi:
+          # /hansa-fab-page/build/...
+          # /hansa-fab-page/css/...
+          # /hansa-fab-page/js/...
+          # /hansa-fab-page/data/...
+          # /hansa-fab-page/tutorial/
+
+          find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -print0 |
+          xargs -0 sed -i \
+            -e 's|href="/build/|href="/hansa-fab-page/build/|g' \
+            -e 's|src="/build/|src="/hansa-fab-page/build/|g' \
+            -e 's|href="/css/|href="/hansa-fab-page/css/|g' \
+            -e 's|src="/css/|src="/hansa-fab-page/css/|g' \
+            -e 's|href="/js/|href="/hansa-fab-page/js/|g' \
+            -e 's|src="/js/|src="/hansa-fab-page/js/|g' \
+            -e 's|href="/data/|href="/hansa-fab-page/data/|g' \
+            -e 's|src="/data/|src="/hansa-fab-page/data/|g' \
+            -e 's|href="/tutorial"|href="/hansa-fab-page/tutorial/"|g' \
+            -e 's|href="/masak-pot"|href="/hansa-fab-page/masak-pot/"|g'
+
+          echo "========================================"
           echo "FINAL ARTIFACT"
           echo "========================================"
 
           find dist -maxdepth 5 -type f -print
 
           echo "========================================"
-          echo "CHECK INDEX FILE"
+          echo "CHECK FILES"
           echo "========================================"
 
           ls -lh dist/index.html
-
-          echo "========================================"
-          echo "CHECK TUTORIAL"
-          echo "========================================"
-
           ls -lh dist/tutorial/index.html
-
-          echo "========================================"
-          echo "CHECK MASAK POT"
-          echo "========================================"
-
           ls -lh dist/masak-pot/index.html
+
+          echo "========================================"
+          echo "CHECK BASE PATH"
+          echo "========================================"
+
+          echo "--- Homepage ---"
+          grep -o 'href="/hansa-fab-page/[^"]*"' dist/index.html | head -20 || true
+
+          echo "--- Tutorial link ---"
+          grep -n "tutorial" dist/index.html | head -10 || true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
