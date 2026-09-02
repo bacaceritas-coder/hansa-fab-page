@@ -296,8 +296,8 @@
                 const form = document.getElementById('monster-form');
 
                 // Single file path - all monster data in one file
-                const MONSTER_DATA_FILE = 'data/monster/all.json';
-                const DISABLE_DATA_FILE = 'data/disable.json';
+                const MONSTER_DATA_FILE = '../data/monster/all.json';
+                const DISABLE_DATA_FILE = '../data/disable.json';
 
                 // ===== Penalty Matrix =====
                 const PENALTY_MATRIX = {
