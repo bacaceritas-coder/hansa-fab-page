@@ -489,6 +489,10 @@
                     const end = start + PER_PAGE;
                     const pageMonsters = sortedMonsters.slice(start, end);
                     const recommended = getRecommendedMonster();
+                    // Tandai SEMUA monster yang levelnya sama dengan level player (param).
+                    // Jika tidak ada monster dengan level persis, fallback ke level monster rekomendasi.
+                    const hasExactMatch = sortedMonsters.some((m) => m.level === playerLevel);
+                    const recommendedLevel = hasExactMatch ? playerLevel : (recommended ? recommended.level : null);
 
                     monsterListEl.innerHTML = '';
 
@@ -503,6 +507,8 @@
 
                         const locations = monster.map_location ? monster.map_location.join(', ') : '-';
 
+                        const isRecommended = recommendedLevel !== null && monster.level === recommendedLevel;
+
                         card.innerHTML = `
                             <div class="w-12 h-12 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-xl shrink-0">
                                 👾
@@ -510,7 +516,7 @@
                             <div class="flex-1 min-w-0">
                                 <div class="flex items-center gap-2">
                                     <span class="font-semibold text-sm text-[#2b2b27] truncate">${monster.name}</span>
-                                    ${recommended && recommended.name === monster.name ? '<span class="text-[10px] px-2 py-0.5 rounded-full bg-green-100 text-green-700 border border-green-300 whitespace-nowrap">Rekomendasi</span>' : ''}
+                                    ${isRecommended ? '<span class="text-[10px] px-2 py-0.5 rounded-full bg-green-100 text-green-700 border border-green-300 whitespace-nowrap">Rekomendasi</span>' : ''}
                                 </div>
                                 <p class="text-xs text-[#8a8068] mt-0.5">Level: ${monster.level}</p>
                             </div>
