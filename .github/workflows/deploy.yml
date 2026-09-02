@@ -52,30 +52,31 @@ jobs:
 
       - name: Prepare static site
         run: |
-          mkdir -p dist/tutorial
-          mkdir -p dist/masak-pot
+          mkdir -p dist
 
           php artisan serve --host=127.0.0.1 --port=8000 > /tmp/laravel.log 2>&1 &
 
           sleep 5
 
-          curl -f http://127.0.0.1:8000/ -o dist/index.html
-          curl -f http://127.0.0.1:8000/tutorial -o dist/tutorial/index.html
-          curl -f http://127.0.0.1:8000/masak-pot -o dist/masak-pot/index.html
+          echo "===== SERVER LOG ====="
+          cat /tmp/laravel.log
 
-          cp -r public/build dist/build
-          cp -r public/data dist/data
+          echo "===== LARAVEL STATUS ====="
+          php artisan about || true
 
-          if [ -d public/css ]; then
-            cp -r public/css dist/css
-          fi
+          echo "===== VITE MANIFEST ====="
+          ls -lah public/build || true
+          cat public/build/manifest.json || true
 
-          if [ -d public/js ]; then
-            cp -r public/js dist/js
-          fi
+          echo "===== STORAGE LOG ====="
+          ls -lah storage/logs || true
+          cat storage/logs/laravel.log || true
 
-          echo "===== DIST CONTENT ====="
-          find dist -maxdepth 3 -type f | sort
+          echo "===== TEST HOMEPAGE ====="
+          curl -i http://127.0.0.1:8000/ || true
+
+          echo "===== LARAVEL LOG AFTER REQUEST ====="
+          cat storage/logs/laravel.log || true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
