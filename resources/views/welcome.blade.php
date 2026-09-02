@@ -48,7 +48,7 @@
                     <a href="#community" class="hover:text-purple-300 transition">Community</a>
                     <a href="#contact" class="hover:text-purple-300 transition">Contact</a>
                     <a href="#support" class="hover:text-purple-300 transition">Support</a>
-                    <a href="{{ route('tutorial') }}" class="text-purple-300 hover:text-purple-200 transition font-semibold">Tutorial</a>
+                    <a href="/tutorial" class="text-purple-300 hover:text-purple-200 transition font-semibold">Tutorial</a>
                 </div>
                 <!-- Mobile menu toggle -->
                 <button id="mobile-menu-btn" class="md:hidden text-2xl text-purple-200 hover:text-purple-100 transition" aria-label="Toggle menu">
@@ -64,7 +64,7 @@
                         <a href="#community" class="hover:text-purple-300 transition py-1">Community</a>
                         <a href="#contact" class="hover:text-purple-300 transition py-1">Contact</a>
                         <a href="#support" class="hover:text-purple-300 transition py-1">Support</a>
-                        <a href="{{ route('tutorial') }}" class="text-purple-300 font-semibold py-1">Tutorial</a>
+                        <a href="/tutorial" class="text-purple-300 font-semibold py-1">Tutorial</a>
                     </div>
                 </div>
 
@@ -446,7 +446,7 @@
                     <span class="text-lg">🏠</span>
                     <span>Home</span>
                 </a>
-                <a href="{{ route('tutorial') }}" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
+                <a href="/tutorial" class="flex flex-col items-center gap-0.5 text-xs text-purple-200 hover:text-purple-100 transition">
                     <span class="text-lg">🗡️</span>
                     <span>Tutorial</span>
                 </a>
@@ -483,6 +483,6 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/welcome.js') }}"></script>
+        <script src="/js/welcome.js"></script>
     </body>
 </html>
