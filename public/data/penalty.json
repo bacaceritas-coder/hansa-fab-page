@@ -1,0 +1,45 @@
+{
+  "v1": {
+    "exp_penalty": [],
+    "drop_penalty": []
+  },
+  "v2": {
+    "exp_penalty": [],
+    "drop_penalty": []
+  },
+  "v3": {
+    "exp_penalty": [],
+    "drop_penalty": []
+  },
+  "v4": {
+    "exp_penalty": [],
+    "drop_penalty": []
+  },
+  "v5": {
+    "exp_penalty": [
+      { "min_level_difference": 1, "max_level_difference": 29, "percentage": 100 },
+      { "min_level_difference": 30, "max_level_difference": 34, "percentage": 95 },
+      { "min_level_difference": 35, "max_level_difference": 39, "percentage": 85 },
+      { "min_level_difference": 40, "max_level_difference": 44, "percentage": 75 },
+      { "min_level_difference": 45, "max_level_difference": 54, "percentage": 65 },
+      { "min_level_difference": 55, "max_level_difference": 59, "percentage": 35 },
+      { "min_level_difference": 60, "max_level_difference": null, "percentage": 5 }
+    ],
+    "drop_penalty": [
+      { "min_level_difference": 1, "max_level_difference": 30, "percentage": 100 },
+      { "min_level_difference": 31, "max_level_difference": 34, "percentage": 85 },
+      { "min_level_difference": 35, "max_level_difference": 39, "percentage": 65 },
+      { "min_level_difference": 40, "max_level_difference": 49, "percentage": 45 },
+      { "min_level_difference": 50, "max_level_difference": 54, "percentage": 25 },
+      { "min_level_difference": 55, "max_level_difference": null, "percentage": 5 }
+    ]
+  },
+  "v6": {
+    "exp_penalty": [],
+    "drop_penalty": []
+  },
+  "v7": {
+    "exp_penalty": [],
+    "drop_penalty": []
+  }
+}

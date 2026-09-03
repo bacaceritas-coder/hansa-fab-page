@@ -1,0 +1,29 @@
+{
+  "default": {
+    "Beginner": "physical",
+    "Knight": "physical",
+    "Warrior": "physical",
+    "Priest": "hybrid",
+    "Mage": "magical",
+    "Crafmant": "physical",
+    "Jester": "hybrid",
+    "Hunter": "hybrid"
+  },
+  "servers": {
+    "v1": {},
+    "v2": {},
+    "v3": {},
+    "v4": {},
+    "v5": {
+    "Beginner": "physical",
+    "Knight": "physical",
+    "Warrior": "physical",
+    "Priest": "hybrid",
+    "Mage": "magical",
+    "Crafmant": "physical",
+    "Jester": "hybrid"
+    },
+    "v6": {},
+    "v7": {}
+  }
+}

@@ -1,0 +1,10 @@
+
+    "Beginner": "physical",
+    "Knight": "physical",
+    "Warrior": "physical",
+    "Priest": "hybrid",
+    "Mage": "magical",
+    "Crafmant": "physical",
+    "Jester": "hybrid",
+    "Hunter": "hybrid",
+    "Cook": "physical"

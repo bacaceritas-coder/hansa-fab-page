@@ -1,0 +1,139 @@
+{
+  "source": {
+    "name": "Seal Online Wiki - Element",
+    "url": "https://sealonline.fandom.com/wiki/Element",
+    "description": "Element damage matrix from weapon element (row) against monster element (column).",
+    "standard_damage": "100%"
+  },
+  "elements": [
+    "fire",
+    "steel",
+    "wood",
+    "earth",
+    "water",
+    "darkness",
+    "light",
+    "physical",
+    "magical"
+  ],
+  "display_names": {
+    "fire": "Fire",
+    "steel": "Steel (Iron)",
+    "wood": "Wood (Tree)",
+    "earth": "Earth",
+    "water": "Water",
+    "darkness": "Darkness",
+    "light": "Light",
+    "physical": "Physical",
+    "magical": "Magical"
+  },
+  "damage_matrix": {
+    "fire": {
+      "fire": 50,
+      "steel": 150,
+      "wood": 125,
+      "earth": 75,
+      "water": 25,
+      "darkness": 100,
+      "light": 100,
+      "physical": 200,
+      "magical": 100
+    },
+    "steel": {
+      "fire": 25,
+      "steel": 50,
+      "wood": 150,
+      "earth": 125,
+      "water": 75,
+      "darkness": 100,
+      "light": 100,
+      "physical": 200,
+      "magical": 100
+    },
+    "wood": {
+      "fire": 75,
+      "steel": 25,
+      "wood": 50,
+      "earth": 150,
+      "water": 125,
+      "darkness": 100,
+      "light": 100,
+      "physical": 200,
+      "magical": 100
+    },
+    "earth": {
+      "fire": 125,
+      "steel": 75,
+      "wood": 25,
+      "earth": 50,
+      "water": 150,
+      "darkness": 100,
+      "light": 100,
+      "physical": 200,
+      "magical": 100
+    },
+    "water": {
+      "fire": 150,
+      "steel": 125,
+      "wood": 75,
+      "earth": 25,
+      "water": 50,
+      "darkness": 100,
+      "light": 100,
+      "physical": 200,
+      "magical": 100
+    },
+    "darkness": {
+      "fire": 100,
+      "steel": 100,
+      "wood": 100,
+      "earth": 100,
+      "water": 100,
+      "darkness": 50,
+      "light": 150,
+      "physical": 200,
+      "magical": 100
+    },
+    "light": {
+      "fire": 100,
+      "steel": 100,
+      "wood": 100,
+      "earth": 100,
+      "water": 100,
+      "darkness": 150,
+      "light": 50,
+      "physical": 200,
+      "magical": 100
+    },
+    "physical": {
+      "fire": 100,
+      "steel": 100,
+      "wood": 100,
+      "earth": 100,
+      "water": 100,
+      "darkness": 100,
+      "light": 100,
+      "physical": 10,
+      "magical": 200
+    },
+    "magical": {
+      "fire": 100,
+      "steel": 100,
+      "wood": 100,
+      "earth": 100,
+      "water": 100,
+      "darkness": 100,
+      "light": 100,
+      "physical": 200,
+      "magical": 10
+    }
+  },
+  "rules": [
+    "Rows represent the weapon/attack element.",
+    "Columns represent the monster element.",
+    "100% is standard damage.",
+    "Using the same elemental type against the same elemental monster generally results in 50% damage.",
+    "Elemental attacks against Physical monsters are reduced unless using magic.",
+    "Values are represented as percentages without the % symbol for easier calculation in code."
+  ]
+}

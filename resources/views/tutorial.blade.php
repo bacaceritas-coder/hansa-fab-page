@@ -116,23 +116,14 @@
                         </label>
                         <select id="job_base" name="job_base" required
                                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-[#e9e9ff] focus:outline-none focus:border-purple-500 transition placeholder-gray-500 appearance-none cursor-pointer">
-                            <option value="" disabled class="font-bold text-black bg-white">Pilih Job Base...</option>
-                            <option value="Beginner" selected class="font-bold text-black bg-white">Beginner</option>
-                            <option value="Knight" class="font-bold text-black bg-white">Knight</option>
-                            <option value="Warrior" class="font-bold text-black bg-white">Warrior</option>
-                            <option value="Priest" class="font-bold text-black bg-white">Priest</option>
-                            <option value="Mage" class="font-bold text-black bg-white">Mage</option>
-                            <option value="Crafmant" class="font-bold text-black bg-white">Crafmant</option>
-                            <option value="Jester" class="font-bold text-black bg-white">Jester</option>
-                            <option value="Hunter" class="font-bold text-black bg-white">Hunter</option>
-                            <option value="Cook" class="font-bold text-black bg-white">Cook</option>
+                            <option value="" disabled selected class="font-bold text-black bg-white">Pilih Job Base...</option>
                         </select>
                     </div>
 
                     <!-- Level -->
                     <div>
                         <label for="level" class="block text-sm font-semibold text-purple-200 mb-2">
-                            Level
+                            Level Karakter
                         </label>
 <input id="level" name="level" type="number" min="1" max="371" step="1" value="1"
                                 placeholder="Masukkan Level (contoh: 150, max 371)"
@@ -152,7 +143,7 @@
 
 <!-- ======================= RESULT COMPONENT ======================= -->
         <section class="pb-24 px-4">
-            <div id="result-box" class="max-w-7xl mx-auto">
+            <div id="result-box" class="max-w-7xl mx-auto hidden">
 
                 <!-- Two-column layout (game-style panel) -->
                 <div class="grid lg:grid-cols-3 gap-6 items-start">
@@ -206,12 +197,29 @@
                                                 <span id="detail-disable-badge" class="hidden text-[11px] px-2.5 py-1 rounded-full bg-red-100 text-red-700 border border-red-300 font-bold">Disable</span>
                                             </div>
                                             <p id="detail-level" class="text-sm text-[#8a8068] mt-1"></p>
+                                            <span id="detail-max-level-warning" class="hidden mt-2 text-[11px] px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 border border-amber-300 font-bold whitespace-nowrap">
+                                                ⚠️ Level melebihi batas maksimal server
+                                            </span>
                                         </div>
 
                                         <!-- Type / Attribute -->
                                         <div>
                                             <p class="text-sm font-bold text-[#4b4d5a] mb-2">Type</p>
                                             <div id="detail-type" class="flex flex-wrap gap-2"></div>
+                                        </div>
+
+                                        <!-- Daya Serang Karakter Terhadap Monster (dibawah value type) -->
+                                        <div>
+                                            <p class="text-sm font-bold text-[#4b4d5a] mb-2">Demage Karakter Terhadap Monster</p>
+                                            <div id="detail-basic-damage" class="text-lg font-bold"></div>
+                                            <div id="detail-basic-damage-note" class="text-xs text-[#8a8068] mt-1 leading-relaxed"></div>
+                                        </div>
+
+                                        <!-- Damage Senjata dengan Element -->
+                                        <div>
+                                            <p class="text-sm font-bold text-[#4b4d5a] mb-2">Damage Senjata dengan Element</p>
+                                            <div id="detail-weapon-element" class="text-sm"></div>
+                                            <div id="detail-weapon-element-note" class="text-xs text-[#8a8068] mt-1 leading-relaxed"></div>
                                         </div>
 
                                         <!-- Map / Location -->
@@ -308,27 +316,26 @@
                 // Single file path - all monster data in one file
                 const MONSTER_DATA_FILE = '../data/monster/all.json';
                 const DISABLE_DATA_FILE = '../data/disable.json';
+                const PENALTY_DATA_FILE = '../data/penalty.json';
+                const MAX_LEVEL_DATA_FILE = '../data/max-level.json';
+                const BASE_JOB_TYPE_DATA_FILE = '../data/base-job-type.json';
+                const RULE_ELEMENT_DATA_FILE = '../data/rule-element.json';
 
-                // ===== Penalty Matrix =====
-                const PENALTY_MATRIX = {
-                    exp_penalty: [
-                        { min_level_difference: 1, max_level_difference: 29, percentage: 100 },
-                        { min_level_difference: 30, max_level_difference: 34, percentage: 95 },
-                        { min_level_difference: 35, max_level_difference: 39, percentage: 85 },
-                        { min_level_difference: 40, max_level_difference: 44, percentage: 75 },
-                        { min_level_difference: 45, max_level_difference: 54, percentage: 65 },
-                        { min_level_difference: 55, max_level_difference: 59, percentage: 35 },
-                        { min_level_difference: 60, max_level_difference: null, percentage: 5 }
-                    ],
-                    drop_penalty: [
-                        { min_level_difference: 1, max_level_difference: 30, percentage: 100 },
-                        { min_level_difference: 31, max_level_difference: 34, percentage: 85 },
-                        { min_level_difference: 35, max_level_difference: 39, percentage: 65 },
-                        { min_level_difference: 40, max_level_difference: 49, percentage: 45 },
-                        { min_level_difference: 50, max_level_difference: 54, percentage: 25 },
-                        { min_level_difference: 55, max_level_difference: null, percentage: 5 }
-                    ]
-                };
+                // ===== Penalty Matrix (per server, dimuat dari JSON) =====
+                // Struktur: { "v1": { exp_penalty: [...], drop_penalty: [...] }, ... }
+                let penaltyData = {};
+
+                // ===== Batas Level Maksimal per server (dari JSON) =====
+                // Struktur: { "v1": 371, "v2": 371, ... }
+                let maxLevelData = {};
+
+                // ===== Job Base + Type per server (dari JSON) =====
+                // Struktur: { "default": { Job: "type", ... }, "servers": { "v1": { ... }, ... } }
+                let baseJobTypeData = null;
+
+                // ===== Rule Element (matrix damage) =====
+                // Struktur: { elements: [...], display_names: {...}, damage_matrix: {...} }
+                let ruleElementData = null;
 
                 /**
                  * Cari persentase penalty dari matrix berdasarkan level difference
@@ -359,17 +366,199 @@
                  */
                 function calculatePenalty(server, inputLevel, monsterLevel, jobBase) {
                     const levelDiff = Math.abs(monsterLevel - inputLevel);
-                    const expRate = getPenaltyPercentage(PENALTY_MATRIX.exp_penalty, levelDiff);
+
+                    // Ambil matrix penalty sesuai server yang dipilih.
+                    // Fallback ke server pertama (v1) & matrix kosong jika data belum ada.
+                    const matrix = (penaltyData && penaltyData[server]) || penaltyData['v5'] || { exp_penalty: [], drop_penalty: [] };
+
+                    const expRate = getPenaltyPercentage(matrix.exp_penalty, levelDiff);
                     let dropRate;
 
                     // Crafmant: drop rate tetap 100%
                     if (jobBase && jobBase.toLowerCase() === 'crafmant') {
                         dropRate = 100;
                     } else {
-                        dropRate = getPenaltyPercentage(PENALTY_MATRIX.drop_penalty, levelDiff);
+                        dropRate = getPenaltyPercentage(matrix.drop_penalty, levelDiff);
                     }
 
                     return { expRate, dropRate, levelDiff };
+                }
+
+                /**
+                 * Ambil matrix penalty untuk server yang sedang dipilih
+                 * @returns {object} { exp_penalty: [], drop_penalty: [] }
+                 */
+                function getServerMatrix() {
+                    return (penaltyData && penaltyData[server]) || penaltyData['v5'] || { exp_penalty: [], drop_penalty: [] };
+                }
+
+                /**
+                 * Ambil batas level maksimal untuk server yang sedang dipilih
+                 * @returns {number} max level player
+                 */
+                function getServerMaxLevel() {
+                    const val = (maxLevelData && maxLevelData[server]) !== undefined ? maxLevelData[server] : (maxLevelData && maxLevelData['v5']);
+                    return typeof val === 'number' ? val : 371;
+                }
+
+                /**
+                 * Ambil daftar Job Base (+ tipe) untuk server yang sedang dipilih.
+                 * Gabungkan "default" dengan override per server.
+                 * @returns {object} { JobName: "type", ... } dalam urutan insertion
+                 */
+                function getServerJobTypes() {
+                    const jobObj = {};
+                    if (baseJobTypeData && baseJobTypeData.default) {
+                        for (const k of Object.keys(baseJobTypeData.default)) jobObj[k] = baseJobTypeData.default[k];
+                    }
+                    if (baseJobTypeData && baseJobTypeData.servers && baseJobTypeData.servers[server]) {
+                        for (const k of Object.keys(baseJobTypeData.servers[server])) jobObj[k] = baseJobTypeData.servers[server][k];
+                    }
+                    return jobObj;
+                }
+
+                /**
+                 * Rendering ulang dropdown Job Base berdasarkan server yang dipilih
+                 */
+                function populateJobBaseDropdown() {
+                    const sel = document.getElementById('job_base');
+                    if (!sel) return;
+                    const selected = sel.value; // simpan pilihan saat ini jika masih valid
+                    const jobs = getServerJobTypes();
+                    const keys = Object.keys(jobs);
+
+                    sel.innerHTML = '';
+
+                    // Placeholder
+                    if (keys.length) {
+                        const ph = document.createElement('option');
+                        ph.value = '';
+                        ph.disabled = true;
+                        ph.textContent = 'Pilih Job Base...';
+                        ph.className = 'font-bold text-black bg-white';
+                        sel.appendChild(ph);
+                    }
+
+                    // Opsi job sesuai server
+                    keys.forEach((job, i) => {
+                        const opt = document.createElement('option');
+                        opt.value = job;
+                        opt.textContent = job;
+                        opt.className = 'font-bold text-black bg-white';
+                        if (i === 0) opt.selected = true;
+                        sel.appendChild(opt);
+                    });
+
+                    // Jika pilihan sebelumnya masih ada di daftar, pertahankan
+                    if (selected && keys.includes(selected)) {
+                        sel.value = selected;
+                    }
+                }
+
+                /**
+                 * Normalisasi type monster menjadi kunci elemen di rule-element.json
+                 * @param {string} type - type/elemen monster (mis. "Water", "Metal", "Tree", "None")
+                 * @returns {string|null} kunci elemen lowercase, atau null jika tak dikenal
+                 */
+                function normalizeElement(type) {
+                    if (!type) return null;
+                    const map = {
+                        'fire': 'fire',
+                        'steel': 'steel',
+                        'metal': 'steel',       // alias iron/steel
+                        'wood': 'wood',
+                        'tree': 'wood',         // alias wood
+                        'earth': 'earth',
+                        'water': 'water',
+                        'darkness': 'darkness',
+                        'light': 'light',
+                        'physical': 'physical',
+                        'magical': 'magical'
+                    };
+                    const key = String(type).toLowerCase().trim();
+                    return map[key] || null;
+                }
+
+                /**
+                 * Ambil nilai Basic Damage dari rule-element.json
+                 * @param {string} weaponElement - elemen senjata/job (physical / magical / dll)
+                 * @param {string|null} monsterElement - elemen monster (kunci lowercase)
+                 * @returns {number|null} persentase damage, atau null jika tidak tersedia
+                 */
+                function getBasicDamage(weaponElement, monsterElement) {
+                    if (!ruleElementData || !ruleElementData.damage_matrix) return null;
+                    const row = ruleElementData.damage_matrix[weaponElement];
+                    if (!row) return null;
+                    if (!monsterElement) {
+                        // Elemen tidak dikenal / "None" -> damage standar
+                        const std = ruleElementData.standard_damage;
+                        const num = parseInt(std, 10);
+                        return isNaN(num) ? null : num;
+                    }
+                    const val = row[monsterElement];
+                    return typeof val === 'number' ? val : null;
+                }
+
+                /**
+                 * Ambil type job base yang sedang dipilih (physical / magical / hybrid)
+                 * @param {string} [job] - nama job, default jobBase saat ini
+                 * @returns {string|null} type job
+                 */
+                function getJobType(job) {
+                    const j = job || jobBase;
+                    if (!j) return null;
+                    const jobs = getServerJobTypes();
+                    return jobs[j] || null;
+                }
+
+                /**
+                 * Tentukan kategori elemen monster untuk perhitungan Daya Serang.
+                 *  - 'none'   : None / tak dikenal -> selalu 100%
+                 *  - 'other'  : elemen selain physical/magical (fire, water, dll) -> selalu 100%
+                 *  - 'physical' / 'magical' : pakai matrix
+                 * @param {string|null} el - kunci elemen lowercase dari normalizeElement
+                 * @returns {string} kategori
+                 */
+                function monsterDamageCategory(el) {
+                    if (!el) return 'none';
+                    if (el === 'physical' || el === 'magical') return el;
+                    return 'other';
+                }
+
+                /**
+                 * Hitung nilai Daya Serang (0-...) untuk suatu weapon element terhadap monster.
+                 * @param {string} weapon - 'physical' | 'magical'
+                 * @param {string|null} el - kunci elemen monster (lowercase)
+                 * @returns {number} persentase (None/other -> 100)
+                 */
+                function getMonsterDamageValue(weapon, el) {
+                    const cat = monsterDamageCategory(el);
+                    if (cat === 'none' || cat === 'other') return 100;
+                    const val = getBasicDamage(weapon, cat);
+                    return val !== null ? val : 100;
+                }
+
+                /**
+                 * Pilih class warna untuk badge nilai Daya Serang berdasarkan %
+                 * @param {number} val
+                 * @returns {object} { cls }
+                 */
+                function damageColor(val) {
+                    if (val >= 150) return { cls: 'bg-green-100 text-green-700 border-green-300' };
+                    if (val === 100) return { cls: 'bg-sky-100 text-sky-700 border-sky-300' };
+                    if (val >= 50) return { cls: 'bg-amber-100 text-amber-700 border-amber-300' };
+                    return { cls: 'bg-red-100 text-red-700 border-red-300' };
+                }
+
+                /**
+                 * Buat span badge berwarna untuk sebuah nilai Daya Serang
+                 * @param {string} label
+                 * @param {number|null} val
+                 * @returns {string} HTML string
+                 */
+                function damageBadge(label, val) {
+                    const c = damageColor(val);
+                    return `<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md border ${c.cls} font-bold text-sm"><span class="opacity-90 font-semibold">${label}</span> ${val}%</span>`;
                 }
 
                 /**
@@ -389,7 +578,7 @@
                 let currentPage = 1;
                 let playerLevel = 1;
                 let selectedMonster = null;
-                let server = 'v1';
+                let server = 'v5';
                 let jobBase = 'Beginner';
                 const PER_PAGE = 5;
                 let disableData = {};
@@ -414,7 +603,7 @@
                     let bestScore = Infinity;
                     for (const monster of sortedMonsters) {
                         const diff = Math.abs(monster.level - playerLevel);
-                        const expRate = getPenaltyPercentage(PENALTY_MATRIX.exp_penalty, diff);
+                        const expRate = getPenaltyPercentage(getServerMatrix().exp_penalty, diff);
                         if (diff === 0) { best = monster; break; }
                         const score = diff * 100 - expRate * 1;
                         if (score < bestScore) {
@@ -456,7 +645,7 @@
 
                     for (const monster of sortedMonsters) {
                         const diff = Math.abs(monster.level - playerLevel);
-                        const expRate = getPenaltyPercentage(PENALTY_MATRIX.exp_penalty, diff);
+                        const expRate = getPenaltyPercentage(getServerMatrix().exp_penalty, diff);
 
                         if (diff < bestDiff) {
                             bestDiff = diff;
@@ -553,12 +742,12 @@
                     detailPanel.classList.remove('hidden');
                     noSelection.classList.add('hidden');
 
-                    const expRate = getPenaltyPercentage(PENALTY_MATRIX.exp_penalty, Math.abs(monster.level - playerLevel));
+                    const expRate = getPenaltyPercentage(getServerMatrix().exp_penalty, Math.abs(monster.level - playerLevel));
                     let dropRate;
                     if (jobBase && jobBase.toLowerCase() === 'crafmant') {
                         dropRate = 100;
                     } else {
-                        dropRate = getPenaltyPercentage(PENALTY_MATRIX.drop_penalty, Math.abs(monster.level - playerLevel));
+                        dropRate = getPenaltyPercentage(getServerMatrix().drop_penalty, Math.abs(monster.level - playerLevel));
                     }
 
                     // Type: bisa string tunggal atau array
@@ -569,17 +758,128 @@
                         types = [monster.type];
                     }
 
-                    const typeBadgesHtml = types.length
-                        ? types.map(t => `<span class="px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-300">${t}</span>`).join(' ')
-                        : '<span class="text-[#8a8068] text-sm">-</span>';
-
                     const maps = monster.map_location && monster.map_location.length
                         ? monster.map_location.map(loc => `<span class="block text-sm text-[#4b4d5a]">📍 ${loc}</span>`).join('')
                         : '<span class="text-[#8a8068] text-sm">-</span>';
 
+                    // ===== Type value hanya menampilkan info type monster =====
+                    const typeBadgesHtml = types.length
+                        ? types.map(t => `<span class="px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-300">${t}</span>`).join(' ')
+                        : '<span class="text-[#8a8068] text-sm">-</span>';
+                    document.getElementById('detail-type').innerHTML = typeBadgesHtml;
+
+                    // ===== Daya Serang Karakter Terhadap Monster (dibawah value type) =====
+                    const basicDamageEl = document.getElementById('detail-basic-damage');
+                    const basicDamageNoteEl = document.getElementById('detail-basic-damage-note');
+                    const jobTypeValue = getJobType();
+
+                    // Label tampilan untuk elemen (dari rule-element.json display_names)
+                    const elementLabel = (el) => {
+                        if (!el) return 'None';
+                        if (ruleElementData && ruleElementData.display_names && ruleElementData.display_names[el]) {
+                            return ruleElementData.display_names[el];
+                        }
+                        return el.charAt(0).toUpperCase() + el.slice(1);
+                    };
+
+                    const monsterElements = types.map(normalizeElement);
+
+                    if (monsterElements.length === 0) {
+                        basicDamageEl.textContent = '-';
+                        basicDamageNoteEl.textContent = '';
+                    } else if (!jobTypeValue) {
+                        // Belum pilih job -> tampilkan '-' saja
+                        basicDamageEl.textContent = '-';
+                        basicDamageNoteEl.textContent = '';
+                    } else if (jobTypeValue === 'hybrid') {
+                        // Hybrid: tampilkan 2 nilai [STR] (physical) & [INT] (magical)
+                        const parts = monsterElements.map((el) => {
+                            const strVal = getMonsterDamageValue('physical', el);
+                            const intVal = getMonsterDamageValue('magical', el);
+                            return `
+                                <div class="my-1">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        ${damageBadge('[STR]', strVal)}
+                                        ${damageBadge('[INT]', intVal)}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('');
+                        basicDamageEl.innerHTML = parts;
+                        basicDamageNoteEl.textContent = 'Type hybrid ditentukan oleh status: STR atau INT.';
+                    } else {
+                        // physical / magical: satu nilai sesuai weapon elemen job
+                        const weaponElement = jobTypeValue; // "physical" / "magical"
+                        const parts = monsterElements.map((el) => {
+                            const val = getMonsterDamageValue(weaponElement, el);
+                            return `
+                                <div class="my-1">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        ${damageBadge('', val)}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('');
+                        basicDamageEl.innerHTML = parts;
+                        basicDamageNoteEl.textContent = '';
+                    }
+
+                    // ===== Damage Senjata dengan Element =====
+                    const weaponElementEl = document.getElementById('detail-weapon-element');
+                    const weaponElementNoteEl = document.getElementById('detail-weapon-element-note');
+
+                    if (!ruleElementData || !ruleElementData.damage_matrix || monsterElements.length === 0 || monsterElements.every(e => e === null)) {
+                        // Monster None / tak dikenal -> semua element 100%
+                        weaponElementEl.innerHTML = '<span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-300">Semua Element 100%</span>';
+                        weaponElementNoteEl.textContent = '';
+                    } else {
+                        const rows = ruleElementData.damage_matrix;
+                        const dNames = ruleElementData.display_names || {};
+                        const blocks = [];
+                        let anyElem = false;
+
+                        for (const ment of monsterElements) {
+                            if (!ment || ment === 'physical' || ment === 'magical') continue;
+                            anyElem = true;
+
+                            // Kumpulkan nilai senjata(element) TERHADAP monster ini, tanpa physical & magical
+                            const values = [];
+                            for (const weapon of Object.keys(rows)) {
+                                if (weapon === 'physical' || weapon === 'magical') continue;
+                                const v = rows[weapon][ment];
+                                if (typeof v === 'number') values.push({ weapon, v });
+                            }
+
+                            const maxVal = values.length ? Math.max(...values.map(x => x.v)) : 0;
+
+                            const badges = values.map(({ weapon, v }) => {
+                                const label = dNames[weapon] || weapon;
+                                const col = damageColor(v).cls;
+                                const isMax = v === maxVal;
+                                const maxCls = isMax
+                                    ? ' ring-2 ring-offset-1 ring-yellow-400 scale-105 font-bold'
+                                    : '';
+                                return `<span class="inline-flex items-center px-2 py-0.5 rounded-md border ${col}${maxCls} text-xs">${label} ${v}%</span>`;
+                            }).join(' ') || '<span class="text-[#8a8068] text-sm">-</span>';
+
+                            blocks.push(`
+                                <div class="my-1">
+                                    <div class="flex flex-wrap gap-2 mt-1">${badges}</div>
+                                </div>
+                            `);
+                        }
+
+                        if (!anyElem) {
+                            weaponElementEl.innerHTML = '<span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-300">Semua Element 100%</span>';
+                            weaponElementNoteEl.textContent = '';
+                        } else {
+                            weaponElementEl.innerHTML = blocks.join('');
+                            weaponElementNoteEl.textContent = '';
+                        }
+                    }
+
                     document.getElementById('detail-name').textContent = monster.name;
                     document.getElementById('detail-level').textContent = `Level: ${monster.level}`;
-                    document.getElementById('detail-type').innerHTML = typeBadgesHtml;
                     document.getElementById('detail-map').innerHTML = maps;
                     document.getElementById('detail-exp-rate').textContent = `${expRate}%`;
                     document.getElementById('detail-drop-rate').textContent = `${dropRate}%`;
@@ -590,6 +890,15 @@
                         disableBadge.classList.remove('hidden');
                     } else {
                         disableBadge.classList.add('hidden');
+                    }
+
+                    // Label peringatan bila LEVEL MONSTER ini melebihi batas maksimal server
+                    // (per-monster, mirip label disable — hanya saat monster ini dipilih)
+                    const maxLevelWarning = document.getElementById('detail-max-level-warning');
+                    if (monster.level > getServerMaxLevel()) {
+                        maxLevelWarning.classList.remove('hidden');
+                    } else {
+                        maxLevelWarning.classList.add('hidden');
                     }
 
                     // Monster image (ambil dari field image, jika kosong tampilkan fallback)
@@ -654,6 +963,33 @@
                             if (dResp.ok) disableData = await dResp.json();
                         } catch (e) { /* abaikan jika file belum ada */ }
 
+                        // Load matrix penalty per server (opsional, non-blocking)
+                        try {
+                            const pResp = await fetch(PENALTY_DATA_FILE);
+                            if (pResp.ok) penaltyData = await pResp.json();
+                        } catch (e) { /* abaikan jika file belum ada */ }
+
+                        // Load batas level maksimal per server (opsional, non-blocking)
+                        try {
+                            const mResp = await fetch(MAX_LEVEL_DATA_FILE);
+                            if (mResp.ok) maxLevelData = await mResp.json();
+                        } catch (e) { /* abaikan jika file belum ada */ }
+
+                        // Load job base + type per server (opsional, non-blocking)
+                        try {
+                            const jResp = await fetch(BASE_JOB_TYPE_DATA_FILE);
+                            if (jResp.ok) baseJobTypeData = await jResp.json();
+                        } catch (e) { /* abaikan jika file belum ada */ }
+
+                        // Load rule element / matrix damage (opsional, non-blocking)
+                        try {
+                            const rResp = await fetch(RULE_ELEMENT_DATA_FILE);
+                            if (rResp.ok) ruleElementData = await rResp.json();
+                        } catch (e) { /* abaikan jika file belum ada */ }
+
+                        // Isi dropdown Job Base sesuai server yang sedang dipilih
+                        populateJobBaseDropdown();
+
                         const response = await fetch(MONSTER_DATA_FILE);
                         if (!response.ok) throw new Error('Failed to load ' + MONSTER_DATA_FILE);
                         allMonsters = await response.json();
@@ -661,15 +997,7 @@
                         // Urutkan berdasarkan level (ascending) sesuai monster order spec
                         sortedMonsters = [...allMonsters].sort((a, b) => (a.level || 0) - (b.level || 0));
 
-                        // Reset to first page & auto-select
-                        currentPage = 1;
-                        renderMonsterList();
-                        renderDetail(null);
-
-                        const totalPages = Math.max(1, Math.ceil(sortedMonsters.length / PER_PAGE));
-                        selectedMonster = sortedMonsters[0] || null;
-                        renderMonsterList();
-                        renderDetail(selectedMonster);
+                        // Jangan render list/detail di sini — hasil baru tampil saat tombol "Cari Monster" ditekan.
 
                     } catch (error) {
                         console.error('Gagal load data monster:', error);
@@ -695,16 +1023,13 @@
                         return;
                     }
 
-                    // Validasi max level 371
-                    if (playerLevel > 371) {
-                        window.showToast && window.showToast('Level maksimal adalah 371!');
-                        return;
-                    }
-
                     // Pastikan data sudah dimuat
                     if (sortedMonsters.length === 0) {
                         await loadMonsters();
                     }
+
+                    // Tampilkan hasil pencarian (list & detail)
+                    document.getElementById('result-box').classList.remove('hidden');
 
                     // Re-render dengan player level baru & lompat ke halaman berisi monster rekomendasi
                     const recommended = getRecommendedMonster();
@@ -731,7 +1056,23 @@
                 prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
                 nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
 
+                // ===== Server change: perbarui job base dropdown sesuai server =====
+                document.getElementById('server').addEventListener('change', function () {
+                    server = this.value;
+                    populateJobBaseDropdown();
+                    // Perbarui detail monster terpilih (Basic Damage & rate) bila ada
+                    if (selectedMonster) renderDetail(selectedMonster);
+                });
+
+                // ===== Job Base change: perbarui Basic Damage di detail terpilih =====
+                document.getElementById('job_base').addEventListener('change', function () {
+                    jobBase = this.value;
+                    if (selectedMonster) renderDetail(selectedMonster);
+                });
+
                 // ===== Init =====
+                // Sinkronkan variabel server dengan nilai dropdown saat ini
+                server = document.getElementById('server').value || server;
                 loadMonsters();
             });
         </script>
