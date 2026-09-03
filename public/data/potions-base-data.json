@@ -10,7 +10,8 @@
     "sacrifice_requirement": "number",
     "slot": "number",
     "source_name": "string",
-    "notes": "string|null"
+    "notes": "string|null",
+    "image": "string (url) | null"
   },
   "categories": {
     "max_blue_potion": [
@@ -20,7 +21,8 @@
         "sacrifice_requirement": 1600,
         "slot": 5,
         "source_name": "Mark of Vampire",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Tough bandage",
@@ -28,7 +30,8 @@
         "sacrifice_requirement": 1480,
         "slot": 5,
         "source_name": "Tough bandage",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Lucky Card",
@@ -36,7 +39,8 @@
         "sacrifice_requirement": 1500,
         "slot": 5,
         "source_name": "Lucky Card",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Solarstone",
@@ -44,7 +48,8 @@
         "sacrifice_requirement": 1400,
         "slot": 3,
         "source_name": "Solarstone",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Cat Cry",
@@ -52,7 +57,8 @@
         "sacrifice_requirement": 1200,
         "slot": 4,
         "source_name": "Cat Cry",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Mermaid's Bubble",
@@ -60,7 +66,8 @@
         "sacrifice_requirement": 1000,
         "slot": 5,
         "source_name": "Mermaid's Bubble",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Broken Mask",
@@ -68,7 +75,8 @@
         "sacrifice_requirement": 900,
         "slot": 1,
         "source_name": "Broken Mask",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Bundle of dreams",
@@ -76,7 +84,8 @@
         "sacrifice_requirement": 1000,
         "slot": 4,
         "source_name": "Bundle of dreams",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Snake Skin",
@@ -84,7 +93,8 @@
         "sacrifice_requirement": 1000,
         "slot": 5,
         "source_name": "Snake Skin",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Sweet Honey",
@@ -92,7 +102,8 @@
         "sacrifice_requirement": 850,
         "slot": 4,
         "source_name": "Sweet Honey",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Hatchling's Scale",
@@ -100,7 +111,8 @@
         "sacrifice_requirement": 800,
         "slot": 3,
         "source_name": "Hatchling's Scale",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Blue Crystal",
@@ -108,7 +120,8 @@
         "sacrifice_requirement": 800,
         "slot": 4,
         "source_name": "Blue Crystal",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Dullahan's Tear",
@@ -116,7 +129,8 @@
         "sacrifice_requirement": 800,
         "slot": 4,
         "source_name": "Dullahan's Tear",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Snake's Tail",
@@ -124,7 +138,8 @@
         "sacrifice_requirement": 800,
         "slot": 4,
         "source_name": "Snake's Tail",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Shining Horseshoe",
@@ -132,7 +147,8 @@
         "sacrifice_requirement": 800,
         "slot": 3,
         "source_name": "Shining Horseshoe",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Crystal of Keterre",
@@ -140,7 +156,8 @@
         "sacrifice_requirement": 600,
         "slot": 3,
         "source_name": "Crystal of Keterre",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Ammonite",
@@ -148,7 +165,8 @@
         "sacrifice_requirement": 600,
         "slot": 3,
         "source_name": "Ammonite",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Aleph's Crystal",
@@ -156,7 +174,8 @@
         "sacrifice_requirement": 500,
         "slot": 3,
         "source_name": "Aleph's Crystal",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Golden Fur",
@@ -164,7 +183,8 @@
         "sacrifice_requirement": 400,
         "slot": 2,
         "source_name": "Golden Fur",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Strong Ribs",
@@ -172,7 +192,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Strong Ribs",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Doll's Tear",
@@ -180,7 +201,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Doll's Tear",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Mariel's Black Feather",
@@ -188,7 +210,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Mariel's Black Feather",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Black Belly Bra",
@@ -196,7 +219,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Black Belly Bra",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Champion's Belt",
@@ -204,7 +228,8 @@
         "sacrifice_requirement": 150,
         "slot": 1,
         "source_name": "Champion's Belt",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Imported Cigarrete",
@@ -212,7 +237,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Imported Cigarrete",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Rusty Alloy Board",
@@ -220,7 +246,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Rusty Alloy Board",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Bee Sting",
@@ -228,7 +255,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Bee Sting",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Crab Leg",
@@ -236,7 +264,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Crab Leg",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Dog's Nose",
@@ -244,7 +273,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Dog's Nose",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Crystal of Naga",
@@ -252,7 +282,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Crystal of Naga",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Wet Peanut",
@@ -260,7 +291,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Wet Peanut",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Broken Bone",
@@ -268,7 +300,8 @@
         "sacrifice_requirement": 400,
         "slot": 2,
         "source_name": "Broken Bone",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Shameless Wooden Board",
@@ -276,7 +309,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Shameless Wooden Board",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Alloy Chain",
@@ -284,7 +318,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Alloy Chain",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Fuse",
@@ -292,7 +327,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Fuse",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Scrapped Armor",
@@ -300,7 +336,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Scrapped Armor",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Bee's antenna",
@@ -308,7 +345,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Bee's antenna",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Songs of Light",
@@ -316,7 +354,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Songs of Light",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Fairy's Antenna",
@@ -324,7 +363,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Fairy's Antenna",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Echinoid's Spine",
@@ -332,7 +372,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Echinoid's Spine",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Aiming Glass",
@@ -340,7 +381,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Aiming Glass",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "bubblegum",
@@ -348,7 +390,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "bubblegum",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Broken Sawtooth",
@@ -356,7 +399,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Broken Sawtooth",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Tree Element",
@@ -364,7 +408,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Tree Element",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Mariel's Feather",
@@ -372,7 +417,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Mariel's Feather",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Jason's Resentment",
@@ -380,7 +426,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Jason's Resentment",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Small-sized Engine",
@@ -388,7 +435,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Small-sized Engine",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Minotaur's Passion",
@@ -396,7 +444,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Minotaur's Passion",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Well-grilled Charcoal",
@@ -404,7 +453,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Well-grilled Charcoal",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Broken Teacup",
@@ -412,7 +462,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Broken Teacup",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Red Marble of Gork",
@@ -420,7 +471,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Red Marble of Gork",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Sturdy Wings",
@@ -428,7 +480,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Sturdy Wings",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Mark of Sun god",
@@ -436,7 +489,8 @@
         "sacrifice_requirement": 50,
         "slot": 2,
         "source_name": "Mark of Sun god",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Golem's Tears",
@@ -444,7 +498,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Golem's Tears",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Quick Tempered Ghost",
@@ -452,7 +507,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Quick Tempered Ghost",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Water Balloon",
@@ -460,7 +516,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Water Balloon",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Ripped piece of Armor",
@@ -468,7 +525,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Ripped piece of Armor",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Firing Red Eyes",
@@ -476,7 +534,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Firing Red Eyes",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Piece of Broken Rock",
@@ -484,7 +543,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Piece of Broken Rock",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Water Crystal",
@@ -492,7 +552,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Water Crystal",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Scorpion's poison",
@@ -500,7 +561,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Scorpion's poison",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Silky Smooth Hair",
@@ -508,7 +570,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Silky Smooth Hair",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Time Bomb",
@@ -516,7 +579,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Time Bomb",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Bouncy Ball",
@@ -524,7 +588,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Bouncy Ball",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Flames of Hell",
@@ -532,7 +597,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Flames of Hell",
-        "notes": null
+        "notes": null,
+        "image": ""
       }
     ],
     "max_red_potion": [
@@ -542,7 +608,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Crystal of Grudge",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Cow Skin",
@@ -550,7 +617,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Cow Skin",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "fallen spirit",
@@ -558,7 +626,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "fallen spirit",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Bent Wheel",
@@ -566,7 +635,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Bent Wheel",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Sphinx Nose",
@@ -574,7 +644,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Sphinx Nose",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Premium Thread",
@@ -582,7 +653,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Premium Thread",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Faded wood",
@@ -590,7 +662,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Faded wood",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Brocolli",
@@ -598,7 +671,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Brocolli",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Soul Melody",
@@ -606,7 +680,8 @@
         "sacrifice_requirement": 50,
         "slot": null,
         "source_name": "Soul Melody",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Shining Crest",
@@ -614,7 +689,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Shining Crest",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Eye of Sword",
@@ -622,7 +698,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Eye of Sword",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Heart of Golem",
@@ -630,7 +707,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Heart of Golem",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Hatcling Tooth",
@@ -638,7 +716,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Hatcling Tooth",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Cow Horn",
@@ -646,7 +725,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Cow Horn",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Foam of Crab",
@@ -654,7 +734,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Foam of Crab",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Hot Sun",
@@ -662,7 +743,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Hot Sun",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Hard Rock",
@@ -670,7 +752,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Hard Rock",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Rusty Screw",
@@ -678,7 +761,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Rusty Screw",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "gariel feather",
@@ -686,7 +770,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "gariel feather",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Light Panel",
@@ -694,7 +779,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Light Panel",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "white base",
@@ -702,7 +788,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "white base",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Beautiful Petal",
@@ -710,7 +797,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Beautiful Petal",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Nixie Oil",
@@ -718,7 +806,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "Nixie Oil",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "soul of pirate",
@@ -726,7 +815,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "soul of pirate",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "horse cry",
@@ -734,7 +824,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "horse cry",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "The Wondering Ghost",
@@ -742,7 +833,8 @@
         "sacrifice_requirement": 100,
         "slot": null,
         "source_name": "The Wondering Ghost",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Boiling blood",
@@ -750,7 +842,8 @@
         "sacrifice_requirement": 200,
         "slot": null,
         "source_name": "Boiling blood",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Special Metal",
@@ -758,7 +851,8 @@
         "sacrifice_requirement": 200,
         "slot": null,
         "source_name": "Special Metal",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Hot Blood",
@@ -766,7 +860,8 @@
         "sacrifice_requirement": 200,
         "slot": null,
         "source_name": "Hot Blood",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Fairy Seduction",
@@ -774,7 +869,8 @@
         "sacrifice_requirement": 200,
         "slot": null,
         "source_name": "Fairy Seduction",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Soul of holy knight",
@@ -782,7 +878,8 @@
         "sacrifice_requirement": 200,
         "slot": null,
         "source_name": "Soul of holy knight",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Crustacean Bonr",
@@ -790,7 +887,8 @@
         "sacrifice_requirement": 200,
         "slot": null,
         "source_name": "Crustacean Bonr",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Golemium",
@@ -798,7 +896,8 @@
         "sacrifice_requirement": 600,
         "slot": null,
         "source_name": "Golemium",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Fish Bone",
@@ -806,7 +905,8 @@
         "sacrifice_requirement": 900,
         "slot": null,
         "source_name": "Fish Bone",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Soul of Jester",
@@ -814,7 +914,8 @@
         "sacrifice_requirement": 950,
         "slot": null,
         "source_name": "Soul of Jester",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "shell of Ostrich egg",
@@ -822,7 +923,8 @@
         "sacrifice_requirement": 600,
         "slot": null,
         "source_name": "shell of Ostrich egg",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Ceramic",
@@ -830,7 +932,8 @@
         "sacrifice_requirement": 700,
         "slot": null,
         "source_name": "Ceramic",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Eagle Feather",
@@ -838,7 +941,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Eagle Feather",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Scales",
@@ -846,7 +950,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Scales",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Screw",
@@ -854,7 +959,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Screw",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "turtle Claw",
@@ -862,7 +968,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "turtle Claw",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "A Piece Of Finger Nail",
@@ -870,7 +977,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "A Piece Of Finger Nail",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Tobbacco Pipe",
@@ -878,7 +986,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Tobbacco Pipe",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "eagle Talon",
@@ -886,7 +995,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "eagle Talon",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Spirit of warrior",
@@ -894,7 +1004,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Spirit of warrior",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Silver of Fear",
@@ -902,7 +1013,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Silver of Fear",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Iron Plate",
@@ -910,7 +1022,8 @@
         "sacrifice_requirement": 1000,
         "slot": 5,
         "source_name": "Iron Plate",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Mithril",
@@ -918,7 +1031,8 @@
         "sacrifice_requirement": 1000,
         "slot": 3,
         "source_name": "Mithril",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Crystal of Vinagh",
@@ -926,7 +1040,8 @@
         "sacrifice_requirement": 500,
         "slot": 3,
         "source_name": "Crystal of Vinagh",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Ice Crystal",
@@ -934,7 +1049,8 @@
         "sacrifice_requirement": 800,
         "slot": 3,
         "source_name": "Ice Crystal",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Man Romance",
@@ -942,7 +1058,8 @@
         "sacrifice_requirement": 800,
         "slot": 3,
         "source_name": "Man Romance",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Crystal of Neza",
@@ -950,7 +1067,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Crystal of Neza",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Sun Flower Seed",
@@ -958,7 +1076,8 @@
         "sacrifice_requirement": 200,
         "slot": 4,
         "source_name": "Sun Flower Seed",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Soul of Swordsman",
@@ -966,9 +1085,24 @@
         "sacrifice_requirement": 150,
         "slot": 150,
         "source_name": "Soul of Swordsman",
-        "notes": null
+        "notes": null,
+        "image": ""
       }
     ],
+    "blue_potion": [],
+    "red_potion": [
+      {
+        "item_name": "Armor Pieces",
+        "price_item": 210,
+        "sacrifice_requirement": 300,
+        "slot": 2,
+        "source_name": "Crystal of Grudge",
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/3/34/Armor_Pieces.gif/revision/latest?cb=20080219043219"
+      }
+    ],
+    "high_blue_potion": [],
+    "high_red_potion": [],
     "junk_items": [
       {
         "item_name": "scarlet crystal",
@@ -976,7 +1110,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "scarlet crystal",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "dust",
@@ -984,7 +1119,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "dust",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "hooman ring",
@@ -992,7 +1128,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "hooman ring",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "gain of darknes",
@@ -1000,7 +1137,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "gain of darknes",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Juice of light",
@@ -1008,7 +1146,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Juice of light",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Severed tail",
@@ -1016,7 +1155,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Severed tail",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Red Flame",
@@ -1024,7 +1164,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Red Flame",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "LAN card",
@@ -1032,7 +1173,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "LAN card",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Blaze",
@@ -1040,7 +1182,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Blaze",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Budding Branch",
@@ -1048,7 +1191,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Budding Branch",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Silver Flower",
@@ -1056,7 +1200,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Silver Flower",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "pumpkin Soup",
@@ -1064,7 +1209,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "pumpkin Soup",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Mysterious Crysta;",
@@ -1072,7 +1218,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Mysterious Crysta;",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "tooth Brush",
@@ -1080,7 +1227,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "tooth Brush",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Winged Candle",
@@ -1088,7 +1236,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Winged Candle",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Grain of sand",
@@ -1096,7 +1245,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Grain of sand",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Tough Guys Soft Spot",
@@ -1104,7 +1254,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Tough Guys Soft Spot",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Severed Tail",
@@ -1112,7 +1263,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Severed Tail",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Hoonnam Ring",
@@ -1120,7 +1272,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Hoonnam Ring",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Religius Devotion",
@@ -1128,7 +1281,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Religius Devotion",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Warrior's heart",
@@ -1136,7 +1290,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Warrior's heart",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "White Carrot",
@@ -1144,7 +1299,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "White Carrot",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Marble of strenght",
@@ -1152,7 +1308,8 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Marble of strenght",
-        "notes": "PDF row does not show a complete value for this field."
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": ""
       },
       {
         "item_name": "Winged Candle",
@@ -1160,7 +1317,8 @@
         "sacrifice_requirement": 900,
         "slot": 4,
         "source_name": "Winged Candle",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "LAN card",
@@ -1168,7 +1326,8 @@
         "sacrifice_requirement": 1500,
         "slot": 5,
         "source_name": "LAN card",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "silver flower",
@@ -1176,7 +1335,8 @@
         "sacrifice_requirement": 900,
         "slot": 5,
         "source_name": "silver flower",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Eyeball Bomb",
@@ -1184,7 +1344,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Eyeball Bomb",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Toluene",
@@ -1192,7 +1353,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Toluene",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "White Carrot",
@@ -1200,7 +1362,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "White Carrot",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Piece of Torn Suit",
@@ -1208,7 +1371,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Piece of Torn Suit",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Warrior's heart",
@@ -1216,7 +1380,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Warrior's heart",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Juice of Light",
@@ -1224,7 +1389,8 @@
         "sacrifice_requirement": 970,
         "slot": 4,
         "source_name": "Juice of Light",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Blaze",
@@ -1232,7 +1398,8 @@
         "sacrifice_requirement": 1000,
         "slot": 4,
         "source_name": "Blaze",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Budding Branch",
@@ -1240,7 +1407,8 @@
         "sacrifice_requirement": 1200,
         "slot": 5,
         "source_name": "Budding Branch",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Mini Lamp",
@@ -1248,7 +1416,8 @@
         "sacrifice_requirement": 50,
         "slot": 1,
         "source_name": "Mini Lamp",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "It Girl's Mirror",
@@ -1256,7 +1425,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "It Girl's Mirror",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Dragon Burp",
@@ -1264,7 +1434,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Dragon Burp",
-        "notes": null
+        "notes": null,
+        "image": ""
       },
       {
         "item_name": "Hoe",
@@ -1272,7 +1443,8 @@
         "sacrifice_requirement": 100,
         "slot": 1,
         "source_name": "Hoe",
-        "notes": null
+        "notes": null,
+        "image": ""
       }
     ]
   },

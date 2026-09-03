@@ -84,6 +84,7 @@
                     Halaman untuk memasak / membuat pot dari item-item sampahan kalian.
                     Selamat menikmati. ✨
                 </p>
+                <img src="https://vignette.wikia.nocookie.net/sealonline/images/2/20/Cook.gif/revision/latest?cb=20080420034335" alt="Cook" class="mx-auto mt-6 w-16 h-16 object-contain drop-shadow-lg" loading="lazy">
             </div>
         </section>
 
@@ -131,7 +132,7 @@
                                 <p id="item1-price" class="text-lg font-bold text-white mt-1">-</p>
                             </div>
                             <div class="rounded-xl bg-black/20 p-3 text-center">
-                                <p class="text-[11px] text-gray-400 uppercase tracking-wide">Sharat Harga Tumbal</p>
+                                <p class="text-[11px] text-gray-400 uppercase tracking-wide">Syarat Harga Tumbal</p>
                                 <p id="item1-sac" class="text-lg font-bold text-orange-300 mt-1">-</p>
                             </div>
                             <div class="rounded-xl bg-black/20 p-3 text-center">
@@ -139,10 +140,24 @@
                                 <p id="item1-slot" class="text-lg font-bold text-white mt-1">-</p>
                             </div>
                         </div>
+                        <div id="item1-cook-level" class="mt-3 rounded-xl bg-amber-500/10 border border-amber-400/20 px-4 py-2.5 flex items-center justify-between">
+                            <span class="text-xs text-amber-200/80">Level Skill Cook dibutuhkan</span>
+                            <span id="item1-cook-level-val" class="text-sm font-extrabold text-amber-300">-</span>
+                        </div>
+                        <div id="item1-npc-suggest" class="hidden mt-3 rounded-xl border px-4 py-3 text-sm leading-relaxed"></div>
+                        <div id="item1-potion-result" class="hidden mt-3 rounded-xl bg-violet-500/10 border border-violet-400/30 px-4 py-3 flex items-center gap-3">
+                            <img id="item1-potion-icon" src="" alt="Potion" class="w-8 h-8 object-contain shrink-0">
+                            <span class="text-sm text-violet-200">Menghasilkan <span id="item1-potion-name" class="font-bold text-white"></span></span>
+                        </div>
+                    </div>
+
+                    <div id="junk-warning" class="hidden mt-4 rounded-2xl border border-red-400/30 bg-red-500/10 p-5 text-center">
+                        <p class="text-sm font-bold text-red-300">⚠️ Item yang dipilih tidak dapat dimasak</p>
+                        <p class="text-xs text-gray-400 mt-1">Item kategori Junk tidak bisa digunakan sebagai bahan.</p>
                     </div>
 
                     <!-- Dropdown 2 : Tumbal -->
-                    <div class="mt-8">
+                    <div id="tumbal-block" class="mt-8">
                         <label for="item2-search" class="block text-sm font-semibold text-orange-200 mb-2">Tumbal (item ke-2)</label>
                         <div class="relative">
                             <input id="item2-search" type="text" autocomplete="off"
@@ -166,7 +181,7 @@
                                 <p id="item2-price" class="text-lg font-bold text-white mt-1">-</p>
                             </div>
                             <div class="rounded-xl bg-black/20 p-3 text-center">
-                                <p class="text-[11px] text-gray-400 uppercase tracking-wide">Sharat Harga Tumbal</p>
+                                <p class="text-[11px] text-gray-400 uppercase tracking-wide">Syarat Harga Tumbal</p>
                                 <p id="item2-sac" class="text-lg font-bold text-white mt-1">-</p>
                             </div>
                             <div class="rounded-xl bg-black/20 p-3 text-center">
@@ -233,9 +248,13 @@
                 const statusEl = document.getElementById('potion-load-status');
 
                 function catMeta(cat) {
-                    if (cat === 'max_blue_potion') return { icon: '🔵', label: 'max_blue', cls: 'bg-sky-500/15 text-sky-300 border-sky-400/30' };
-                    if (cat === 'max_red_potion') return { icon: '🔴', label: 'max_red', cls: 'bg-red-500/15 text-red-300 border-red-400/30' };
-                    if (cat === 'junk_items') return { icon: '🗑️', label: 'junk', cls: 'bg-zinc-500/15 text-zinc-300 border-zinc-400/30' };
+                    if (cat === 'max_blue_potion') return { img: 'https://vignette.wikia.nocookie.net/sealonline/images/7/7c/Max_Blue_Potion.gif/revision/latest?cb=20080128001316', label: 'Max Blue Potion', cls: 'bg-sky-500/15 text-sky-300 border-sky-400/30' };
+                    if (cat === 'max_red_potion') return { img: 'https://vignette.wikia.nocookie.net/sealonline/images/1/1d/Max_Red_Potion.gif/revision/latest?cb=20080216172858', label: 'Max Red Potion', cls: 'bg-red-500/15 text-red-300 border-red-400/30' };
+                    if (cat === 'high_blue_potion') return { img: 'https://vignette.wikia.nocookie.net/sealonline/images/8/8c/High_Blue_Potion.gif/revision/latest?cb=20080128003104', label: 'High Blue Potion', cls: 'bg-cyan-500/15 text-cyan-300 border-cyan-400/30' };
+                    if (cat === 'high_red_potion') return { img: 'https://vignette.wikia.nocookie.net/sealonline/images/2/23/High_Red_Potion.gif/revision/latest?cb=20080125090830', label: 'High Red Potion', cls: 'bg-rose-500/15 text-rose-300 border-rose-400/30' };
+                    if (cat === 'blue_potion') return { img: 'https://vignette.wikia.nocookie.net/sealonline/images/5/5e/Blue_Potion.gif/revision/latest?cb=20080126065354', label: 'Blue Potion', cls: 'bg-blue-500/15 text-blue-300 border-blue-400/30' };
+                    if (cat === 'red_potion') return { img: 'https://vignette.wikia.nocookie.net/sealonline/images/1/16/Red_Potion.gif/revision/latest?cb=20080216172828', label: 'Red Potion', cls: 'bg-orange-500/15 text-orange-300 border-orange-400/30' };
+                    if (cat === 'junk_items') return { icon: '🗑️', label: 'Junk', cls: 'bg-zinc-500/15 text-zinc-300 border-zinc-400/30' };
                     return { icon: '📦', label: cat, cls: 'bg-white/10 text-white border-white/20' };
                 }
 
@@ -251,13 +270,15 @@
                     }
                     listEl.innerHTML = items.map(it => {
                         const m = catMeta(it.category);
+                        const hasImg = it.image && String(it.image).trim() !== '';
+                        const iconHtml = hasImg ? `<img src="${it.image}" alt="${it.item_name}" class="w-6 h-6 object-contain shrink-0 rounded" loading="lazy" onerror="this.style.display='none'">` : (m.img ? `<img src="${m.img}" alt="${m.label}" class="w-6 h-6 object-contain shrink-0" loading="lazy">` : `<span class="text-lg">${m.icon || '📦'}</span>`);
                         return `<button type="button" data-name="${it.item_name.replace(/"/g, '&quot;')}" class="w-full text-left px-4 py-2.5 hover:bg-white/10 flex items-center gap-3 border-b border-white/[0.06] last:border-0">
-                            <span class="text-lg">${m.icon}</span>
+                            ${iconHtml}
                             <span class="flex-1 min-w-0">
                                 <span class="block text-sm font-semibold text-white truncate">${it.item_name}</span>
                                 <span class="block text-xs text-gray-400">price ${it.price_item ?? '-'} • sac ${it.sacrifice_requirement ?? '-'} • slot ${it.slot ?? '-'}</span>
                             </span>
-                            <span class="text-[10px] px-2 py-1 rounded-full border ${m.cls}">${m.label}</span>
+                            <span class="text-[10px] px-2 py-1 rounded-full border ${m.cls} shrink-0">${m.label}</span>
                         </button>`;
                     }).join('');
                     listEl.classList.remove('hidden');
@@ -274,7 +295,11 @@
                 function showDetail1(it) {
                     if (!it) { d1.classList.add('hidden'); return; }
                     const m = catMeta(it.category);
-                    document.getElementById('item1-icon').textContent = m.icon;
+                    const iconEl = document.getElementById('item1-icon');
+                    const hasImg = it.image && String(it.image).trim() !== '';
+                    if (hasImg) iconEl.innerHTML = `<img src="${it.image}" alt="${it.item_name}" class="w-10 h-10 object-contain rounded" onerror="this.style.display='none'">`;
+                    else if (m.img) iconEl.innerHTML = `<img src="${m.img}" alt="${m.label}" class="w-8 h-8 object-contain">`;
+                    else iconEl.textContent = m.icon || '📦';
                     document.getElementById('item1-name').textContent = it.item_name;
                     const catEl = document.getElementById('item1-cat');
                     catEl.textContent = m.label;
@@ -282,13 +307,76 @@
                     document.getElementById('item1-price').textContent = it.price_item ?? '-';
                     document.getElementById('item1-sac').textContent = it.sacrifice_requirement ?? '-';
                     document.getElementById('item1-slot').textContent = it.slot ?? '-';
+                    // Level Skill Cook matrix
+                    const cookLevelMap = { 'red_potion': 3, 'blue_potion': 3, 'high_blue_potion': 4, 'high_red_potion': 4, 'max_blue_potion': 5, 'max_red_potion': 5 };
+                    const lvl = cookLevelMap[it.category];
+                    const lvlEl = document.getElementById('item1-cook-level-val');
+                    const lvlWrap = document.getElementById('item1-cook-level');
+                    if (lvlEl && lvlWrap) {
+                        if (lvl) { lvlEl.textContent = lvl; lvlWrap.classList.remove('hidden'); }
+                        else { lvlEl.textContent = '-'; lvlWrap.classList.add('hidden'); }
+                    }
+                    // Tampilan baru: icon potion yang dihasilkan
+                    const potWrap = document.getElementById('item1-potion-result');
+                    const potIcon = document.getElementById('item1-potion-icon');
+                    const potName = document.getElementById('item1-potion-name');
+                    if (potWrap && potIcon && potName) {
+                        if (m.img) {
+                            potIcon.src = m.img;
+                            potIcon.alt = m.label;
+                            potName.textContent = m.label;
+                            potWrap.classList.remove('hidden');
+                        } else {
+                            potWrap.classList.add('hidden');
+                        }
+                    }
                     d1.classList.remove('hidden');
+                    // Saran NPC jika Syarat Harga Tumbal 100 / 50
+                    const npcEl = document.getElementById('item1-npc-suggest');
+                    if (npcEl) {
+                        const sac = Number(it.sacrifice_requirement);
+                        const qty = Math.max(1, parseInt(jumlahEl.value, 10) || 300);
+                        const qStr = qty.toLocaleString('id-ID');
+                        if (sac === 100) {
+                            npcEl.className = 'mt-3 rounded-xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-sm leading-relaxed text-emerald-200';
+                            npcEl.innerHTML = '💡 Bisa <span class="font-bold">1 banding 1</span> dengan item dari NPC (<span class="font-bold text-white">Ample Bottle</span> <img src="https://vignette.wikia.nocookie.net/sealonline/images/e/ee/Ample_Bottle.gif/revision/latest?cb=20160113002223" alt="Ample Bottle" class="inline w-5 h-5 object-contain align-middle">):<br><span class="font-bold text-white">' + qStr + ' × ' + it.item_name + ' : ' + qStr + ' × Ample Bottle</span>';
+                            npcEl.classList.remove('hidden');
+                        } else if (sac === 50) {
+                            npcEl.className = 'mt-3 rounded-xl border border-sky-400/30 bg-sky-500/10 px-4 py-3 text-sm leading-relaxed text-sky-200';
+                            npcEl.innerHTML = '💡 Bisa <span class="font-bold">1 banding 1</span> dengan item dari NPC <span class="font-bold text-white">Paper Bag <img src="https://vignette.wikia.nocookie.net/sealonline/images/e/e8/Paper_Bag.gif/revision/latest?cb=20160113002517" alt="Paper Bag" class="inline w-5 h-5 object-contain align-middle">, Bowl, atau Plate</span>:<br><span class="font-bold text-white">' + qStr + ' × ' + it.item_name + ' : ' + qStr + ' × Paper Bag / Bowl / Plate</span>';
+                            npcEl.classList.remove('hidden');
+                        } else {
+                            npcEl.classList.add('hidden');
+                            npcEl.innerHTML = '';
+                        }
+                    }
+                    // Jika bahan Junk → warning & sembunyikan tumbal + hasil setelahnya
+                    const junkEl = document.getElementById('junk-warning');
+                    const tumbalBlock = document.getElementById('tumbal-block');
+                    if (it.category === 'junk_items') {
+                        if (junkEl) junkEl.classList.remove('hidden');
+                        if (tumbalBlock) tumbalBlock.classList.add('hidden');
+                        d2.classList.add('hidden');
+                        resultBox.classList.add('hidden');
+                        // reset pilihan tumbal agar tidak terhitung
+                        selected2 = null;
+                        s2.value = '';
+                        // saran NPC tidak relevan untuk junk
+                        if (npcEl) { npcEl.classList.add('hidden'); npcEl.innerHTML = ''; }
+                    } else {
+                        if (junkEl) junkEl.classList.add('hidden');
+                        if (tumbalBlock) tumbalBlock.classList.remove('hidden');
+                    }
                 }
 
                 function showDetail2(it) {
                     if (!it) { d2.classList.add('hidden'); return; }
                     const m = catMeta(it.category);
-                    document.getElementById('item2-icon').textContent = m.icon;
+                    const iconEl = document.getElementById('item2-icon');
+                    const hasImg = it.image && String(it.image).trim() !== '';
+                    if (hasImg) iconEl.innerHTML = `<img src="${it.image}" alt="${it.item_name}" class="w-10 h-10 object-contain rounded" onerror="this.style.display='none'">`;
+                    else if (m.img) iconEl.innerHTML = `<img src="${m.img}" alt="${m.label}" class="w-8 h-8 object-contain">`;
+                    else iconEl.textContent = m.icon || '📦';
                     document.getElementById('item2-name').textContent = it.item_name;
                     const catEl = document.getElementById('item2-cat');
                     catEl.textContent = m.label;
@@ -306,6 +394,16 @@
                     resultBox.classList.add('hidden');
                     const sb = document.getElementById('tumbal-suggest-box');
                     if (sb) { sb.classList.add('hidden'); sb.innerHTML = ''; }
+                    // Jika bahan masih Junk tetap hidden tumbal, else pastikan tumbal block terlihat
+                    const junkEl = document.getElementById('junk-warning');
+                    const tumbalBlock = document.getElementById('tumbal-block');
+                    if (selected1 && selected1.category === 'junk_items') {
+                        if (junkEl) junkEl.classList.remove('hidden');
+                        if (tumbalBlock) tumbalBlock.classList.add('hidden');
+                    } else {
+                        if (junkEl) junkEl.classList.add('hidden');
+                        if (tumbalBlock) tumbalBlock.classList.remove('hidden');
+                    }
                 }
 
                 function recalc() {
@@ -382,8 +480,22 @@
                     if (!s2.contains(e.target) && !l2.contains(e.target)) l2.classList.add('hidden');
                 });
 
-                jumlahEl.addEventListener('input', recalc);
-                jumlahEl.addEventListener('change', recalc);
+                function refreshNpcSuggest() {
+                    if (!selected1) return;
+                    const npcEl = document.getElementById('item1-npc-suggest');
+                    if (!npcEl) return;
+                    const sac = Number(selected1.sacrifice_requirement);
+                    if (sac !== 100 && sac !== 50) return;
+                    const qty = Math.max(1, parseInt(jumlahEl.value, 10) || 300);
+                    const qStr = qty.toLocaleString('id-ID');
+                    if (sac === 100) {
+                        npcEl.innerHTML = '💡 Bisa <span class="font-bold">1 banding 1</span> dengan item dari NPC (<span class="font-bold text-white">Ample Bottle</span> <img src="https://vignette.wikia.nocookie.net/sealonline/images/e/ee/Ample_Bottle.gif/revision/latest?cb=20160113002223" alt="Ample Bottle" class="inline w-5 h-5 object-contain align-middle">):<br><span class="font-bold text-white">' + qStr + ' × ' + selected1.item_name + ' : ' + qStr + ' × Ample Bottle</span>';
+                    } else if (sac === 50) {
+                        npcEl.innerHTML = '💡 Bisa <span class="font-bold">1 banding 1</span> dengan <span class="font-bold text-white">Paper Bag <img src="https://vignette.wikia.nocookie.net/sealonline/images/e/e8/Paper_Bag.gif/revision/latest?cb=20160113002517" alt="Paper Bag" class="inline w-5 h-5 object-contain align-middle">, Bowl, atau Plate</span>:<br><span class="font-bold text-white">' + qStr + ' × ' + selected1.item_name + ' : ' + qStr + ' × Paper Bag / Bowl / Plate</span>';
+                    }
+                }
+                jumlahEl.addEventListener('input', () => { refreshNpcSuggest(); recalc(); });
+                jumlahEl.addEventListener('change', () => { refreshNpcSuggest(); recalc(); });
 
                 // === Fetch JSON — pola identik tutorial.blade.php ===
                 async function loadPotions() {
