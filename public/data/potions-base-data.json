@@ -1,0 +1,1285 @@
+{
+  "source": {
+    "file": "Hype Beast guide - Cook (pot creation).pdf",
+    "pages": 2,
+    "description": "Data extracted from the guide. Spelling is preserved where the PDF/OCR is unclear."
+  },
+  "schema": {
+    "item_name": "string",
+    "price_item": "number",
+    "sacrifice_requirement": "number",
+    "slot": "number",
+    "source_name": "string",
+    "notes": "string|null"
+  },
+  "categories": {
+    "max_blue_potion": [
+      {
+        "item_name": "Mark of Vampire",
+        "price_item": 600,
+        "sacrifice_requirement": 1600,
+        "slot": 5,
+        "source_name": "Mark of Vampire",
+        "notes": null
+      },
+      {
+        "item_name": "Tough bandage",
+        "price_item": 690,
+        "sacrifice_requirement": 1480,
+        "slot": 5,
+        "source_name": "Tough bandage",
+        "notes": null
+      },
+      {
+        "item_name": "Lucky Card",
+        "price_item": 700,
+        "sacrifice_requirement": 1500,
+        "slot": 5,
+        "source_name": "Lucky Card",
+        "notes": null
+      },
+      {
+        "item_name": "Solarstone",
+        "price_item": 700,
+        "sacrifice_requirement": 1400,
+        "slot": 3,
+        "source_name": "Solarstone",
+        "notes": null
+      },
+      {
+        "item_name": "Cat Cry",
+        "price_item": 800,
+        "sacrifice_requirement": 1200,
+        "slot": 4,
+        "source_name": "Cat Cry",
+        "notes": null
+      },
+      {
+        "item_name": "Mermaid's Bubble",
+        "price_item": 885,
+        "sacrifice_requirement": 1000,
+        "slot": 5,
+        "source_name": "Mermaid's Bubble",
+        "notes": null
+      },
+      {
+        "item_name": "Broken Mask",
+        "price_item": 900,
+        "sacrifice_requirement": 900,
+        "slot": 1,
+        "source_name": "Broken Mask",
+        "notes": null
+      },
+      {
+        "item_name": "Bundle of dreams",
+        "price_item": 925,
+        "sacrifice_requirement": 1000,
+        "slot": 4,
+        "source_name": "Bundle of dreams",
+        "notes": null
+      },
+      {
+        "item_name": "Snake Skin",
+        "price_item": 950,
+        "sacrifice_requirement": 1000,
+        "slot": 5,
+        "source_name": "Snake Skin",
+        "notes": null
+      },
+      {
+        "item_name": "Sweet Honey",
+        "price_item": 970,
+        "sacrifice_requirement": 850,
+        "slot": 4,
+        "source_name": "Sweet Honey",
+        "notes": null
+      },
+      {
+        "item_name": "Hatchling's Scale",
+        "price_item": 1000,
+        "sacrifice_requirement": 800,
+        "slot": 3,
+        "source_name": "Hatchling's Scale",
+        "notes": null
+      },
+      {
+        "item_name": "Blue Crystal",
+        "price_item": 1000,
+        "sacrifice_requirement": 800,
+        "slot": 4,
+        "source_name": "Blue Crystal",
+        "notes": null
+      },
+      {
+        "item_name": "Dullahan's Tear",
+        "price_item": 1000,
+        "sacrifice_requirement": 800,
+        "slot": 4,
+        "source_name": "Dullahan's Tear",
+        "notes": null
+      },
+      {
+        "item_name": "Snake's Tail",
+        "price_item": 1000,
+        "sacrifice_requirement": 800,
+        "slot": 4,
+        "source_name": "Snake's Tail",
+        "notes": null
+      },
+      {
+        "item_name": "Shining Horseshoe",
+        "price_item": 1100,
+        "sacrifice_requirement": 800,
+        "slot": 3,
+        "source_name": "Shining Horseshoe",
+        "notes": null
+      },
+      {
+        "item_name": "Crystal of Keterre",
+        "price_item": 1100,
+        "sacrifice_requirement": 600,
+        "slot": 3,
+        "source_name": "Crystal of Keterre",
+        "notes": null
+      },
+      {
+        "item_name": "Ammonite",
+        "price_item": 1150,
+        "sacrifice_requirement": 600,
+        "slot": 3,
+        "source_name": "Ammonite",
+        "notes": null
+      },
+      {
+        "item_name": "Aleph's Crystal",
+        "price_item": 1200,
+        "sacrifice_requirement": 500,
+        "slot": 3,
+        "source_name": "Aleph's Crystal",
+        "notes": null
+      },
+      {
+        "item_name": "Golden Fur",
+        "price_item": 1200,
+        "sacrifice_requirement": 400,
+        "slot": 2,
+        "source_name": "Golden Fur",
+        "notes": null
+      },
+      {
+        "item_name": "Strong Ribs",
+        "price_item": 1300,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Strong Ribs",
+        "notes": null
+      },
+      {
+        "item_name": "Doll's Tear",
+        "price_item": 1400,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Doll's Tear",
+        "notes": null
+      },
+      {
+        "item_name": "Mariel's Black Feather",
+        "price_item": 1400,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Mariel's Black Feather",
+        "notes": null
+      },
+      {
+        "item_name": "Black Belly Bra",
+        "price_item": 1410,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Black Belly Bra",
+        "notes": null
+      },
+      {
+        "item_name": "Champion's Belt",
+        "price_item": 1450,
+        "sacrifice_requirement": 150,
+        "slot": 1,
+        "source_name": "Champion's Belt",
+        "notes": null
+      },
+      {
+        "item_name": "Imported Cigarrete",
+        "price_item": 1500,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Imported Cigarrete",
+        "notes": null
+      },
+      {
+        "item_name": "Rusty Alloy Board",
+        "price_item": 1500,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Rusty Alloy Board",
+        "notes": null
+      },
+      {
+        "item_name": "Bee Sting",
+        "price_item": 1500,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Bee Sting",
+        "notes": null
+      },
+      {
+        "item_name": "Crab Leg",
+        "price_item": 1600,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Crab Leg",
+        "notes": null
+      },
+      {
+        "item_name": "Dog's Nose",
+        "price_item": 1600,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Dog's Nose",
+        "notes": null
+      },
+      {
+        "item_name": "Crystal of Naga",
+        "price_item": 1600,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Crystal of Naga",
+        "notes": null
+      },
+      {
+        "item_name": "Wet Peanut",
+        "price_item": 1600,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Wet Peanut",
+        "notes": null
+      },
+      {
+        "item_name": "Broken Bone",
+        "price_item": 1650,
+        "sacrifice_requirement": 400,
+        "slot": 2,
+        "source_name": "Broken Bone",
+        "notes": null
+      },
+      {
+        "item_name": "Shameless Wooden Board",
+        "price_item": 1700,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Shameless Wooden Board",
+        "notes": null
+      },
+      {
+        "item_name": "Alloy Chain",
+        "price_item": 1700,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Alloy Chain",
+        "notes": null
+      },
+      {
+        "item_name": "Fuse",
+        "price_item": 1700,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Fuse",
+        "notes": null
+      },
+      {
+        "item_name": "Scrapped Armor",
+        "price_item": 1700,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Scrapped Armor",
+        "notes": null
+      },
+      {
+        "item_name": "Bee's antenna",
+        "price_item": 1800,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Bee's antenna",
+        "notes": null
+      },
+      {
+        "item_name": "Songs of Light",
+        "price_item": 1800,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Songs of Light",
+        "notes": null
+      },
+      {
+        "item_name": "Fairy's Antenna",
+        "price_item": 1900,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Fairy's Antenna",
+        "notes": null
+      },
+      {
+        "item_name": "Echinoid's Spine",
+        "price_item": 1950,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Echinoid's Spine",
+        "notes": null
+      },
+      {
+        "item_name": "Aiming Glass",
+        "price_item": 2000,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Aiming Glass",
+        "notes": null
+      },
+      {
+        "item_name": "bubblegum",
+        "price_item": 2200,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "bubblegum",
+        "notes": null
+      },
+      {
+        "item_name": "Broken Sawtooth",
+        "price_item": 2200,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Broken Sawtooth",
+        "notes": null
+      },
+      {
+        "item_name": "Tree Element",
+        "price_item": 2200,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Tree Element",
+        "notes": null
+      },
+      {
+        "item_name": "Mariel's Feather",
+        "price_item": 2200,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Mariel's Feather",
+        "notes": null
+      },
+      {
+        "item_name": "Jason's Resentment",
+        "price_item": 2250,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Jason's Resentment",
+        "notes": null
+      },
+      {
+        "item_name": "Small-sized Engine",
+        "price_item": 2250,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Small-sized Engine",
+        "notes": null
+      },
+      {
+        "item_name": "Minotaur's Passion",
+        "price_item": 2250,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Minotaur's Passion",
+        "notes": null
+      },
+      {
+        "item_name": "Well-grilled Charcoal",
+        "price_item": 2250,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Well-grilled Charcoal",
+        "notes": null
+      },
+      {
+        "item_name": "Broken Teacup",
+        "price_item": 2300,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Broken Teacup",
+        "notes": null
+      },
+      {
+        "item_name": "Red Marble of Gork",
+        "price_item": 2400,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Red Marble of Gork",
+        "notes": null
+      },
+      {
+        "item_name": "Sturdy Wings",
+        "price_item": 2400,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Sturdy Wings",
+        "notes": null
+      },
+      {
+        "item_name": "Mark of Sun god",
+        "price_item": 2550,
+        "sacrifice_requirement": 50,
+        "slot": 2,
+        "source_name": "Mark of Sun god",
+        "notes": null
+      },
+      {
+        "item_name": "Golem's Tears",
+        "price_item": 2550,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Golem's Tears",
+        "notes": null
+      },
+      {
+        "item_name": "Quick Tempered Ghost",
+        "price_item": 2550,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Quick Tempered Ghost",
+        "notes": null
+      },
+      {
+        "item_name": "Water Balloon",
+        "price_item": 2450,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Water Balloon",
+        "notes": null
+      },
+      {
+        "item_name": "Ripped piece of Armor",
+        "price_item": 2600,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Ripped piece of Armor",
+        "notes": null
+      },
+      {
+        "item_name": "Firing Red Eyes",
+        "price_item": 2650,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Firing Red Eyes",
+        "notes": null
+      },
+      {
+        "item_name": "Piece of Broken Rock",
+        "price_item": 2650,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Piece of Broken Rock",
+        "notes": null
+      },
+      {
+        "item_name": "Water Crystal",
+        "price_item": 2700,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Water Crystal",
+        "notes": null
+      },
+      {
+        "item_name": "Scorpion's poison",
+        "price_item": 2800,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Scorpion's poison",
+        "notes": null
+      },
+      {
+        "item_name": "Silky Smooth Hair",
+        "price_item": 2800,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Silky Smooth Hair",
+        "notes": null
+      },
+      {
+        "item_name": "Time Bomb",
+        "price_item": 3000,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Time Bomb",
+        "notes": null
+      },
+      {
+        "item_name": "Bouncy Ball",
+        "price_item": 3000,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Bouncy Ball",
+        "notes": null
+      },
+      {
+        "item_name": "Flames of Hell",
+        "price_item": 3300,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Flames of Hell",
+        "notes": null
+      }
+    ],
+    "max_red_potion": [
+      {
+        "item_name": "Crystal of Grudge",
+        "price_item": 1300,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Crystal of Grudge",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Cow Skin",
+        "price_item": 1950,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Cow Skin",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "fallen spirit",
+        "price_item": 1900,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "fallen spirit",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Bent Wheel",
+        "price_item": 1950,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Bent Wheel",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Sphinx Nose",
+        "price_item": 1600,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Sphinx Nose",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Premium Thread",
+        "price_item": 1500,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Premium Thread",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Faded wood",
+        "price_item": 2150,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Faded wood",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Brocolli",
+        "price_item": 1400,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Brocolli",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Soul Melody",
+        "price_item": 1340,
+        "sacrifice_requirement": 50,
+        "slot": null,
+        "source_name": "Soul Melody",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Shining Crest",
+        "price_item": 950,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Shining Crest",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Eye of Sword",
+        "price_item": 1800,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Eye of Sword",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Heart of Golem",
+        "price_item": 1000,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Heart of Golem",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Hatcling Tooth",
+        "price_item": 1150,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Hatcling Tooth",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Cow Horn",
+        "price_item": 1250,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Cow Horn",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Foam of Crab",
+        "price_item": 1400,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Foam of Crab",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Hot Sun",
+        "price_item": 1700,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Hot Sun",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Hard Rock",
+        "price_item": 1800,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Hard Rock",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Rusty Screw",
+        "price_item": 1800,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Rusty Screw",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "gariel feather",
+        "price_item": 2100,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "gariel feather",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Light Panel",
+        "price_item": 1100,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Light Panel",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "white base",
+        "price_item": 865,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "white base",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Beautiful Petal",
+        "price_item": 1900,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Beautiful Petal",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Nixie Oil",
+        "price_item": 1750,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "Nixie Oil",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "soul of pirate",
+        "price_item": 1300,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "soul of pirate",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "horse cry",
+        "price_item": 1900,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "horse cry",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "The Wondering Ghost",
+        "price_item": 1450,
+        "sacrifice_requirement": 100,
+        "slot": null,
+        "source_name": "The Wondering Ghost",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Boiling blood",
+        "price_item": 800,
+        "sacrifice_requirement": 200,
+        "slot": null,
+        "source_name": "Boiling blood",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Special Metal",
+        "price_item": 800,
+        "sacrifice_requirement": 200,
+        "slot": null,
+        "source_name": "Special Metal",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Hot Blood",
+        "price_item": 850,
+        "sacrifice_requirement": 200,
+        "slot": null,
+        "source_name": "Hot Blood",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Fairy Seduction",
+        "price_item": 825,
+        "sacrifice_requirement": 200,
+        "slot": null,
+        "source_name": "Fairy Seduction",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Soul of holy knight",
+        "price_item": 900,
+        "sacrifice_requirement": 200,
+        "slot": null,
+        "source_name": "Soul of holy knight",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Crustacean Bonr",
+        "price_item": 1400,
+        "sacrifice_requirement": 200,
+        "slot": null,
+        "source_name": "Crustacean Bonr",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Golemium",
+        "price_item": 550,
+        "sacrifice_requirement": 600,
+        "slot": null,
+        "source_name": "Golemium",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Fish Bone",
+        "price_item": 450,
+        "sacrifice_requirement": 900,
+        "slot": null,
+        "source_name": "Fish Bone",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Soul of Jester",
+        "price_item": 500,
+        "sacrifice_requirement": 950,
+        "slot": null,
+        "source_name": "Soul of Jester",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "shell of Ostrich egg",
+        "price_item": 600,
+        "sacrifice_requirement": 600,
+        "slot": null,
+        "source_name": "shell of Ostrich egg",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Ceramic",
+        "price_item": 525,
+        "sacrifice_requirement": 700,
+        "slot": null,
+        "source_name": "Ceramic",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Eagle Feather",
+        "price_item": 910,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Eagle Feather",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Scales",
+        "price_item": 2300,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Scales",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Screw",
+        "price_item": 1900,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Screw",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "turtle Claw",
+        "price_item": 2500,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "turtle Claw",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "A Piece Of Finger Nail",
+        "price_item": 2200,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "A Piece Of Finger Nail",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Tobbacco Pipe",
+        "price_item": 2250,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Tobbacco Pipe",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "eagle Talon",
+        "price_item": 2450,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "eagle Talon",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Spirit of warrior",
+        "price_item": 2550,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Spirit of warrior",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Silver of Fear",
+        "price_item": 2600,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Silver of Fear",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Iron Plate",
+        "price_item": 500,
+        "sacrifice_requirement": 1000,
+        "slot": 5,
+        "source_name": "Iron Plate",
+        "notes": null
+      },
+      {
+        "item_name": "Mithril",
+        "price_item": 490,
+        "sacrifice_requirement": 1000,
+        "slot": 3,
+        "source_name": "Mithril",
+        "notes": null
+      },
+      {
+        "item_name": "Crystal of Vinagh",
+        "price_item": 650,
+        "sacrifice_requirement": 500,
+        "slot": 3,
+        "source_name": "Crystal of Vinagh",
+        "notes": null
+      },
+      {
+        "item_name": "Ice Crystal",
+        "price_item": 550,
+        "sacrifice_requirement": 800,
+        "slot": 3,
+        "source_name": "Ice Crystal",
+        "notes": null
+      },
+      {
+        "item_name": "Man Romance",
+        "price_item": 500,
+        "sacrifice_requirement": 800,
+        "slot": 3,
+        "source_name": "Man Romance",
+        "notes": null
+      },
+      {
+        "item_name": "Crystal of Neza",
+        "price_item": 1000,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Crystal of Neza",
+        "notes": null
+      },
+      {
+        "item_name": "Sun Flower Seed",
+        "price_item": 900,
+        "sacrifice_requirement": 200,
+        "slot": 4,
+        "source_name": "Sun Flower Seed",
+        "notes": null
+      },
+      {
+        "item_name": "Soul of Swordsman",
+        "price_item": 850,
+        "sacrifice_requirement": 150,
+        "slot": 150,
+        "source_name": "Soul of Swordsman",
+        "notes": null
+      }
+    ],
+    "junk_items": [
+      {
+        "item_name": "scarlet crystal",
+        "price_item": 710,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "scarlet crystal",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "dust",
+        "price_item": 960,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "dust",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "hooman ring",
+        "price_item": 640,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "hooman ring",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "gain of darknes",
+        "price_item": 980,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "gain of darknes",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Juice of light",
+        "price_item": 920,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Juice of light",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Severed tail",
+        "price_item": 950,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Severed tail",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Red Flame",
+        "price_item": 680,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Red Flame",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "LAN card",
+        "price_item": 720,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "LAN card",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Blaze",
+        "price_item": 930,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Blaze",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Budding Branch",
+        "price_item": 940,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Budding Branch",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Silver Flower",
+        "price_item": 880,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Silver Flower",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "pumpkin Soup",
+        "price_item": 580,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "pumpkin Soup",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Mysterious Crysta;",
+        "price_item": 1500,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Mysterious Crysta;",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "tooth Brush",
+        "price_item": 770,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "tooth Brush",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Winged Candle",
+        "price_item": 590,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Winged Candle",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Grain of sand",
+        "price_item": 670,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Grain of sand",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Tough Guys Soft Spot",
+        "price_item": 680,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Tough Guys Soft Spot",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Severed Tail",
+        "price_item": 950,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Severed Tail",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Hoonnam Ring",
+        "price_item": 640,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Hoonnam Ring",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Religius Devotion",
+        "price_item": 1500,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Religius Devotion",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Warrior's heart",
+        "price_item": 2900,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Warrior's heart",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "White Carrot",
+        "price_item": 1800,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "White Carrot",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Marble of strenght",
+        "price_item": 2200,
+        "sacrifice_requirement": null,
+        "slot": null,
+        "source_name": "Marble of strenght",
+        "notes": "PDF row does not show a complete value for this field."
+      },
+      {
+        "item_name": "Winged Candle",
+        "price_item": 590,
+        "sacrifice_requirement": 900,
+        "slot": 4,
+        "source_name": "Winged Candle",
+        "notes": null
+      },
+      {
+        "item_name": "LAN card",
+        "price_item": 720,
+        "sacrifice_requirement": 1500,
+        "slot": 5,
+        "source_name": "LAN card",
+        "notes": null
+      },
+      {
+        "item_name": "silver flower",
+        "price_item": 880,
+        "sacrifice_requirement": 900,
+        "slot": 5,
+        "source_name": "silver flower",
+        "notes": null
+      },
+      {
+        "item_name": "Eyeball Bomb",
+        "price_item": 1080,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Eyeball Bomb",
+        "notes": null
+      },
+      {
+        "item_name": "Toluene",
+        "price_item": 1170,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Toluene",
+        "notes": null
+      },
+      {
+        "item_name": "White Carrot",
+        "price_item": 1800,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "White Carrot",
+        "notes": null
+      },
+      {
+        "item_name": "Piece of Torn Suit",
+        "price_item": 2300,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Piece of Torn Suit",
+        "notes": null
+      },
+      {
+        "item_name": "Warrior's heart",
+        "price_item": 2900,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Warrior's heart",
+        "notes": null
+      },
+      {
+        "item_name": "Juice of Light",
+        "price_item": 920,
+        "sacrifice_requirement": 970,
+        "slot": 4,
+        "source_name": "Juice of Light",
+        "notes": null
+      },
+      {
+        "item_name": "Blaze",
+        "price_item": 930,
+        "sacrifice_requirement": 1000,
+        "slot": 4,
+        "source_name": "Blaze",
+        "notes": null
+      },
+      {
+        "item_name": "Budding Branch",
+        "price_item": 940,
+        "sacrifice_requirement": 1200,
+        "slot": 5,
+        "source_name": "Budding Branch",
+        "notes": null
+      },
+      {
+        "item_name": "Mini Lamp",
+        "price_item": 980,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Mini Lamp",
+        "notes": null
+      },
+      {
+        "item_name": "It Girl's Mirror",
+        "price_item": 3500,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "It Girl's Mirror",
+        "notes": null
+      },
+      {
+        "item_name": "Dragon Burp",
+        "price_item": 3800,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Dragon Burp",
+        "notes": null
+      },
+      {
+        "item_name": "Hoe",
+        "price_item": 3100,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Hoe",
+        "notes": null
+      }
+    ]
+  },
+  "data_quality": {
+    "important": "Some OCR/text layout in the source is ambiguous. Values that cannot be confidently assigned are null rather than guessed.",
+    "preserved_spelling": true,
+    "duplicates_preserved": true,
+    "normalization_recommended": "Create a separate canonical item table if this becomes a production database."
+  }
+}

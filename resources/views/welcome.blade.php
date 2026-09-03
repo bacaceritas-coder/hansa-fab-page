@@ -141,7 +141,7 @@
 
                         <!-- Floating stats -->
                         <div class="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 text-center animate-float-slow shadow-xl">
-                            <div class="font-display text-2xl font-bold text-cyan-300 count-number" data-count="300671 " data-suffix="">0</div>
+                            <div class="font-display text-2xl font-bold text-cyan-300 count-number" data-count="303225 " data-suffix="">0</div>
                             <div class="text-xs text-gray-400">Ditonton 🔥</div>
                         </div>
 
@@ -411,7 +411,7 @@
             </br></br>
                 <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-gray-500 reveal delay-3">
                     <span class="glass rounded-xl px-4 py-2">🙏 Semua dukungan diterima</span>
-                    <span class="glass rounded-xl px-4 py-2">🔥 Debug &amp; terima kasih di stream</span>
+                    <span class="glass rounded-xl px-4 py-2">🔥 Nuhun &amp; terima kasih di stream</span>
                     <span class="glass rounded-xl px-4 py-2">💜 #HansaFab</span>
                 </div>
             </div>
