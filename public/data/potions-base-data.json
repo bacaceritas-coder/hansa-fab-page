@@ -884,128 +884,128 @@
       {
         "item_name": "Crustacean Bonr",
         "price_item": 1400,
-        "sacrifice_requirement": 200,
-        "slot": null,
+        "sacrifice_requirement": 100,
+        "slot": 1,
         "source_name": "Crustacean Bonr",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/a/a3/Crustacean%27s_Bone.gif/revision/latest?cb=20080128065538"
       },
       {
         "item_name": "Golemium",
         "price_item": 550,
         "sacrifice_requirement": 600,
-        "slot": null,
+        "slot": 3,
         "source_name": "Golemium",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/9/99/Golemium.gif/revision/latest?cb=20080128005613"
       },
       {
         "item_name": "Fish Bone",
         "price_item": 450,
         "sacrifice_requirement": 900,
-        "slot": null,
+        "slot": 4,
         "source_name": "Fish Bone",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "http://vignette.wikia.nocookie.net/sealonline/images/7/72/Fish_Bone.gif/revision/latest?cb=20080219043500"
       },
       {
         "item_name": "Soul of Jester",
         "price_item": 500,
-        "sacrifice_requirement": 950,
-        "slot": null,
+        "sacrifice_requirement": 800,
+        "slot": 3,
         "source_name": "Soul of Jester",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/a/a3/Soul_of_Jester.gif/revision/latest?cb=20080302113941"
       },
       {
-        "item_name": "shell of Ostrich egg",
+        "item_name": "Shell of Ostrich egg",
         "price_item": 600,
         "sacrifice_requirement": 600,
-        "slot": null,
+        "slot": 3,
         "source_name": "shell of Ostrich egg",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/21/Shell_of_Ostrich_Egg.gif/revision/latest?cb=20080125085035"
       },
       {
         "item_name": "Ceramic",
         "price_item": 525,
         "sacrifice_requirement": 700,
-        "slot": null,
+        "slot": 3,
         "source_name": "Ceramic",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/0/0d/Ceramic.gif/revision/latest?cb=20080124220957"
       },
       {
         "item_name": "Eagle Feather",
         "price_item": 910,
-        "sacrifice_requirement": null,
-        "slot": null,
+        "sacrifice_requirement": 50,
+        "slot": 1,
         "source_name": "Eagle Feather",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/6/6b/Eagle_Feather.gif/revision/latest?cb=20080127085908"
       },
       {
         "item_name": "Scales",
         "price_item": 2300,
-        "sacrifice_requirement": null,
-        "slot": null,
+        "sacrifice_requirement": 50,
+        "slot": 1,
         "source_name": "Scales",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/d/d3/Scales.gif/revision/latest?cb=20090417225956"
       },
       {
         "item_name": "Screw",
         "price_item": 1900,
-        "sacrifice_requirement": null,
-        "slot": null,
+        "sacrifice_requirement": 100,
+        "slot": 1,
         "source_name": "Screw",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/0/09/Screw.gif/revision/latest?cb=20080125023055"
       },
       {
-        "item_name": "turtle Claw",
+        "item_name": "Turtle Claw",
         "price_item": 2500,
-        "sacrifice_requirement": null,
-        "slot": null,
+        "sacrifice_requirement": 50,
+        "slot": 1,
         "source_name": "turtle Claw",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/8/85/Turtle%27s_Claw.gif/revision/latest?cb=20080128004259"
       },
       {
-        "item_name": "A Piece Of Finger Nail",
+        "item_name": "A Piece Of Fingernail",
         "price_item": 2200,
         "sacrifice_requirement": 50,
         "slot": 1,
-        "source_name": "A Piece Of Finger Nail",
+        "source_name": "A Piece Of Fingernail",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/7/7b/A_Piece_of_Fingernail.gif/revision/latest?cb=20090417185018"
       },
       {
-        "item_name": "Tobbacco Pipe",
+        "item_name": "Tobacco Pipe",
         "price_item": 2250,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Tobacco Pipe",
+        "notes": "PDF row does not show a complete value for this field.",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/2d/Tobacco_Pipe.gif/revision/latest?cb=20080125084851"
+      },
+      {
+        "item_name": "Eagle's Talon",
+        "price_item": 2450,
         "sacrifice_requirement": 50,
         "slot": 1,
-        "source_name": "Tobbacco Pipe",
+        "source_name": "Eagle's Talon",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
-      },
-      {
-        "item_name": "eagle Talon",
-        "price_item": 2450,
-        "sacrifice_requirement": null,
-        "slot": null,
-        "source_name": "eagle Talon",
-        "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/9/9f/Eagle%27s_Talon.gif/revision/latest?cb=20080204155315"
       },
       {
         "item_name": "Spirit of warrior",
         "price_item": 2550,
-        "sacrifice_requirement": null,
-        "slot": null,
+        "sacrifice_requirement": 100,
+        "slot": 1,
         "source_name": "Spirit of warrior",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/0/03/Spirit_of_Warrior.gif/revision/latest?cb=20080304030221"
       },
       {
         "item_name": "Silver of Fear",
@@ -1013,7 +1013,7 @@
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "Silver of Fear",
-        "notes": "PDF row does not show a complete value for this field.",
+        "notes": "",
         "image": ""
       },
       {
@@ -1192,7 +1192,89 @@
         "image": "https://vignette.wikia.nocookie.net/sealonline/images/e/ef/Blue_Dye.gif/revision/latest?cb=20080129024529"
       }
     ],
-    "high_blue_potion": [],
+    "high_blue_potion": [
+      {
+        "item_name": "Fairy's Powder",
+        "price_item": 390,
+        "sacrifice_requirement": 200,
+        "slot": 2,
+        "source_name": "Fairy's Powder",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/8/81/Fairy%27s_Powder.gif/revision/latest?cb=20080128002821"
+      },
+      {
+        "item_name": "Man's Senility",
+        "price_item": 350,
+        "sacrifice_requirement": 200,
+        "slot": 2,
+        "source_name": "Man's Senility",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/7/72/Man%27s_Senility.gif/revision/latest?cb=20080128001153"
+      },
+      {
+        "item_name": "Motherly Devotion",
+        "price_item": 335,
+        "sacrifice_requirement": 200,
+        "slot": 1,
+        "source_name": "Motherly Devotion",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/8/87/Motherly_Devotion.gif/revision/latest?cb=20080128003531"
+      },
+      {
+        "item_name": "Piece of Glass",
+        "price_item": 300,
+        "sacrifice_requirement": 200,
+        "slot": 2,
+        "source_name": "Piece of Glass",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/3/34/Piece_of_Glass.gif/revision/latest?cb=20080126010241"
+      },
+      {
+        "item_name": "Poisonous Claws",
+        "price_item": 500,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Poisonous Claws",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/2/29/Poisonous_Claws.gif/revision/latest?cb=20080125085242"
+      },
+      {
+        "item_name": "Really Hard Shell",
+        "price_item": 420,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Really Hard Shell",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/4/47/Really_Hard_Shell.gif/revision/latest?cb=20080216171240"
+      },
+      {
+        "item_name": "Silver",
+        "price_item": 450,
+        "sacrifice_requirement": 100,
+        "slot": 2,
+        "source_name": "Silver",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/9/94/Silver.gif/revision/latest?cb=20080128010629"
+      },
+      {
+        "item_name": "Vine",
+        "price_item": 400,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Vine",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/3/3d/Vine.gif/revision/latest?cb=20080129173211"
+      },
+      {
+        "item_name": "Mother's Heart",
+        "price_item": 260,
+        "sacrifice_requirement": 100,
+        "slot": 1,
+        "source_name": "Mother's Heart",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/5/55/Mother%27s_Heart.gif/revision/latest?cb=20080126085500"
+      }
+    ],
     "high_red_potion": [
       {
         "item_name": "Carbon",
@@ -1231,24 +1313,60 @@
         "image": "https://vignette.wikia.nocookie.net/sealonline/images/5/58/Knight%27s_Crest.gif/revision/latest?cb=20080126085209"
       },
       {
-        "item_name": "Knight's Crest",
+        "item_name": "Mark of Great Sage",
         "price_item": 250,
         "sacrifice_requirement": 100,
-        "slot": 2,
-        "source_name": "Knight's Crest",
+        "slot": 1,
+        "source_name": "Mark of Great Sage",
         "notes": "",
-        "image": "https://vignette.wikia.nocookie.net/sealonline/images/5/58/Knight%27s_Crest.gif/revision/latest?cb=20080126085209"
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/3/3b/Mark_of_Great_Sage.gif/revision/latest?cb=20080125092035"
+      },
+      {
+        "item_name": "Platinum",
+        "price_item": 175,
+        "sacrifice_requirement": 250,
+        "slot": 2,
+        "source_name": "Platinum",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/f/fe/Platinum.gif/revision/latest?cb=20080129021449"
+      },
+      {
+        "item_name": "Silkworm's Thread",
+        "price_item": 200,
+        "sacrifice_requirement": 250,
+        "slot": 2,
+        "source_name": "Silkworm's Thread",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/8/8b/Silkworm%27s_Thread.gif/revision/latest?cb=20080128004157"
+      },
+      {
+        "item_name": "Spider's Poisond",
+        "price_item": 300,
+        "sacrifice_requirement": 50,
+        "slot": 1,
+        "source_name": "Spider's Poison",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/c/c4/Spider%27s_Poison.gif/revision/latest?cb=20080128105101"
+      },
+      {
+        "item_name": "Gasoline",
+        "price_item": 300,
+        "sacrifice_requirement": 200,
+        "slot": 2,
+        "source_name": "Gasoline",
+        "notes": "",
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/6/67/Gasoline.gif/revision/latest?cb=20080216171640"
       }
     ],
     "junk_items": [
       {
-        "item_name": "scarlet crystal",
+        "item_name": "Scarlet crystal",
         "price_item": 710,
         "sacrifice_requirement": null,
         "slot": null,
         "source_name": "scarlet crystal",
         "notes": "PDF row does not show a complete value for this field.",
-        "image": ""
+        "image": "https://vignette.wikia.nocookie.net/sealonline/images/1/14/Scarlet_Crystal.gif/revision/latest?cb=20230728172516"
       },
       {
         "item_name": "dust",

@@ -108,7 +108,7 @@
                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-500 transition placeholder-gray-500">
                         </div>
                         <div>
-                            <label for="item1-search" class="block text-sm font-semibold text-orange-200 mb-2">Item (bahan)</label>
+                            <label for="item1-search" class="block text-sm font-semibold text-orange-200 mb-2">Item (Bahan)</label>
                             <div class="relative">
                                 <input id="item1-search" type="text" autocomplete="off"
                                        placeholder="Ketik untuk cari — contoh: Mark of Vampire"
@@ -158,7 +158,7 @@
 
                     <!-- Dropdown 2 : Tumbal -->
                     <div id="tumbal-block" class="mt-8">
-                        <label for="item2-search" class="block text-sm font-semibold text-orange-200 mb-2">Tumbal (item ke-2)</label>
+                        <label for="item2-search" class="block text-sm font-semibold text-orange-200 mb-2">Item (Tumbal)</label>
                         <div class="relative">
                             <input id="item2-search" type="text" autocomplete="off"
                                    placeholder="Ketik untuk cari tumbal — contoh: Horseshoe"
