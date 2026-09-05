@@ -207,12 +207,12 @@
                             <div class="rounded-xl bg-black/25 p-4 text-center">
                                 <p class="text-xs text-amber-200/80 uppercase tracking-wide">Total Harga Tumbal</p>
                                 <p id="total-harga" class="text-xl font-extrabold text-white mt-1">-</p>
-                                <p class="text-[11px] text-gray-400 mt-1">sacrifice₁ × jumlah</p>
+                                <p class="text-[11px] text-gray-400 mt-1">Jika dijual ke Npc</p>
                             </div>
                             <div class="rounded-xl bg-black/25 p-4 text-center border border-emerald-400/30">
                                 <p class="text-xs text-emerald-200/80 uppercase tracking-wide">Jumlah Tumbal Dibutuhkan</p>
                                 <p id="hasil-masak" class="text-xl font-extrabold text-emerald-300 mt-1">-</p>
-                                <p class="text-[11px] text-gray-400 mt-1">total ÷ price_item₂</p>
+                                <p class="text-[11px] text-gray-400 mt-1"></p>
                             </div>
                         </div>
                         <div id="cook-formula-row" class="mt-3 flex flex-wrap gap-2 justify-center">
@@ -436,7 +436,7 @@
                     // total harga tumbal ÷ Harga Item (price_item tumbal item 2) = jumlah tumbal dibutuhkan
                     const total = sac1 * qty;
                     const hasil = total / price2;
-                    document.getElementById('total-harga').textContent = total.toLocaleString('id-ID');
+                    document.getElementById('total-harga').textContent = '🪙 ' + total.toLocaleString('id-ID') + ' Cegel';
                     const hasilFloor = Math.floor(hasil);
                     const hasilCeil = Math.ceil(hasil);
                     // Wording dibulatkan hanya tampil jika hitungan butuh memiliki koma (pecahan)
@@ -453,7 +453,16 @@
                     let extraLine = '';
                     if (slot1 === 1) {
                         const q = qty.toLocaleString('id-ID');
-                        extraLine = '<br><span class="text-red-300">⚠️ Harga item terlalu mahal untuk dijadikan tumbal (slot = 1) — jika memaksa, isikan <span class="font-bold text-white">' + q + ' × ' + selected1.item_name + ' : ' + q + ' × ' + selected2.item_name + '</span> (1 banding 1)</span>';
+                        // Kondisi tambahan: jika slot=1 dan tumbal dibutuhkan masih kurang dari jumlah bahan → sarankan 1 banding 1
+                        if (price2 >= 1900 && selected2.category !== 'junk_items') {
+                            // Jika harga tumbal 1900 atau lebih dan bukan junk → langsung warning
+                            extraLine = '<br><span class="text-red-300">⚠️ Harga item terlalu mahal untuk dijadikan tumbal (slot = 1) — jika memaksa, isikan <span class="font-bold text-white">' + q + ' × ' + selected1.item_name + ' : ' + q + ' × ' + selected2.item_name + '</span> (1 banding 1)</span>';
+                        
+                        } else if (hasilCeil < qty) {
+                            extraLine = '<br><span class="text-red-300">⚠️ Karena slot = 1 | maka disarankan <span class="font-bold text-white">1 banding 1</span>: <span class="font-bold text-white">' + q + ' × ' + selected1.item_name + ' : ' + q + ' × ' + selected2.item_name + '</span></span>';
+                        } else {
+                            extraLine = '<br><span class="text-red-300">⚠️ Harga item terlalu mahal untuk dijadikan tumbal (slot = 1) — jika memaksa, isikan <span class="font-bold text-white">' + q + ' × ' + selected1.item_name + ' : ' + q + ' × ' + selected2.item_name + '</span> (1 banding 1)</span>';
+                        }
                     } else if (!isNaN(slot1) && slot1 > 1 && hasilCeil < qty) {
                         const dartNeed = qty - hasilCeil;
                         extraLine = '<br><span class="text-sky-300">→ Slot ke-2 bisa diisi <span class="font-bold text-white">Dart × ' + dartNeed.toLocaleString('id-ID') + '</span> (' + qty.toLocaleString('id-ID') + ' − ' + hasilCeil.toLocaleString('id-ID') + ')</span>';
